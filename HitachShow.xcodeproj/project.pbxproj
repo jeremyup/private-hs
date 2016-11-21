@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F008F7A1DC251FB00F3C752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F008F791DC251FB00F3C752 /* main.m */; };
+		3F008F7D1DC2521E00F3C752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F008F7C1DC2521E00F3C752 /* AppDelegate.m */; };
+		3F008F7F1DC2528A00F3C752 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F008F7E1DC2528A00F3C752 /* Images.xcassets */; };
+		3F008F821DC252C300F3C752 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F008F801DC252C300F3C752 /* LaunchScreen.xib */; };
+		3F16F8381DDB672900E26427 /* HSCITabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F8371DDB672900E26427 /* HSCITabVC.m */; };
+		3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83A1DDB6A8200E26427 /* HSCICompanyProfileVC.m */; };
+		3F16F8401DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */; };
+		3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */; };
+		3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */; };
+		3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22737B1DCC52B1003E421E /* HSLabel.m */; };
+		3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */; };
+		3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */; };
+		3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */; };
+		3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F716C231DDCB304009147EF /* HSDisplayInfo.m */; };
+		3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */; };
+		3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */; };
+		3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032D31DD0638B00C8BFCD /* HSBaseBottomLogoVC.m */; };
+		3F8032DF1DD0638B00C8BFCD /* HSBaseContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032D51DD0638B00C8BFCD /* HSBaseContentVC.m */; };
+		3F8032E11DD0638B00C8BFCD /* HSBaseTopLogoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032D91DD0638B00C8BFCD /* HSBaseTopLogoVC.m */; };
+		3F8032E21DD0638B00C8BFCD /* HSBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032DB1DD0638B00C8BFCD /* HSBaseVC.m */; };
+		3F8032E31DD0638B00C8BFCD /* HSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032DD1DD0638B00C8BFCD /* HSTabBarController.m */; };
+		3F87A2591DCB7B2700A18CE3 /* HSViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87A2581DCB7B2700A18CE3 /* HSViewUtil.m */; };
+		3F9203EC1DC38DCD007EB7B6 /* HSMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */; };
+		3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */; };
+		3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */; };
+		3F9203F51DC39112007EB7B6 /* HSOSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */; };
+		3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */; };
+		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
+		3FFAA6741DE1866400FD9875 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
+		3FFAA6761DE1867000FD9875 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
+		3FFAA6781DE1867900FD9875 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
+		3FFAA67A1DE1868600FD9875 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */; };
+		BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HitachShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		349BBB22885E3522413A2D2F /* Pods-HitachShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitachShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow.release.xcconfig"; sourceTree = "<group>"; };
+		3F008F761DC2519900F3C752 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F008F791DC251FB00F3C752 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F008F7B1DC2521E00F3C752 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F008F7C1DC2521E00F3C752 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F008F7E1DC2528A00F3C752 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3F008F801DC252C300F3C752 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = HitachShow/Others/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		3F0189A61DC25BC100108F35 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		3F16F8361DDB672900E26427 /* HSCITabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITabVC.h; sourceTree = "<group>"; };
+		3F16F8371DDB672900E26427 /* HSCITabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITabVC.m; sourceTree = "<group>"; };
+		3F16F8391DDB6A8200E26427 /* HSCICompanyProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCICompanyProfileVC.h; sourceTree = "<group>"; };
+		3F16F83A1DDB6A8200E26427 /* HSCICompanyProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCICompanyProfileVC.m; sourceTree = "<group>"; };
+		3F16F83B1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIDevelopmentBaseVC.h; sourceTree = "<group>"; };
+		3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIDevelopmentBaseVC.m; sourceTree = "<group>"; };
+		3F16F83D1DDB6A8200E26427 /* HSCIManufacturingBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIManufacturingBaseVC.h; sourceTree = "<group>"; };
+		3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIManufacturingBaseVC.m; sourceTree = "<group>"; };
+		3F1E72E91DCAD0A800B16341 /* HSImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSImageButton.h; sourceTree = "<group>"; };
+		3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSImageButton.m; sourceTree = "<group>"; };
+		3F22737A1DCC52B1003E421E /* HSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSLabel.h; sourceTree = "<group>"; };
+		3F22737B1DCC52B1003E421E /* HSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSLabel.m; sourceTree = "<group>"; };
+		3F2B20A61DC602A700B2BBA4 /* HSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTabBar.h; sourceTree = "<group>"; };
+		3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTabBar.m; sourceTree = "<group>"; };
+		3F3D80661DC24B6B0074556C /* HitachShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitachShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F676EE51DD0B7A9000AE782 /* HSCITechnologyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITechnologyVC.h; sourceTree = "<group>"; };
+		3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITechnologyVC.m; sourceTree = "<group>"; };
+		3F676EE81DD0B7C3000AE782 /* HSCITopicsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITopicsVC.h; sourceTree = "<group>"; };
+		3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITopicsVC.m; sourceTree = "<group>"; };
+		3F716C221DDCB304009147EF /* HSDisplayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDisplayInfo.h; sourceTree = "<group>"; };
+		3F716C231DDCB304009147EF /* HSDisplayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDisplayInfo.m; sourceTree = "<group>"; };
+		3F7A1F971DC6DDA900DEE2E6 /* HSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDefine.h; sourceTree = "<group>"; };
+		3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
+		3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainTabItemSelected@2x.png"; sourceTree = "<group>"; };
+		3F8032D21DD0638B00C8BFCD /* HSBaseBottomLogoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBaseBottomLogoVC.h; sourceTree = "<group>"; };
+		3F8032D31DD0638B00C8BFCD /* HSBaseBottomLogoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBaseBottomLogoVC.m; sourceTree = "<group>"; };
+		3F8032D41DD0638B00C8BFCD /* HSBaseContentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBaseContentVC.h; sourceTree = "<group>"; };
+		3F8032D51DD0638B00C8BFCD /* HSBaseContentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBaseContentVC.m; sourceTree = "<group>"; };
+		3F8032D81DD0638B00C8BFCD /* HSBaseTopLogoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBaseTopLogoVC.h; sourceTree = "<group>"; };
+		3F8032D91DD0638B00C8BFCD /* HSBaseTopLogoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBaseTopLogoVC.m; sourceTree = "<group>"; };
+		3F8032DA1DD0638B00C8BFCD /* HSBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBaseVC.h; sourceTree = "<group>"; };
+		3F8032DB1DD0638B00C8BFCD /* HSBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBaseVC.m; sourceTree = "<group>"; };
+		3F8032DC1DD0638B00C8BFCD /* HSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTabBarController.h; sourceTree = "<group>"; };
+		3F8032DD1DD0638B00C8BFCD /* HSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTabBarController.m; sourceTree = "<group>"; };
+		3F87A2571DCB7B2700A18CE3 /* HSViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSViewUtil.h; sourceTree = "<group>"; };
+		3F87A2581DCB7B2700A18CE3 /* HSViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSViewUtil.m; sourceTree = "<group>"; };
+		3F9203E91DC38DCD007EB7B6 /* HSMainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainTabController.h; sourceTree = "<group>"; };
+		3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainTabController.m; sourceTree = "<group>"; };
+		3F9203ED1DC390C4007EB7B6 /* HSCIMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIMainVC.h; sourceTree = "<group>"; };
+		3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIMainVC.m; sourceTree = "<group>"; };
+		3F9203F01DC390E5007EB7B6 /* HSCPMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPMainVC.h; sourceTree = "<group>"; };
+		3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPMainVC.m; sourceTree = "<group>"; };
+		3F9203F31DC39112007EB7B6 /* HSOSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSOSMainVC.h; sourceTree = "<group>"; };
+		3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSOSMainVC.m; sourceTree = "<group>"; };
+		3F9203F61DC391A3007EB7B6 /* HSPIMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIMainVC.h; sourceTree = "<group>"; };
+		3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIMainVC.m; sourceTree = "<group>"; };
+		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
+		3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainVC.m; sourceTree = "<group>"; };
+		3FFAA6731DE1866400FD9875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3FFAA6751DE1867000FD9875 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		3FFAA6771DE1867900FD9875 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitachShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F3D80631DC24B6B0074556C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FFAA67A1DE1868600FD9875 /* libstdc++.6.0.9.dylib in Frameworks */,
+				3FFAA6781DE1867900FD9875 /* libiconv.dylib in Frameworks */,
+				3FFAA6761DE1867000FD9875 /* libbz2.dylib in Frameworks */,
+				3FFAA6741DE1866400FD9875 /* libz.dylib in Frameworks */,
+				BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19690E7CEE882B21572E1B84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */,
+				3FFAA6771DE1867900FD9875 /* libiconv.dylib */,
+				3FFAA6751DE1867000FD9875 /* libbz2.dylib */,
+				3FFAA6731DE1866400FD9875 /* libz.dylib */,
+				2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F008F721DC2517100F3C752 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F9203E61DC38DAF007EB7B6 /* Main */,
+				3F9203E31DC38C36007EB7B6 /* CompanyIntroduction */,
+				3F9203E21DC38C36007EB7B6 /* ClassicProject */,
+				3F9203E51DC38C36007EB7B6 /* ProductIntroduction */,
+				3F9203E41DC38C36007EB7B6 /* OverseasService */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F008F731DC2517100F3C752 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F716C221DDCB304009147EF /* HSDisplayInfo.h */,
+				3F716C231DDCB304009147EF /* HSDisplayInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F008F741DC2517100F3C752 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EFBF41DC9DFDB00845586 /* images */,
+				3F008F801DC252C300F3C752 /* LaunchScreen.xib */,
+				3F008F7E1DC2528A00F3C752 /* Images.xcassets */,
+				3F008F761DC2519900F3C752 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3F008F751DC2517100F3C752 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B20A61DC602A700B2BBA4 /* HSTabBar.h */,
+				3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */,
+				3F1E72E91DCAD0A800B16341 /* HSImageButton.h */,
+				3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */,
+				3F22737A1DCC52B1003E421E /* HSLabel.h */,
+				3F22737B1DCC52B1003E421E /* HSLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F008F781DC251C400F3C752 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3F008F7B1DC2521E00F3C752 /* AppDelegate.h */,
+				3F008F7C1DC2521E00F3C752 /* AppDelegate.m */,
+				3F008F791DC251FB00F3C752 /* main.m */,
+				3F0189A61DC25BC100108F35 /* Prefix.pch */,
+				3F7A1F971DC6DDA900DEE2E6 /* HSDefine.h */,
+				3F87A2571DCB7B2700A18CE3 /* HSViewUtil.h */,
+				3F87A2581DCB7B2700A18CE3 /* HSViewUtil.m */,
+			);
+			name = Others;
+			path = HitachShow/Others;
+			sourceTree = SOURCE_ROOT;
+		};
+		3F3D805D1DC24B6B0074556C = {
+			isa = PBXGroup;
+			children = (
+				3F3D80681DC24B6B0074556C /* HitachShow */,
+				3F3D80671DC24B6B0074556C /* Products */,
+				AB9CF02B0EFF46701AB9F05F /* Pods */,
+				19690E7CEE882B21572E1B84 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F3D80671DC24B6B0074556C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D80661DC24B6B0074556C /* HitachShow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F3D80681DC24B6B0074556C /* HitachShow */ = {
+			isa = PBXGroup;
+			children = (
+				3F008F721DC2517100F3C752 /* Controller */,
+				3F008F751DC2517100F3C752 /* View */,
+				3F008F731DC2517100F3C752 /* Model */,
+				3F008F781DC251C400F3C752 /* Others */,
+				3F008F741DC2517100F3C752 /* Resource */,
+			);
+			path = HitachShow;
+			sourceTree = "<group>";
+		};
+		3F7EFBF41DC9DFDB00845586 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */,
+				3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		3F8032D11DD0638B00C8BFCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3F8032D21DD0638B00C8BFCD /* HSBaseBottomLogoVC.h */,
+				3F8032D31DD0638B00C8BFCD /* HSBaseBottomLogoVC.m */,
+				3F8032D41DD0638B00C8BFCD /* HSBaseContentVC.h */,
+				3F8032D51DD0638B00C8BFCD /* HSBaseContentVC.m */,
+				3F8032D81DD0638B00C8BFCD /* HSBaseTopLogoVC.h */,
+				3F8032D91DD0638B00C8BFCD /* HSBaseTopLogoVC.m */,
+				3F8032DA1DD0638B00C8BFCD /* HSBaseVC.h */,
+				3F8032DB1DD0638B00C8BFCD /* HSBaseVC.m */,
+				3F8032DC1DD0638B00C8BFCD /* HSTabBarController.h */,
+				3F8032DD1DD0638B00C8BFCD /* HSTabBarController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3F9203E21DC38C36007EB7B6 /* ClassicProject */ = {
+			isa = PBXGroup;
+			children = (
+				3F9203F01DC390E5007EB7B6 /* HSCPMainVC.h */,
+				3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */,
+			);
+			path = ClassicProject;
+			sourceTree = "<group>";
+		};
+		3F9203E31DC38C36007EB7B6 /* CompanyIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				3F9203ED1DC390C4007EB7B6 /* HSCIMainVC.h */,
+				3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */,
+				3F16F8361DDB672900E26427 /* HSCITabVC.h */,
+				3F16F8371DDB672900E26427 /* HSCITabVC.m */,
+				3F16F8391DDB6A8200E26427 /* HSCICompanyProfileVC.h */,
+				3F16F83A1DDB6A8200E26427 /* HSCICompanyProfileVC.m */,
+				3F16F83B1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.h */,
+				3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */,
+				3F16F83D1DDB6A8200E26427 /* HSCIManufacturingBaseVC.h */,
+				3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */,
+				3F676EE51DD0B7A9000AE782 /* HSCITechnologyVC.h */,
+				3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */,
+				3F676EE81DD0B7C3000AE782 /* HSCITopicsVC.h */,
+				3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */,
+			);
+			path = CompanyIntroduction;
+			sourceTree = "<group>";
+		};
+		3F9203E41DC38C36007EB7B6 /* OverseasService */ = {
+			isa = PBXGroup;
+			children = (
+				3F9203F31DC39112007EB7B6 /* HSOSMainVC.h */,
+				3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */,
+			);
+			path = OverseasService;
+			sourceTree = "<group>";
+		};
+		3F9203E51DC38C36007EB7B6 /* ProductIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				3F9203F61DC391A3007EB7B6 /* HSPIMainVC.h */,
+				3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */,
+			);
+			path = ProductIntroduction;
+			sourceTree = "<group>";
+		};
+		3F9203E61DC38DAF007EB7B6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F8032D11DD0638B00C8BFCD /* Base */,
+				3F9203E91DC38DCD007EB7B6 /* HSMainTabController.h */,
+				3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */,
+				3F9203F91DC396E0007EB7B6 /* HSMainVC.h */,
+				3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AB9CF02B0EFF46701AB9F05F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */,
+				349BBB22885E3522413A2D2F /* Pods-HitachShow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F3D80651DC24B6B0074556C /* HitachShow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HitachShow" */;
+			buildPhases = (
+				A0287E3EA8FDD30BE8E79EED /* [CP] Check Pods Manifest.lock */,
+				3F3D80621DC24B6B0074556C /* Sources */,
+				3F3D80631DC24B6B0074556C /* Frameworks */,
+				3F3D80641DC24B6B0074556C /* Resources */,
+				4FC86B57386395C855296361 /* [CP] Embed Pods Frameworks */,
+				FD4CF90A50C199F9DA8FDD49 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HitachShow;
+			productName = HitachShow;
+			productReference = 3F3D80661DC24B6B0074556C /* HitachShow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F3D805E1DC24B6B0074556C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = hitach;
+				TargetAttributes = {
+					3F3D80651DC24B6B0074556C = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = WJR5NAA722;
+					};
+				};
+			};
+			buildConfigurationList = 3F3D80611DC24B6B0074556C /* Build configuration list for PBXProject "HitachShow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F3D805D1DC24B6B0074556C;
+			productRefGroup = 3F3D80671DC24B6B0074556C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F3D80651DC24B6B0074556C /* HitachShow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F3D80641DC24B6B0074556C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */,
+				3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */,
+				3F008F821DC252C300F3C752 /* LaunchScreen.xib in Resources */,
+				3F008F7F1DC2528A00F3C752 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FC86B57386395C855296361 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0287E3EA8FDD30BE8E79EED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4CF90A50C199F9DA8FDD49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F3D80621DC24B6B0074556C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */,
+				3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */,
+				3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */,
+				3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */,
+				3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */,
+				3F16F8381DDB672900E26427 /* HSCITabVC.m in Sources */,
+				3F8032E11DD0638B00C8BFCD /* HSBaseTopLogoVC.m in Sources */,
+				3F008F7A1DC251FB00F3C752 /* main.m in Sources */,
+				3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */,
+				3F8032E21DD0638B00C8BFCD /* HSBaseVC.m in Sources */,
+				3F8032E31DD0638B00C8BFCD /* HSTabBarController.m in Sources */,
+				3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */,
+				3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */,
+				3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */,
+				3F9203F51DC39112007EB7B6 /* HSOSMainVC.m in Sources */,
+				3F87A2591DCB7B2700A18CE3 /* HSViewUtil.m in Sources */,
+				3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */,
+				3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */,
+				3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */,
+				3F9203EC1DC38DCD007EB7B6 /* HSMainTabController.m in Sources */,
+				3F16F8401DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m in Sources */,
+				3F008F7D1DC2521E00F3C752 /* AppDelegate.m in Sources */,
+				3F8032DF1DD0638B00C8BFCD /* HSBaseContentVC.m in Sources */,
+				3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F3D80871DC24B6B0074556C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3F3D80881DC24B6B0074556C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F3D808A1DC24B6B0074556C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Others/Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F3D808B1DC24B6B0074556C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349BBB22885E3522413A2D2F /* Pods-HitachShow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Others/Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F3D80611DC24B6B0074556C /* Build configuration list for PBXProject "HitachShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D80871DC24B6B0074556C /* Debug */,
+				3F3D80881DC24B6B0074556C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HitachShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D808A1DC24B6B0074556C /* Debug */,
+				3F3D808B1DC24B6B0074556C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F3D805E1DC24B6B0074556C /* Project object */;
+}
