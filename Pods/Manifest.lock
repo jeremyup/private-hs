@@ -1,12 +1,15 @@
 PODS:
   - Masonry (1.0.0)
+  - MobileVLCKit (2.2.2)
 
 DEPENDENCIES:
   - Masonry
+  - MobileVLCKit
 
 SPEC CHECKSUMS:
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  MobileVLCKit: be4986cf67802826b9c4e185a1157be72ed460f9
 
-PODFILE CHECKSUM: 820f7bf581406ff9acb64bd8ce6c927b20deb2fc
+PODFILE CHECKSUM: cac5edebbfacb11ff30114a3ac4f30f1b3159d03
 
 COCOAPODS: 1.1.1

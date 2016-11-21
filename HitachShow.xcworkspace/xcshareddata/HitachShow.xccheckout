@@ -10,14 +10,14 @@
 	<string>HitachShow</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FFDE8294B7D4865D775F81C21DA21BC10131BEB3</key>
+		<key>98A90E79CCCD4FB0EC083283A7FDE81070643857</key>
 		<string>github.com:Jeremy-Chou/private.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HitachShow.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FFDE8294B7D4865D775F81C21DA21BC10131BEB3</key>
+		<key>98A90E79CCCD4FB0EC083283A7FDE81070643857</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FFDE8294B7D4865D775F81C21DA21BC10131BEB3</string>
+	<string>98A90E79CCCD4FB0EC083283A7FDE81070643857</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FFDE8294B7D4865D775F81C21DA21BC10131BEB3</string>
+			<string>98A90E79CCCD4FB0EC083283A7FDE81070643857</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HitachShow</string>
 		</dict>
