@@ -18,9 +18,11 @@
 		3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */; };
 		3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22737B1DCC52B1003E421E /* HSLabel.m */; };
 		3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */; };
+		3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */; };
 		3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */; };
 		3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */; };
 		3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F716C231DDCB304009147EF /* HSDisplayInfo.m */; };
+		3F74C8CF1DE2F2590071758E /* video.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F74C8CD1DE2F2590071758E /* video.mpeg */; };
 		3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */; };
 		3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */; };
 		3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032D31DD0638B00C8BFCD /* HSBaseBottomLogoVC.m */; };
@@ -35,10 +37,14 @@
 		3F9203F51DC39112007EB7B6 /* HSOSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */; };
 		3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */; };
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
-		3FFAA6741DE1866400FD9875 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
-		3FFAA6761DE1867000FD9875 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
-		3FFAA6781DE1867900FD9875 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
-		3FFAA67A1DE1868600FD9875 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */; };
+		3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */; };
+		3FEE6F211DE349A200A097E9 /* duihua.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F201DE349A200A097E9 /* duihua.mp4 */; };
+		3FEE6F261DE35C6400A097E9 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */; };
+		3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
+		3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
+		3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
+		3FEE6F2E1DE35E9900A097E9 /* 2.mkv in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F2B1DE35E9900A097E9 /* 2.mkv */; };
+		3FEE6F2F1DE35E9900A097E9 /* 3.rmvb in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */; };
 		BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */; };
 /* End PBXBuildFile section */
 
@@ -67,12 +73,15 @@
 		3F2B20A61DC602A700B2BBA4 /* HSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTabBar.h; sourceTree = "<group>"; };
 		3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTabBar.m; sourceTree = "<group>"; };
 		3F3D80661DC24B6B0074556C /* HitachShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitachShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3FA51F1DE3EA210072DDE9 /* HSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoView.h; sourceTree = "<group>"; };
+		3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoView.m; sourceTree = "<group>"; };
 		3F676EE51DD0B7A9000AE782 /* HSCITechnologyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITechnologyVC.h; sourceTree = "<group>"; };
 		3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITechnologyVC.m; sourceTree = "<group>"; };
 		3F676EE81DD0B7C3000AE782 /* HSCITopicsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITopicsVC.h; sourceTree = "<group>"; };
 		3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITopicsVC.m; sourceTree = "<group>"; };
 		3F716C221DDCB304009147EF /* HSDisplayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDisplayInfo.h; sourceTree = "<group>"; };
 		3F716C231DDCB304009147EF /* HSDisplayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDisplayInfo.m; sourceTree = "<group>"; };
+		3F74C8CD1DE2F2590071758E /* video.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = video.mpeg; sourceTree = "<group>"; };
 		3F7A1F971DC6DDA900DEE2E6 /* HSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDefine.h; sourceTree = "<group>"; };
 		3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainTabItemSelected@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +109,13 @@
 		3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIMainVC.m; sourceTree = "<group>"; };
 		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
 		3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainVC.m; sourceTree = "<group>"; };
+		3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoPlayVC.h; sourceTree = "<group>"; };
+		3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoPlayVC.m; sourceTree = "<group>"; };
+		3FEE6F1E1DE347FF00A097E9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3FEE6F201DE349A200A097E9 /* duihua.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = duihua.mp4; sourceTree = "<group>"; };
+		3FEE6F221DE34C8F00A097E9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3FEE6F2B1DE35E9900A097E9 /* 2.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mkv; sourceTree = "<group>"; };
+		3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.rmvb; sourceTree = "<group>"; };
 		3FFAA6731DE1866400FD9875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3FFAA6751DE1867000FD9875 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		3FFAA6771DE1867900FD9875 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
@@ -112,10 +128,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFAA67A1DE1868600FD9875 /* libstdc++.6.0.9.dylib in Frameworks */,
-				3FFAA6781DE1867900FD9875 /* libiconv.dylib in Frameworks */,
-				3FFAA6761DE1867000FD9875 /* libbz2.dylib in Frameworks */,
-				3FFAA6741DE1866400FD9875 /* libz.dylib in Frameworks */,
+				3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */,
+				3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */,
+				3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */,
+				3FEE6F261DE35C6400A097E9 /* libstdc++.6.0.9.dylib in Frameworks */,
 				BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +142,8 @@
 		19690E7CEE882B21572E1B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FEE6F221DE34C8F00A097E9 /* CoreMedia.framework */,
+				3FEE6F1E1DE347FF00A097E9 /* AVFoundation.framework */,
 				3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */,
 				3FFAA6771DE1867900FD9875 /* libiconv.dylib */,
 				3FFAA6751DE1867000FD9875 /* libbz2.dylib */,
@@ -159,6 +177,7 @@
 		3F008F741DC2517100F3C752 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3F74C8CB1DE2F2590071758E /* videos */,
 				3F7EFBF41DC9DFDB00845586 /* images */,
 				3F008F801DC252C300F3C752 /* LaunchScreen.xib */,
 				3F008F7E1DC2528A00F3C752 /* Images.xcassets */,
@@ -176,6 +195,8 @@
 				3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */,
 				3F22737A1DCC52B1003E421E /* HSLabel.h */,
 				3F22737B1DCC52B1003E421E /* HSLabel.m */,
+				3F3FA51F1DE3EA210072DDE9 /* HSVideoView.h */,
+				3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +244,17 @@
 				3F008F741DC2517100F3C752 /* Resource */,
 			);
 			path = HitachShow;
+			sourceTree = "<group>";
+		};
+		3F74C8CB1DE2F2590071758E /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				3FEE6F2B1DE35E9900A097E9 /* 2.mkv */,
+				3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */,
+				3FEE6F201DE349A200A097E9 /* duihua.mp4 */,
+				3F74C8CD1DE2F2590071758E /* video.mpeg */,
+			);
+			path = videos;
 			sourceTree = "<group>";
 		};
 		3F7EFBF41DC9DFDB00845586 /* images */ = {
@@ -307,6 +339,8 @@
 				3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */,
 				3F9203F91DC396E0007EB7B6 /* HSMainVC.h */,
 				3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */,
+				3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */,
+				3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -383,7 +417,11 @@
 			files = (
 				3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */,
 				3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */,
+				3FEE6F2E1DE35E9900A097E9 /* 2.mkv in Resources */,
 				3F008F821DC252C300F3C752 /* LaunchScreen.xib in Resources */,
+				3FEE6F211DE349A200A097E9 /* duihua.mp4 in Resources */,
+				3FEE6F2F1DE35E9900A097E9 /* 3.rmvb in Resources */,
+				3F74C8CF1DE2F2590071758E /* video.mpeg in Resources */,
 				3F008F7F1DC2528A00F3C752 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,10 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */,
+				3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */,
 				3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */,
 				3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */,
 				3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */,
 				3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */,
+				3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */,
 				3F16F8381DDB672900E26427 /* HSCITabVC.m in Sources */,
 				3F8032E11DD0638B00C8BFCD /* HSBaseTopLogoVC.m in Sources */,
 				3F008F7A1DC251FB00F3C752 /* main.m in Sources */,
@@ -561,6 +601,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jeremy/Desktop/MobileVLCKit/MobileVLCKit-binary",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Others/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";
@@ -575,6 +619,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Jeremy/Desktop/MobileVLCKit/MobileVLCKit-binary",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Others/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";

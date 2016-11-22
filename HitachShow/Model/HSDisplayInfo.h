@@ -15,5 +15,6 @@
 @property(nonatomic,strong) NSString *info;
 @property(nonatomic,strong) NSString *image;
 @property(nonatomic,strong) NSString *btnText;
+@property(nonatomic,strong) NSString *videoPath;
 
 @end

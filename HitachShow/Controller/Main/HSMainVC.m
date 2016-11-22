@@ -25,7 +25,7 @@
 
 - (void) addSubViews {
     // LOGO
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png" ]];
     [self.view addSubview:logoView];
     [logoView makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(123.5);
@@ -58,7 +58,7 @@
 - (void) presentVC:(UIButton *) sender {
     NSInteger index = [sender tag];
     HSMainTabController *mainTabVC = [[HSMainTabController alloc] init];
-    [mainTabVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+//    [mainTabVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     mainTabVC.selectedIndex = index;
     [self presentViewController:mainTabVC animated:YES completion:nil];
 }

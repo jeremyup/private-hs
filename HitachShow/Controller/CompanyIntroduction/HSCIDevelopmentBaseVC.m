@@ -9,12 +9,14 @@
 #import "HSCIDevelopmentBaseVC.h"
 #import "HSLabel.h"
 #import "HSDisplayInfo.h"
+#import "HSVideoView.h"
+
 
 @interface HSCIDevelopmentBaseVC ()
 
 @property(nonatomic,strong) UIImageView *topImage;
 @property(nonatomic,strong) HSLabel *introduction;
-@property(nonatomic,strong) UIImageView *movie;
+@property(nonatomic,strong) HSVideoView *movie;
 @property(nonatomic,strong) NSMutableArray *introductions;
 
 @end
@@ -32,6 +34,7 @@
         entity.image = @"";
         entity.title = [NSString stringWithFormat:@"%d", i ];
         entity.btnText = [NSString stringWithFormat:@"%d", i ];;
+        entity.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
         [_introductions addObject:entity];
     }
     
@@ -66,14 +69,16 @@
     }];
     
     // Video thumbnail
-    _movie = [[UIImageView alloc] init];
+    _movie = [[HSVideoView alloc] init];
+    _movie.displayTitle = YES;
     [self.mainView addSubview:_movie];
     [_movie makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(_topImage.right).offset(-50);
         make.top.equalTo(_introduction.top);
-        make.height.equalTo(_introduction.height);
+        make.bottom.equalTo(self.view.bottom).offset(-80);
         make.width.equalTo(200);
     }];
+    _movie.hidden = YES;
     
     // Buttons
     NSInteger count = _introductions.count;
@@ -110,7 +115,9 @@
     _introduction.text = ci.introduction;
     _topImage.image = [UIImage imageNamed:ci.image];
     _topImage.backgroundColor = [UIColor grayColor];
-    _movie.backgroundColor = [UIColor grayColor];
+
+    _movie.hidden = NO;
+    _movie.videoPath = ci.videoPath;
 }
 
 - (void)didReceiveMemoryWarning {
