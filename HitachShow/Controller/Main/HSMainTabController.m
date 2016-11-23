@@ -24,7 +24,7 @@
     NSDictionary *map = @{@"Company Introduction":@"HSCIMainVC",
                           @"Classic Project":@"HSCPMainVC",
                           @"Product Introduction":@"HSPIMainVC",
-                          @"Maintenance":@"HSOSMainVC"};
+                          @"Maintenance":@"HSMaintenanceVC"};
     NSMutableArray *vcs = [[NSMutableArray alloc] init];
     for (NSString *key in self.titles) {
         NSString *vcName = map[key];

@@ -22,7 +22,6 @@
 		3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */; };
 		3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */; };
 		3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F716C231DDCB304009147EF /* HSDisplayInfo.m */; };
-		3F74C8CF1DE2F2590071758E /* video.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F74C8CD1DE2F2590071758E /* video.mpeg */; };
 		3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */; };
 		3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */; };
 		3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8032D31DD0638B00C8BFCD /* HSBaseBottomLogoVC.m */; };
@@ -35,7 +34,6 @@
 		3F9203EC1DC38DCD007EB7B6 /* HSMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */; };
 		3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */; };
 		3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */; };
-		3F9203F51DC39112007EB7B6 /* HSOSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */; };
 		3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */; };
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
 		3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */; };
@@ -43,13 +41,12 @@
 		3FCF05E51DE5BD090098D292 /* dummy2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05E41DE5BD090098D292 /* dummy2.jpg */; };
 		3FCF05E81DE5BD640098D292 /* HSCIBaseVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCF05E71DE5BD640098D292 /* HSCIBaseVideoVC.m */; };
 		3FCF05EB1DE5D6AE0098D292 /* HSCIHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCF05EA1DE5D6AE0098D292 /* HSCIHistoryVC.m */; };
-		3FEE6F211DE349A200A097E9 /* duihua.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F201DE349A200A097E9 /* duihua.mp4 */; };
+		3FCF05ED1DE5D95A0098D292 /* duihua.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05EC1DE5D95A0098D292 /* duihua.mp4 */; };
+		3FCF05F11DE5E9EB0098D292 /* HSMaintenanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCF05F01DE5E9EB0098D292 /* HSMaintenanceVC.m */; };
 		3FEE6F261DE35C6400A097E9 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */; };
 		3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
 		3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
 		3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
-		3FEE6F2E1DE35E9900A097E9 /* 2.mkv in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F2B1DE35E9900A097E9 /* 2.mkv */; };
-		3FEE6F2F1DE35E9900A097E9 /* 3.rmvb in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */; };
 		BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +83,6 @@
 		3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITopicsVC.m; sourceTree = "<group>"; };
 		3F716C221DDCB304009147EF /* HSDisplayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDisplayInfo.h; sourceTree = "<group>"; };
 		3F716C231DDCB304009147EF /* HSDisplayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDisplayInfo.m; sourceTree = "<group>"; };
-		3F74C8CD1DE2F2590071758E /* video.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = video.mpeg; sourceTree = "<group>"; };
 		3F7A1F971DC6DDA900DEE2E6 /* HSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDefine.h; sourceTree = "<group>"; };
 		3F7EFBF51DC9DFDB00845586 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		3F7EFBF61DC9DFDB00845586 /* MainTabItemSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainTabItemSelected@2x.png"; sourceTree = "<group>"; };
@@ -110,8 +106,6 @@
 		3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIMainVC.m; sourceTree = "<group>"; };
 		3F9203F01DC390E5007EB7B6 /* HSCPMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPMainVC.h; sourceTree = "<group>"; };
 		3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPMainVC.m; sourceTree = "<group>"; };
-		3F9203F31DC39112007EB7B6 /* HSOSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSOSMainVC.h; sourceTree = "<group>"; };
-		3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSOSMainVC.m; sourceTree = "<group>"; };
 		3F9203F61DC391A3007EB7B6 /* HSPIMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIMainVC.h; sourceTree = "<group>"; };
 		3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIMainVC.m; sourceTree = "<group>"; };
 		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
@@ -124,11 +118,11 @@
 		3FCF05E71DE5BD640098D292 /* HSCIBaseVideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIBaseVideoVC.m; sourceTree = "<group>"; };
 		3FCF05E91DE5D6AE0098D292 /* HSCIHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIHistoryVC.h; sourceTree = "<group>"; };
 		3FCF05EA1DE5D6AE0098D292 /* HSCIHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIHistoryVC.m; sourceTree = "<group>"; };
+		3FCF05EC1DE5D95A0098D292 /* duihua.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = duihua.mp4; sourceTree = "<group>"; };
+		3FCF05EF1DE5E9EB0098D292 /* HSMaintenanceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMaintenanceVC.h; sourceTree = "<group>"; };
+		3FCF05F01DE5E9EB0098D292 /* HSMaintenanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMaintenanceVC.m; sourceTree = "<group>"; };
 		3FEE6F1E1DE347FF00A097E9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3FEE6F201DE349A200A097E9 /* duihua.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = duihua.mp4; sourceTree = "<group>"; };
 		3FEE6F221DE34C8F00A097E9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		3FEE6F2B1DE35E9900A097E9 /* 2.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mkv; sourceTree = "<group>"; };
-		3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.rmvb; sourceTree = "<group>"; };
 		3FFAA6731DE1866400FD9875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3FFAA6751DE1867000FD9875 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		3FFAA6771DE1867900FD9875 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
@@ -173,7 +167,7 @@
 				3F9203E31DC38C36007EB7B6 /* CompanyIntroduction */,
 				3F9203E21DC38C36007EB7B6 /* ClassicProject */,
 				3F9203E51DC38C36007EB7B6 /* ProductIntroduction */,
-				3F9203E41DC38C36007EB7B6 /* OverseasService */,
+				3FCF05EE1DE5E9EB0098D292 /* Maintenance */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,10 +256,7 @@
 		3F74C8CB1DE2F2590071758E /* videos */ = {
 			isa = PBXGroup;
 			children = (
-				3FEE6F2B1DE35E9900A097E9 /* 2.mkv */,
-				3FEE6F2C1DE35E9900A097E9 /* 3.rmvb */,
-				3FEE6F201DE349A200A097E9 /* duihua.mp4 */,
-				3F74C8CD1DE2F2590071758E /* video.mpeg */,
+				3FCF05EC1DE5D95A0098D292 /* duihua.mp4 */,
 			);
 			path = videos;
 			sourceTree = "<group>";
@@ -334,15 +325,6 @@
 			path = CompanyIntroduction;
 			sourceTree = "<group>";
 		};
-		3F9203E41DC38C36007EB7B6 /* OverseasService */ = {
-			isa = PBXGroup;
-			children = (
-				3F9203F31DC39112007EB7B6 /* HSOSMainVC.h */,
-				3F9203F41DC39112007EB7B6 /* HSOSMainVC.m */,
-			);
-			path = OverseasService;
-			sourceTree = "<group>";
-		};
 		3F9203E51DC38C36007EB7B6 /* ProductIntroduction */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +346,15 @@
 				3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		3FCF05EE1DE5E9EB0098D292 /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				3FCF05EF1DE5E9EB0098D292 /* HSMaintenanceVC.h */,
+				3FCF05F01DE5E9EB0098D292 /* HSMaintenanceVC.m */,
+			);
+			path = Maintenance;
 			sourceTree = "<group>";
 		};
 		AB9CF02B0EFF46701AB9F05F /* Pods */ = {
@@ -439,11 +430,8 @@
 				3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */,
 				3FCF05E51DE5BD090098D292 /* dummy2.jpg in Resources */,
 				3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */,
-				3FEE6F2E1DE35E9900A097E9 /* 2.mkv in Resources */,
 				3F008F821DC252C300F3C752 /* LaunchScreen.xib in Resources */,
-				3FEE6F211DE349A200A097E9 /* duihua.mp4 in Resources */,
-				3FEE6F2F1DE35E9900A097E9 /* 3.rmvb in Resources */,
-				3F74C8CF1DE2F2590071758E /* video.mpeg in Resources */,
+				3FCF05ED1DE5D95A0098D292 /* duihua.mp4 in Resources */,
 				3FCF05E31DE5B4B20098D292 /* dummy.jpg in Resources */,
 				3F008F7F1DC2528A00F3C752 /* Images.xcassets in Resources */,
 			);
@@ -507,6 +495,7 @@
 				3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */,
 				3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */,
 				3FCF05E81DE5BD640098D292 /* HSCIBaseVideoVC.m in Sources */,
+				3FCF05F11DE5E9EB0098D292 /* HSMaintenanceVC.m in Sources */,
 				3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */,
 				3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */,
 				3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */,
@@ -523,7 +512,6 @@
 				3F8F93231DE48B6A00495180 /* HSCISalesServiceVC.m in Sources */,
 				3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */,
 				3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */,
-				3F9203F51DC39112007EB7B6 /* HSOSMainVC.m in Sources */,
 				3F87A2591DCB7B2700A18CE3 /* HSViewUtil.m in Sources */,
 				3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */,
 				3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */,
