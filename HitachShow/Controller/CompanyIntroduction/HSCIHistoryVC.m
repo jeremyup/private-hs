@@ -1,22 +1,22 @@
 //
-//  HSCITopicsVC.m
+//  HSCIHistoryVC.m
 //  HitachShow
 //
 //  Created by Jeremy on 2016年.
 //  Copyright (c) 2016年 hitach. All rights reserved.
 //
 
-#import "HSCITopicsVC.h"
+#import "HSCIHistoryVC.h"
 #import "HSDisplayInfo.h"
 
-@interface HSCITopicsVC ()
+@interface HSCIHistoryVC ()
 
 @end
 
-@implementation HSCITopicsVC
+@implementation HSCIHistoryVC
 
 - (void)viewDidLoad {
-    self.mainTitle = @"Topics";
+    self.mainTitle = @"History";
     
     NSMutableArray *list = [NSMutableArray arrayWithCapacity:2];
     for (int i=0; i<2; i++) {

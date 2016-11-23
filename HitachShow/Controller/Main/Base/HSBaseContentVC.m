@@ -39,7 +39,7 @@
     [titleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.top);
         make.right.equalTo(self.view.right);
-        make.width.equalTo(236);
+        make.width.equalTo(250);
         make.height.equalTo(236);
     }];
     

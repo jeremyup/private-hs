@@ -7,7 +7,8 @@
 //
 
 #import "HSBaseTopLogoVC.h"
+#import "HSCIBaseVideoVC.h"
 
-@interface HSCITechnologyVC : HSBaseTopLogoVC
+@interface HSCITechnologyVC : HSCIBaseVideoVC
 
 @end

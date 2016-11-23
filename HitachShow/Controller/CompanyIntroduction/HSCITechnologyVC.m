@@ -7,6 +7,7 @@
 //
 
 #import "HSCITechnologyVC.h"
+#import "HSDisplayInfo.h"
 
 @interface HSCITechnologyVC ()
 
@@ -15,24 +16,18 @@
 @implementation HSCITechnologyVC
 
 - (void)viewDidLoad {
+    self.mainTitle = @"Technology";
+    
+    NSMutableArray *list = [NSMutableArray arrayWithCapacity:2];
+    for (int i=0; i<2; i++) {
+        HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
+        info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
+        [list addObject:info];
+    }
+    self.videoList = list;
+    
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
-    [self addSubviews];
-}
-
-- (void) addSubviews {
-    // title
-    UILabel *title = [[UILabel alloc] init];
-    [self.view addSubview:title];
-    title.text = @"Technology";
-    title.textAlignment = NSTextAlignmentCenter;
-    title.font = [UIFont systemFontOfSize:30 weight:0.5];
-    title.textColor = [UIColor whiteColor];
-    [title sizeToFit];
-    [title makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.top).offset(110);
-        make.centerX.equalTo(self.view.centerX);
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

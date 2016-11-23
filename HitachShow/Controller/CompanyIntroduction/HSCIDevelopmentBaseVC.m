@@ -25,7 +25,7 @@
 @implementation HSCIDevelopmentBaseVC
 
 - (void)viewDidLoad {
-    self.titleText = @"Company";
+    self.titleText = @"Development base";
     // Dummy TODO
     _introductions = [NSMutableArray arrayWithCapacity:6];
     for (int i=0;i<6;i++) {
@@ -33,7 +33,7 @@
         entity.introduction = @"VOA Associates Incorporated is delighted to announce that we have joined Stantec. We are now part of a team that unites approximately 22,000 employees working in over 400 locations across six continents. ";
         entity.image = @"";
         entity.title = [NSString stringWithFormat:@"%d", i ];
-        entity.btnText = [NSString stringWithFormat:@"%d", i ];;
+        entity.btnText = [NSString stringWithFormat:@"%d", i ];
         entity.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
         [_introductions addObject:entity];
     }

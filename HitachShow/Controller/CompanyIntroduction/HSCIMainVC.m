@@ -32,8 +32,8 @@
      [HSImageButton initWithTitle:@"Company Profile" rightImage:@"" targetVCName:@"HSCICompanyProfileVC"],
      [HSImageButton initWithTitle:@"Development Base" rightImage:@"" targetVCName:@"HSCIDevelopmentBaseVC"],
      [HSImageButton initWithTitle:@"Manufacturing Base" rightImage:@"" targetVCName:@"HSCIManufacturingBaseVC"],
-     [HSImageButton initWithTitle:@"Sales/Service Stations" rightImage:@"" targetVCName:@"HSCICompanyProfileVC"],
-     [HSImageButton initWithTitle:@"History" rightImage:@"" targetVCName:@"HSCICompanyProfileVC"],
+     [HSImageButton initWithTitle:@"Sales/Service Stations" rightImage:@"" targetVCName:@"HSCISalesServiceVC"],
+     [HSImageButton initWithTitle:@"History" rightImage:@"" targetVCName:@"HSCIHistoryVC"],
      [HSImageButton initWithTitle:@"Technology" rightImage:@"" targetVCName:@"HSCITechnologyVC"],
      [HSImageButton initWithTitle:@"Topics" rightImage:@"" targetVCName:@"HSCITopicsVC"],nil];
     

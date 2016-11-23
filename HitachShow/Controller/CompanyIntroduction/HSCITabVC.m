@@ -26,8 +26,8 @@
     NSDictionary *map = @{@"Company Profile":@"HSCICompanyProfileVC",
                           @"Development Base":@"HSCIDevelopmentBaseVC",
                           @"Manufacturing Base":@"HSCIManufacturingBaseVC",
-                          @"Sales/Service Stations":@"HSCICompanyProfileVC",
-                          @"History":@"HSCICompanyProfileVC",
+                          @"Sales/Service Stations":@"HSCISalesServiceVC",
+                          @"History":@"HSCIHistoryVC",
                           @"Technology":@"HSCITechnologyVC",
                           @"Topics":@"HSCITopicsVC"};
     for (NSString *key in self.titles) {
