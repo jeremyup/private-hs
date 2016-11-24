@@ -23,7 +23,7 @@
 - (void)setChildVC {
     NSDictionary *map = @{@"Company Introduction":@"HSCIMainVC",
                           @"Classic Project":@"HSCPMainVC",
-                          @"Product Introduction":@"HSPIMainVC",
+                          @"Product Introduction":@"HSPITabVC",
                           @"Maintenance":@"HSMaintenanceVC"};
     NSMutableArray *vcs = [[NSMutableArray alloc] init];
     for (NSString *key in self.titles) {

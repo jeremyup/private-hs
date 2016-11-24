@@ -19,6 +19,10 @@
 		3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22737B1DCC52B1003E421E /* HSLabel.m */; };
 		3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */; };
 		3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */; };
+		3F5C1EA61DE68B9E00B298F6 /* HSPIBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EA51DE68B9E00B298F6 /* HSPIBaseVC.m */; };
+		3F5C1EA91DE68BDD00B298F6 /* HSPIElevatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EA81DE68BDD00B298F6 /* HSPIElevatorVC.m */; };
+		3F5C1EAC1DE68C6F00B298F6 /* HSPIEscalatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EAB1DE68C6F00B298F6 /* HSPIEscalatorVC.m */; };
+		3F5C1EAF1DE68F2200B298F6 /* HSProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EAE1DE68F2200B298F6 /* HSProductView.m */; };
 		3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */; };
 		3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */; };
 		3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F716C231DDCB304009147EF /* HSDisplayInfo.m */; };
@@ -34,7 +38,7 @@
 		3F9203EC1DC38DCD007EB7B6 /* HSMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EA1DC38DCD007EB7B6 /* HSMainTabController.m */; };
 		3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */; };
 		3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */; };
-		3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */; };
+		3F9203F81DC391A3007EB7B6 /* HSPITabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */; };
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
 		3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */; };
 		3FCF05E31DE5B4B20098D292 /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05E21DE5B4B20098D292 /* dummy.jpg */; };
@@ -77,6 +81,14 @@
 		3F3D80661DC24B6B0074556C /* HitachShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitachShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FA51F1DE3EA210072DDE9 /* HSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoView.h; sourceTree = "<group>"; };
 		3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoView.m; sourceTree = "<group>"; };
+		3F5C1EA41DE68B9E00B298F6 /* HSPIBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIBaseVC.h; sourceTree = "<group>"; };
+		3F5C1EA51DE68B9E00B298F6 /* HSPIBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIBaseVC.m; sourceTree = "<group>"; };
+		3F5C1EA71DE68BDD00B298F6 /* HSPIElevatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIElevatorVC.h; sourceTree = "<group>"; };
+		3F5C1EA81DE68BDD00B298F6 /* HSPIElevatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIElevatorVC.m; sourceTree = "<group>"; };
+		3F5C1EAA1DE68C6F00B298F6 /* HSPIEscalatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIEscalatorVC.h; sourceTree = "<group>"; };
+		3F5C1EAB1DE68C6F00B298F6 /* HSPIEscalatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIEscalatorVC.m; sourceTree = "<group>"; };
+		3F5C1EAD1DE68F2200B298F6 /* HSProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSProductView.h; sourceTree = "<group>"; };
+		3F5C1EAE1DE68F2200B298F6 /* HSProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSProductView.m; sourceTree = "<group>"; };
 		3F676EE51DD0B7A9000AE782 /* HSCITechnologyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITechnologyVC.h; sourceTree = "<group>"; };
 		3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITechnologyVC.m; sourceTree = "<group>"; };
 		3F676EE81DD0B7C3000AE782 /* HSCITopicsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITopicsVC.h; sourceTree = "<group>"; };
@@ -106,8 +118,8 @@
 		3F9203EE1DC390C4007EB7B6 /* HSCIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIMainVC.m; sourceTree = "<group>"; };
 		3F9203F01DC390E5007EB7B6 /* HSCPMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPMainVC.h; sourceTree = "<group>"; };
 		3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPMainVC.m; sourceTree = "<group>"; };
-		3F9203F61DC391A3007EB7B6 /* HSPIMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPIMainVC.h; sourceTree = "<group>"; };
-		3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIMainVC.m; sourceTree = "<group>"; };
+		3F9203F61DC391A3007EB7B6 /* HSPITabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPITabVC.h; sourceTree = "<group>"; };
+		3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPITabVC.m; sourceTree = "<group>"; };
 		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
 		3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainVC.m; sourceTree = "<group>"; };
 		3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoPlayVC.h; sourceTree = "<group>"; };
@@ -204,6 +216,8 @@
 				3F22737B1DCC52B1003E421E /* HSLabel.m */,
 				3F3FA51F1DE3EA210072DDE9 /* HSVideoView.h */,
 				3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */,
+				3F5C1EAD1DE68F2200B298F6 /* HSProductView.h */,
+				3F5C1EAE1DE68F2200B298F6 /* HSProductView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,8 +342,14 @@
 		3F9203E51DC38C36007EB7B6 /* ProductIntroduction */ = {
 			isa = PBXGroup;
 			children = (
-				3F9203F61DC391A3007EB7B6 /* HSPIMainVC.h */,
-				3F9203F71DC391A3007EB7B6 /* HSPIMainVC.m */,
+				3F9203F61DC391A3007EB7B6 /* HSPITabVC.h */,
+				3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */,
+				3F5C1EA41DE68B9E00B298F6 /* HSPIBaseVC.h */,
+				3F5C1EA51DE68B9E00B298F6 /* HSPIBaseVC.m */,
+				3F5C1EA71DE68BDD00B298F6 /* HSPIElevatorVC.h */,
+				3F5C1EA81DE68BDD00B298F6 /* HSPIElevatorVC.m */,
+				3F5C1EAA1DE68C6F00B298F6 /* HSPIEscalatorVC.h */,
+				3F5C1EAB1DE68C6F00B298F6 /* HSPIEscalatorVC.m */,
 			);
 			path = ProductIntroduction;
 			sourceTree = "<group>";
@@ -502,17 +522,21 @@
 				3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */,
 				3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */,
 				3F16F8381DDB672900E26427 /* HSCITabVC.m in Sources */,
+				3F5C1EA91DE68BDD00B298F6 /* HSPIElevatorVC.m in Sources */,
 				3F8032E11DD0638B00C8BFCD /* HSBaseTopLogoVC.m in Sources */,
 				3F008F7A1DC251FB00F3C752 /* main.m in Sources */,
 				3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */,
+				3F5C1EA61DE68B9E00B298F6 /* HSPIBaseVC.m in Sources */,
 				3FCF05EB1DE5D6AE0098D292 /* HSCIHistoryVC.m in Sources */,
 				3F8032E21DD0638B00C8BFCD /* HSBaseVC.m in Sources */,
 				3F8032E31DD0638B00C8BFCD /* HSTabBarController.m in Sources */,
 				3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */,
+				3F5C1EAF1DE68F2200B298F6 /* HSProductView.m in Sources */,
 				3F8F93231DE48B6A00495180 /* HSCISalesServiceVC.m in Sources */,
 				3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */,
-				3F9203F81DC391A3007EB7B6 /* HSPIMainVC.m in Sources */,
+				3F9203F81DC391A3007EB7B6 /* HSPITabVC.m in Sources */,
 				3F87A2591DCB7B2700A18CE3 /* HSViewUtil.m in Sources */,
+				3F5C1EAC1DE68C6F00B298F6 /* HSPIEscalatorVC.m in Sources */,
 				3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */,
 				3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */,
 				3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */,

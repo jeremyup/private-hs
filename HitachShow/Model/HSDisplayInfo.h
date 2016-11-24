@@ -18,4 +18,11 @@
 @property(nonatomic,strong) NSString *videoPath;
 @property(nonatomic,strong) NSArray *subInfos;
 
+#pragma for product show
+@property(nonatomic,strong) NSString *detail;
+@property(nonatomic,strong) NSString *remark;
+@property(nonatomic,strong) NSString *productName;
+@property(nonatomic,strong) NSString *pdfPath;
+@property(nonatomic,strong) NSString *pptPath;
+
 @end
