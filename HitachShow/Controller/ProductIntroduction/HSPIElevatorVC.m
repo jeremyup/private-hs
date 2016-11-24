@@ -21,7 +21,7 @@
         HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
         info.image = @"";
         info.pdfPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"pdf"];
-        info.pptPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"ppt"];
+        info.pptPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"pptx"];
         info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
         info.productName = @"MACHINE ROOM-LESS ELEVATOR";
         info.detail = @"UAG-SN1";

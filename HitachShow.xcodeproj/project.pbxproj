@@ -23,6 +23,10 @@
 		3F5C1EA91DE68BDD00B298F6 /* HSPIElevatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EA81DE68BDD00B298F6 /* HSPIElevatorVC.m */; };
 		3F5C1EAC1DE68C6F00B298F6 /* HSPIEscalatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EAB1DE68C6F00B298F6 /* HSPIEscalatorVC.m */; };
 		3F5C1EAF1DE68F2200B298F6 /* HSProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1EAE1DE68F2200B298F6 /* HSProductView.m */; };
+		3F66977E1DE732290092311C /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F66977D1DE732290092311C /* QuickLook.framework */; };
+		3F6697811DE732490092311C /* HSPreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6697801DE732490092311C /* HSPreviewVC.m */; };
+		3F6697831DE733490092311C /* test.pptx in Resources */ = {isa = PBXBuildFile; fileRef = 3F6697821DE733490092311C /* test.pptx */; };
+		3F6697851DE734130092311C /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3F6697841DE734130092311C /* test.pdf */; };
 		3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */; };
 		3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F676EE91DD0B7C3000AE782 /* HSCITopicsVC.m */; };
 		3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F716C231DDCB304009147EF /* HSDisplayInfo.m */; };
@@ -89,6 +93,11 @@
 		3F5C1EAB1DE68C6F00B298F6 /* HSPIEscalatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPIEscalatorVC.m; sourceTree = "<group>"; };
 		3F5C1EAD1DE68F2200B298F6 /* HSProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSProductView.h; sourceTree = "<group>"; };
 		3F5C1EAE1DE68F2200B298F6 /* HSProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSProductView.m; sourceTree = "<group>"; };
+		3F66977D1DE732290092311C /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		3F66977F1DE732490092311C /* HSPreviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPreviewVC.h; sourceTree = "<group>"; };
+		3F6697801DE732490092311C /* HSPreviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPreviewVC.m; sourceTree = "<group>"; };
+		3F6697821DE733490092311C /* test.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.pptx; sourceTree = "<group>"; };
+		3F6697841DE734130092311C /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
 		3F676EE51DD0B7A9000AE782 /* HSCITechnologyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITechnologyVC.h; sourceTree = "<group>"; };
 		3F676EE61DD0B7A9000AE782 /* HSCITechnologyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCITechnologyVC.m; sourceTree = "<group>"; };
 		3F676EE81DD0B7C3000AE782 /* HSCITopicsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCITopicsVC.h; sourceTree = "<group>"; };
@@ -147,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F66977E1DE732290092311C /* QuickLook.framework in Frameworks */,
 				3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */,
 				3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */,
 				3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */,
@@ -161,6 +171,7 @@
 		19690E7CEE882B21572E1B84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F66977D1DE732290092311C /* QuickLook.framework */,
 				3FEE6F221DE34C8F00A097E9 /* CoreMedia.framework */,
 				3FEE6F1E1DE347FF00A097E9 /* AVFoundation.framework */,
 				3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */,
@@ -270,6 +281,8 @@
 		3F74C8CB1DE2F2590071758E /* videos */ = {
 			isa = PBXGroup;
 			children = (
+				3F6697841DE734130092311C /* test.pdf */,
+				3F6697821DE733490092311C /* test.pptx */,
 				3FCF05EC1DE5D95A0098D292 /* duihua.mp4 */,
 			);
 			path = videos;
@@ -364,6 +377,8 @@
 				3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */,
 				3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */,
 				3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */,
+				3F66977F1DE732490092311C /* HSPreviewVC.h */,
+				3F6697801DE732490092311C /* HSPreviewVC.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -450,10 +465,12 @@
 				3F7EFBF71DC9DFDB00845586 /* Logo@2x.png in Resources */,
 				3FCF05E51DE5BD090098D292 /* dummy2.jpg in Resources */,
 				3F7EFBF81DC9DFDB00845586 /* MainTabItemSelected@2x.png in Resources */,
+				3F6697831DE733490092311C /* test.pptx in Resources */,
 				3F008F821DC252C300F3C752 /* LaunchScreen.xib in Resources */,
 				3FCF05ED1DE5D95A0098D292 /* duihua.mp4 in Resources */,
 				3FCF05E31DE5B4B20098D292 /* dummy.jpg in Resources */,
 				3F008F7F1DC2528A00F3C752 /* Images.xcassets in Resources */,
+				3F6697851DE734130092311C /* test.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +561,7 @@
 				3F16F8401DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m in Sources */,
 				3F008F7D1DC2521E00F3C752 /* AppDelegate.m in Sources */,
 				3F8032DF1DD0638B00C8BFCD /* HSBaseContentVC.m in Sources */,
+				3F6697811DE732490092311C /* HSPreviewVC.m in Sources */,
 				3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 #import "HSProductView.h"
 #import "HSVideoPlayVC.h"
 #import "HSViewUtil.h"
+#import "HSPreviewVC.h"
 
 @interface HSProductView ()
 
@@ -136,19 +137,26 @@
 }
 
 - (void) showPPT {
-    // TODO
+    [self previewWithPath:_pptPath];
 }
 
 - (void) showPDF {
-    // TODO
+    [self previewWithPath:_pdfPath];
+}
+
+- (void) previewWithPath:(NSString *) path {
+    HSPreviewVC *preview = [[HSPreviewVC alloc] init];
+    preview.filePath = path;
+    UIViewController *vc = [HSViewUtil findViewController:self];
+    [vc presentViewController:preview animated:YES completion:nil];
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
