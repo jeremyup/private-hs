@@ -8,11 +8,11 @@
 
 #import "HSCISalesServiceVC.h"
 #import "HSDisplayInfo.h"
+#import "HSCISalesServiceSubVC.h"
 
 @interface HSCISalesServiceVC ()
 
 @property(nonatomic,strong) NSMutableArray *introductions;
-@property(nonatomic,strong) HSDisplayInfo *currentParent;
 
 @end
 
@@ -71,48 +71,11 @@
 }
 
 - (void) click:(UIButton *) sender {
-    _currentParent =  _introductions[sender.tag];
-    self.subTitle = _currentParent.title;
-    self.mainView.layer.contents = (id)[UIImage imageNamed:_currentParent.image].CGImage;
-    [self optViewChanged:_currentParent.subInfos];
-}
-
-- (void)optViewChanged:(NSArray *) infos{
-    for (UIView *v in [self.optView subviews]) {
-        [v removeFromSuperview];
-    }
-    NSInteger count = infos.count;
-    for (int i=0;i<count;i++) {
-        UIButton *btn = [[UIButton alloc] init];
-        [self.optView addSubview:btn];
-        HSDisplayInfo *info = infos[i];
-        [btn setTitle:info.btnText forState:UIControlStateNormal];
-        [btn sizeToFit];
-        [btn setTitleColor:HS_COLOR_BTN_BORDER_HSCICompanyProfileVC forState:UIControlStateNormal];
-        btn.tag = i;
-        btn.backgroundColor = [UIColor blackColor];
-        btn.layer.borderWidth = 1.5;
-        [btn makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.optView.centerX);
-            make.size.equalTo(CGSizeMake(143, 33));
-            make.top.equalTo(self.optView.top).offset(8 + 40 * i);
-        }];
-        [btn addTarget:self action:@selector(subBtnClick:) forControlEvents:UIControlEventTouchDown];
-    }
-}
-
-- (void) subBtnClick:(UIButton *) sender {
-    for (UIButton *btn in self.optView.subviews) {
-        if (btn.tag == sender.tag) {
-            btn.layer.borderColor = HS_COLOR_BTN_BORDER_HSCICompanyProfileVC.CGColor;
-        } else {
-            btn.layer.borderColor = [UIColor blackColor].CGColor;
-        }
-    }
-    
-    HSDisplayInfo *subInfo = _currentParent.subInfos[sender.tag];
-    self.subTitle = subInfo.title;
-    self.mainView.layer.contents = (id)[ UIImage imageNamed:subInfo.image].CGImage;
+    HSDisplayInfo *info = _introductions[sender.tag];
+    HSCISalesServiceSubVC *subVC = [[HSCISalesServiceSubVC alloc] init];
+    subVC.infos = info.subInfos;
+    subVC.image = info.image;
+    [self.navigationController pushViewController:subVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

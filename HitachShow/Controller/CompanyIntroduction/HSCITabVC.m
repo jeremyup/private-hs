@@ -7,8 +7,9 @@
 //
 
 #import "HSCITabVC.h"
+#import "HSBaseVC.h"
 
-@interface HSCITabVC ()
+@interface HSCITabVC () <UITabBarControllerDelegate>
 
 @end
 
@@ -18,7 +19,7 @@
     self.titles = [NSArray arrayWithObjects:@"Company Profile",@"Development Base",@"Manufacturing Base",@"Sales/Service Stations",@"History",@"Technology" ,@"Topics",nil];
 
     [super viewDidLoad];
-    
+    self.delegate = self;
     [self setChildVC];
 }
 
@@ -32,8 +33,17 @@
                           @"Topics":@"HSCITopicsVC"};
     for (NSString *key in self.titles) {
         NSString *vcName = map[key];
-        [self addChildViewController:[[NSClassFromString(vcName) alloc] init]];
+        HSBaseVC *vc = [[NSClassFromString(vcName) alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self addChildViewController:nav];
     }
+}
+
+- (void) setSelectedIndex:(NSUInteger)selectedIndex {
+    // Reset navigation to the root view on tab every time
+    UINavigationController *vc = self.childViewControllers[selectedIndex];
+    [vc popToRootViewControllerAnimated:YES];
+    [super setSelectedIndex:selectedIndex];
 }
 
 - (void)didReceiveMemoryWarning {

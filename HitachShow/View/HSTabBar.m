@@ -42,7 +42,7 @@
 - (void) tabClick:(UIButton *) sender {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     if ([currentVC isKindOfClass:[UITabBarController class]]) {
-        if (sender.tag != 2) {
+        if (![sender.titleLabel.text isEqualToString:@"Production Introduction"]) {
             UITabBarController *tab = (UITabBarController *) currentVC;
             [tab setSelectedIndex:sender.tag];
         } else {
