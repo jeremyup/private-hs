@@ -8,6 +8,7 @@
 
 #import "HSMainVC.h"
 #import "HSMainTabController.h"
+#import "HSPITabVC.h"
 
 
 @interface HSMainVC ()
@@ -58,9 +59,14 @@
 - (void) presentVC:(UIButton *) sender {
     NSInteger index = [sender tag];
     HSMainTabController *mainTabVC = [[HSMainTabController alloc] init];
-//    [mainTabVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    mainTabVC.selectedIndex = index;
-    [self presentViewController:mainTabVC animated:YES completion:nil];
+    if (index !=2) {
+        mainTabVC.selectedIndex = index;
+        [self presentViewController:mainTabVC animated:YES completion:nil];
+    } else {
+        // Production introduction do not like other tab page,need create new view
+        HSPITabVC *piTab = [[HSPITabVC alloc] init];
+        [self presentViewController:piTab animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

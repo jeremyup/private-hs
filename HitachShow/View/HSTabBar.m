@@ -8,6 +8,7 @@
 
 #import "HSTabBar.h"
 #import "HSViewUtil.h"
+#import "HSPITabVC.h"
 
 @implementation HSTabBar
 
@@ -41,8 +42,14 @@
 - (void) tabClick:(UIButton *) sender {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     if ([currentVC isKindOfClass:[UITabBarController class]]) {
-        UITabBarController *tab = (UITabBarController *) currentVC;
-        [tab setSelectedIndex:sender.tag];
+        if (sender.tag != 2) {
+            UITabBarController *tab = (UITabBarController *) currentVC;
+            [tab setSelectedIndex:sender.tag];
+        } else {
+            // Production introduction do not like other tab page,need create new view
+            HSPITabVC *piTab = [[HSPITabVC alloc] init];
+            [currentVC presentViewController:piTab animated:YES completion:nil];
+        }
     }
 }
 
