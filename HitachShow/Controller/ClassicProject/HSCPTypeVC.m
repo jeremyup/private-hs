@@ -7,6 +7,7 @@
 //
 
 #import "HSCPTypeVC.h"
+#import "HSImageButton.h"
 
 @interface HSCPTypeVC ()
 
@@ -17,7 +18,33 @@
 - (void)viewDidLoad {
     self.mainTitle = @"Project Gallery";
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self addSubviews];
+}
+
+-(void) addSubviews {
+    NSArray *areas = [NSArray arrayWithObjects:@"Mix",@"Office",@"Residence",
+                      @"Hotel",@"Shopping",@"Airport",@"Commercial",@"Others",@"", nil];
+    NSInteger count = areas.count;
+    
+    CGFloat width = 240;
+    CGFloat height = 120;
+    for (int i=0; i<count;i++) {
+        HSImageButton *btn = [[HSImageButton alloc] init];
+        btn.leftTitle = [areas objectAtIndex:i];
+        [self.view addSubview:btn];
+        [btn makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(width);
+            make.height.equalTo(height);
+            make.top.equalTo(self.view.top).offset(255 + height * (i/3));
+            make.left.equalTo(self.view.left).offset(100 + (i/3==1?width/2:0) + width * (i%3));
+        }];
+        btn.leftBtn.tag = i;
+        [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
+    }
+}
+
+-(void) tab:(UIButton *) sender {
+    // TODO
 }
 
 - (void)didReceiveMemoryWarning {

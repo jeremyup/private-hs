@@ -7,6 +7,7 @@
 //
 
 #import "HSCPAreaVC.h"
+#import "HSImageButton.h"
 
 @interface HSCPAreaVC ()
 
@@ -17,7 +18,32 @@
 - (void)viewDidLoad {
     self.mainTitle = @"Project Gallery";
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self addSubviews];
+}
+
+-(void) addSubviews {
+    NSArray *areas = [NSArray arrayWithObjects:@"East Asia",@"Southeast Asia",@"Southern Asia",@"West Asia\nMiddle Asia", nil];
+    NSInteger count = areas.count;
+    
+    CGFloat width = 321;
+    CGFloat height = 165;
+    for (int i=0; i<count;i++) {
+        HSImageButton *btn = [[HSImageButton alloc] init];
+        btn.leftTitle = [areas objectAtIndex:i];
+        [self.view addSubview:btn];
+        [btn makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(width);
+            make.height.equalTo(height);
+            make.top.equalTo(self.view.top).offset(255 + height * (i/2));
+            make.left.equalTo(self.view.left).offset(100 + width/2 * (i/2) + width * (i%2));
+        }];
+        btn.leftBtn.tag = i;
+        [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
+    }
+}
+
+-(void) tab:(UIButton *) sender {
+    // TODO
 }
 
 - (void)didReceiveMemoryWarning {

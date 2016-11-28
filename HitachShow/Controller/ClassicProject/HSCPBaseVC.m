@@ -30,7 +30,7 @@
         make.centerX.equalTo(self.view.centerX);
     }];
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning {

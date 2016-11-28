@@ -29,8 +29,8 @@
 - (void) addSubviews {
     _kv = @{@"Area":@"HSCPAreaVC",@"Building Type":@"HSCPTypeVC"};
     _keys = _kv.allKeys;
-    CGFloat width = 240.0;
-    CGFloat height = 126.0;
+    CGFloat width = 330;
+    CGFloat height = 168;
     for (int i=0;i<_keys.count;i++) {
         NSString *key = _keys[i];
         HSImageButton *imageBtn = [[HSImageButton alloc] init];
