@@ -42,7 +42,7 @@
 - (void) tabClick:(UIButton *) sender {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     if ([currentVC isKindOfClass:[UITabBarController class]]) {
-        if (![sender.titleLabel.text isEqualToString:@"Production Introduction"]) {
+        if (![sender.titleLabel.text isEqualToString:@"Product Introduction"]) {
             UITabBarController *tab = (UITabBarController *) currentVC;
             [tab setSelectedIndex:sender.tag];
         } else {
@@ -57,7 +57,7 @@
     UIButton *btn = [[UIButton alloc] initWithFrame:frame];
     btn.titleLabel.font = [UIFont systemFontOfSize:13 weight:0.5];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.layer.borderWidth = 2;
+    btn.layer.borderWidth = 1;
     btn.layer.borderColor = HS_COLOR_TAB_BORDER_HSMainTab.CGColor;
     [btn setTitle:title forState:UIControlStateNormal];
     btn.titleLabel.numberOfLines = 0;
