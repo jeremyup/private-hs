@@ -8,6 +8,8 @@
 
 #import "HSCPAreaVC.h"
 #import "HSImageButton.h"
+#import "HSCPAreaPartVC.h"
+#import "HSProject.h"
 
 @interface HSCPAreaVC ()
 
@@ -43,7 +45,19 @@
 }
 
 -(void) tab:(UIButton *) sender {
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:3];
+    for (int i=0;i<14;i++) {
+        HSProject *p = [[HSProject alloc] init];
+        p.name = @"CITIC Plaza,Guangzhou";
+        p.country = @"China";
+        p.image = @"";
+        [array addObject:p];
+    }
     // TODO
+    HSCPAreaPartVC *vc = [[HSCPAreaPartVC alloc] init];
+    vc.projects = array;
+    vc.areaName = @"The southeast Asia";
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
