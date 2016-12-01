@@ -17,10 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (!_mainTitle) {
+        _mainTitle = @"Project Gallery";
+    }
+    
     // title
     UILabel *title = [[UILabel alloc] init];
     [self.view addSubview:title];
-    title.text = @"Project Gallery";
+    title.text = _mainTitle;
     title.textAlignment = NSTextAlignmentCenter;
     title.font = [UIFont systemFontOfSize:30];
     title.textColor = [UIColor whiteColor];

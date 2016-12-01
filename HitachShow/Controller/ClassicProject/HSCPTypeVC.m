@@ -8,6 +8,8 @@
 
 #import "HSCPTypeVC.h"
 #import "HSImageButton.h"
+#import "HSProject.h"
+#import "HSCPTypePartVC.h"
 
 @interface HSCPTypeVC ()
 
@@ -44,7 +46,19 @@
 }
 
 -(void) tab:(UIButton *) sender {
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:3];
+    for (int i=0;i<14;i++) {
+        HSProject *p = [[HSProject alloc] init];
+        p.name = @"CITIC Plaza,Guangzhou";
+        p.country = @"China";
+        p.image = @"";
+        [array addObject:p];
+    }
     // TODO
+    HSCPTypePartVC *vc = [[HSCPTypePartVC alloc] init];
+    vc.projects = array;
+    vc.typeName = @"Mix";
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

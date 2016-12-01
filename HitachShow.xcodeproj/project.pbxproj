@@ -63,6 +63,7 @@
 		3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
 		3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
 		3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
+		3FFB9E961DF0656200ACD9F9 /* HSCPTypePartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */; };
 		BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,8 @@
 		3FFAA6751DE1867000FD9875 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		3FFAA6771DE1867900FD9875 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		3FFB9E941DF0656200ACD9F9 /* HSCPTypePartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPTypePartVC.h; sourceTree = "<group>"; };
+		3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypePartVC.m; sourceTree = "<group>"; };
 		54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitachShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -359,6 +362,8 @@
 				3F903BDF1DEF13CA00777388 /* HSCPAreaPartVC.m */,
 				3F5313911DEC114E005B8CC2 /* HSCPTypeVC.h */,
 				3F5313921DEC114E005B8CC2 /* HSCPTypeVC.m */,
+				3FFB9E941DF0656200ACD9F9 /* HSCPTypePartVC.h */,
+				3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */,
 			);
 			path = ClassicProject;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 			files = (
 				3F716C241DDCB304009147EF /* HSDisplayInfo.m in Sources */,
 				3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */,
+				3FFB9E961DF0656200ACD9F9 /* HSCPTypePartVC.m in Sources */,
 				3F903BE01DEF13CA00777388 /* HSCPAreaPartVC.m in Sources */,
 				3FCF05E81DE5BD640098D292 /* HSCIBaseVideoVC.m in Sources */,
 				3FCF05F11DE5E9EB0098D292 /* HSMaintenanceVC.m in Sources */,
