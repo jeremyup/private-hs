@@ -50,6 +50,8 @@
 		3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */; };
 		3F9203F81DC391A3007EB7B6 /* HSPITabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */; };
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
+		3FA375511DF084B300E4EDA5 /* HSCPTypeTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */; };
+		3FA375541DF0857B00E4EDA5 /* HSCPTypeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA375531DF0857B00E4EDA5 /* HSCPTypeTabBar.m */; };
 		3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */; };
 		3FB7E3911DE7DD0F007A33A9 /* HSCISalesServiceSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E3901DE7DD0F007A33A9 /* HSCISalesServiceSubVC.m */; };
 		3FCF05E31DE5B4B20098D292 /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05E21DE5B4B20098D292 /* dummy.jpg */; };
@@ -64,6 +66,8 @@
 		3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
 		3FEE6F291DE35C7B00A097E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6731DE1866400FD9875 /* libz.dylib */; };
 		3FFB9E961DF0656200ACD9F9 /* HSCPTypePartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */; };
+		3FFB9E991DF0719200ACD9F9 /* HSCPAreaTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB9E981DF0719200ACD9F9 /* HSCPAreaTabVC.m */; };
+		3FFB9E9C1DF0742D00ACD9F9 /* HSCPAreaTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB9E9B1DF0742D00ACD9F9 /* HSCPAreaTabBar.m */; };
 		BE19C03C4D822CD5153B9E9B /* libPods-HitachShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F848EEA07360639BEC005D3 /* libPods-HitachShow.a */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,10 @@
 		3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPITabVC.m; sourceTree = "<group>"; };
 		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
 		3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainVC.m; sourceTree = "<group>"; };
+		3FA3754F1DF084B300E4EDA5 /* HSCPTypeTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPTypeTabVC.h; sourceTree = "<group>"; };
+		3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypeTabVC.m; sourceTree = "<group>"; };
+		3FA375521DF0857B00E4EDA5 /* HSCPTypeTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPTypeTabBar.h; sourceTree = "<group>"; };
+		3FA375531DF0857B00E4EDA5 /* HSCPTypeTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypeTabBar.m; sourceTree = "<group>"; };
 		3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoPlayVC.h; sourceTree = "<group>"; };
 		3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoPlayVC.m; sourceTree = "<group>"; };
 		3FB7E38F1DE7DD0F007A33A9 /* HSCISalesServiceSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCISalesServiceSubVC.h; sourceTree = "<group>"; };
@@ -175,6 +183,10 @@
 		3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		3FFB9E941DF0656200ACD9F9 /* HSCPTypePartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPTypePartVC.h; sourceTree = "<group>"; };
 		3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypePartVC.m; sourceTree = "<group>"; };
+		3FFB9E971DF0719200ACD9F9 /* HSCPAreaTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPAreaTabVC.h; sourceTree = "<group>"; };
+		3FFB9E981DF0719200ACD9F9 /* HSCPAreaTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPAreaTabVC.m; sourceTree = "<group>"; };
+		3FFB9E9A1DF0742D00ACD9F9 /* HSCPAreaTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPAreaTabBar.h; sourceTree = "<group>"; };
+		3FFB9E9B1DF0742D00ACD9F9 /* HSCPAreaTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPAreaTabBar.m; sourceTree = "<group>"; };
 		54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitachShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HitachShow/Pods-HitachShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +262,10 @@
 			children = (
 				3F2B20A61DC602A700B2BBA4 /* HSTabBar.h */,
 				3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */,
+				3FFB9E9A1DF0742D00ACD9F9 /* HSCPAreaTabBar.h */,
+				3FFB9E9B1DF0742D00ACD9F9 /* HSCPAreaTabBar.m */,
+				3FA375521DF0857B00E4EDA5 /* HSCPTypeTabBar.h */,
+				3FA375531DF0857B00E4EDA5 /* HSCPTypeTabBar.m */,
 				3F1E72E91DCAD0A800B16341 /* HSImageButton.h */,
 				3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */,
 				3F22737A1DCC52B1003E421E /* HSLabel.h */,
@@ -360,10 +376,14 @@
 				3F53138F1DEC1115005B8CC2 /* HSCPAreaVC.m */,
 				3F903BDE1DEF13CA00777388 /* HSCPAreaPartVC.h */,
 				3F903BDF1DEF13CA00777388 /* HSCPAreaPartVC.m */,
+				3FFB9E971DF0719200ACD9F9 /* HSCPAreaTabVC.h */,
+				3FFB9E981DF0719200ACD9F9 /* HSCPAreaTabVC.m */,
 				3F5313911DEC114E005B8CC2 /* HSCPTypeVC.h */,
 				3F5313921DEC114E005B8CC2 /* HSCPTypeVC.m */,
 				3FFB9E941DF0656200ACD9F9 /* HSCPTypePartVC.h */,
 				3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */,
+				3FA3754F1DF084B300E4EDA5 /* HSCPTypeTabVC.h */,
+				3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */,
 			);
 			path = ClassicProject;
 			sourceTree = "<group>";
@@ -594,16 +614,20 @@
 				3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */,
 				3F5C1EA61DE68B9E00B298F6 /* HSPIBaseVC.m in Sources */,
 				3FCF05EB1DE5D6AE0098D292 /* HSCIHistoryVC.m in Sources */,
+				3FFB9E9C1DF0742D00ACD9F9 /* HSCPAreaTabBar.m in Sources */,
+				3FA375541DF0857B00E4EDA5 /* HSCPTypeTabBar.m in Sources */,
 				3F8032E21DD0638B00C8BFCD /* HSBaseVC.m in Sources */,
 				3F903BE61DEF273000777388 /* HSProject.m in Sources */,
 				3F8032E31DD0638B00C8BFCD /* HSTabBarController.m in Sources */,
 				3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */,
 				3F5C1EAF1DE68F2200B298F6 /* HSProductView.m in Sources */,
+				3FFB9E991DF0719200ACD9F9 /* HSCPAreaTabVC.m in Sources */,
 				3F8F93231DE48B6A00495180 /* HSCISalesServiceVC.m in Sources */,
 				3F5313931DEC114E005B8CC2 /* HSCPTypeVC.m in Sources */,
 				3F676EEA1DD0B7C3000AE782 /* HSCITopicsVC.m in Sources */,
 				3F9203F81DC391A3007EB7B6 /* HSPITabVC.m in Sources */,
 				3F87A2591DCB7B2700A18CE3 /* HSViewUtil.m in Sources */,
+				3FA375511DF084B300E4EDA5 /* HSCPTypeTabVC.m in Sources */,
 				3F5313961DEC1775005B8CC2 /* HSCPTabVC.m in Sources */,
 				3F5C1EAC1DE68C6F00B298F6 /* HSPIEscalatorVC.m in Sources */,
 				3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */,

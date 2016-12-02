@@ -12,4 +12,10 @@
 
 @property(strong,nonatomic) NSArray *titles;
 
+- (void) tabClick:(UIButton *) sender;
+
+- (UIButton *) customBtnWithTitle:(NSString *) title frame:(CGRect) frame;
+
+- (void) addButtons;
+
 @end

@@ -21,9 +21,14 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
+    [self addButtons];
+    [self addTopButton];
+}
+
+- (void) addButtons {
     int i = 0;
-    CGFloat x = 95;
-    CGFloat width = (AppWidth - x - 240)/7;
+    CGFloat x = 75;
+    CGFloat width = (AppWidth - x - 250)/7;
     for (UIView *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             [tabBarButton removeFromSuperview];
@@ -36,7 +41,6 @@
             i++;
         }
     }
-    [self addTopButton];
 }
 
 - (void) tabClick:(UIButton *) sender {
@@ -67,7 +71,7 @@
 }
 
 - (void) addTopButton {
-    CGRect frame = CGRectMake(7, (self.bounds.size.height - 40)/2, 80, 40);
+    CGRect frame = CGRectMake(7, (self.bounds.size.height - 40)/2, 60, 40);
     UIButton *topBtn = [self customBtnWithTitle:@"TOP" frame:frame];
     [self addSubview:topBtn];
     [topBtn addTarget:self action:@selector(topClick) forControlEvents:UIControlEventTouchDown];

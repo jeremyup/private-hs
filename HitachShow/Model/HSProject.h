@@ -18,4 +18,6 @@
 @property(nonatomic,strong) NSString *image;
 @property(nonatomic,strong) NSString *spec;
 
++ (NSArray *) listByArea:(NSString *) area;
+
 @end
