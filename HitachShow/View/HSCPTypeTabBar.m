@@ -22,7 +22,7 @@
             CGRect frame = CGRectMake(x, (self.bounds.size.height - 40)/2, width, 40);
             UIButton *tabBtn = [self customBtnWithTitle:self.titles[i] frame:frame];
             if ([self.titles[i] isEqualToString:@"Commercial"]) {
-                tabBtn.titleLabel.font = [UIFont systemFontOfSize:11 weight:0.5];
+                tabBtn.titleLabel.font = [UIFont systemFontOfSize:11 weight:1];
             }
             tabBtn.tag = i;
             [tabBtn addTarget:self action:@selector(tabClick:) forControlEvents:UIControlEventTouchDown];
