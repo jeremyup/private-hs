@@ -13,6 +13,8 @@
 - (instancetype) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _textInsets = UIEdgeInsetsZero;
+        self.numberOfLines = 0;
+        self.lineBreakMode = NSLineBreakByWordWrapping;
     }
     return self;
 }
