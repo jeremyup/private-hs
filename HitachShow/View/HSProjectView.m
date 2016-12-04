@@ -8,6 +8,8 @@
 
 #import "HSProjectView.h"
 #import "HSLabel.h"
+#import "HSViewUtil.h"
+#import "HSCPProjectVC.h"
 
 @interface HSProjectView ()
 
@@ -55,6 +57,17 @@
     _detailLabel.textColor = [UIColor blackColor];
     _detailLabel.font = [UIFont systemFontOfSize:10];
     _detailLabel.textAlignment = NSTextAlignmentCenter;
+    
+    // Click event
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click)];
+    [self addGestureRecognizer:tapGesture];
+}
+
+- (void) click {
+    UIViewController *currentVC = [HSViewUtil findViewController:self];
+    HSCPProjectVC *pVC = [[HSCPProjectVC alloc] init];
+    pVC.project = _project;
+    [currentVC.navigationController pushViewController:pVC animated:YES];
 }
 
 /*

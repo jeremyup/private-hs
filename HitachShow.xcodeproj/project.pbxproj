@@ -52,6 +52,7 @@
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
 		3FA375511DF084B300E4EDA5 /* HSCPTypeTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */; };
 		3FA375541DF0857B00E4EDA5 /* HSCPTypeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA375531DF0857B00E4EDA5 /* HSCPTypeTabBar.m */; };
+		3FA481461DF4171B00493E81 /* HSCPProjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA481451DF4171B00493E81 /* HSCPProjectVC.m */; };
 		3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */; };
 		3FB7E3911DE7DD0F007A33A9 /* HSCISalesServiceSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB7E3901DE7DD0F007A33A9 /* HSCISalesServiceSubVC.m */; };
 		3FCF05E31DE5B4B20098D292 /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05E21DE5B4B20098D292 /* dummy.jpg */; };
@@ -160,6 +161,8 @@
 		3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypeTabVC.m; sourceTree = "<group>"; };
 		3FA375521DF0857B00E4EDA5 /* HSCPTypeTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPTypeTabBar.h; sourceTree = "<group>"; };
 		3FA375531DF0857B00E4EDA5 /* HSCPTypeTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPTypeTabBar.m; sourceTree = "<group>"; };
+		3FA481441DF4171B00493E81 /* HSCPProjectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPProjectVC.h; sourceTree = "<group>"; };
+		3FA481451DF4171B00493E81 /* HSCPProjectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPProjectVC.m; sourceTree = "<group>"; };
 		3FA527B61DE4308C00813E07 /* HSVideoPlayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoPlayVC.h; sourceTree = "<group>"; };
 		3FA527B71DE4308C00813E07 /* HSVideoPlayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoPlayVC.m; sourceTree = "<group>"; };
 		3FB7E38F1DE7DD0F007A33A9 /* HSCISalesServiceSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCISalesServiceSubVC.h; sourceTree = "<group>"; };
@@ -384,6 +387,8 @@
 				3FFB9E951DF0656200ACD9F9 /* HSCPTypePartVC.m */,
 				3FA3754F1DF084B300E4EDA5 /* HSCPTypeTabVC.h */,
 				3FA375501DF084B300E4EDA5 /* HSCPTypeTabVC.m */,
+				3FA481441DF4171B00493E81 /* HSCPProjectVC.h */,
+				3FA481451DF4171B00493E81 /* HSCPProjectVC.m */,
 			);
 			path = ClassicProject;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 				3FCF05F11DE5E9EB0098D292 /* HSMaintenanceVC.m in Sources */,
 				3F9203EF1DC390C4007EB7B6 /* HSCIMainVC.m in Sources */,
 				3F8032DE1DD0638B00C8BFCD /* HSBaseBottomLogoVC.m in Sources */,
+				3FA481461DF4171B00493E81 /* HSCPProjectVC.m in Sources */,
 				3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */,
 				3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */,
 				3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */,

@@ -38,8 +38,8 @@
         HSCPAreaPartVC *vc = [[HSCPAreaPartVC alloc] init];
         vc.areaName = area;
         vc.projects = [HSProject listByArea:area];
-        
-        [vcs addObject:vc];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [vcs addObject:nav];
     }
     self.viewControllers = vcs;
 }

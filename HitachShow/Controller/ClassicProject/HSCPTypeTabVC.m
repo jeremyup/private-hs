@@ -39,8 +39,9 @@
         HSCPTypePartVC *vc = [[HSCPTypePartVC alloc] init];
         vc.typeName = type;
         vc.projects = [HSProject listByArea:type];
-        
-        [vcs addObject:vc];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+
+        [vcs addObject:nav];
     }
     self.viewControllers = vcs;
 }

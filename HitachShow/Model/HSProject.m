@@ -16,6 +16,7 @@
         HSProject *p = [[HSProject alloc] init];
         p.name = @"CITIC Plaza,Guangzhou";
         p.country = @"China";
+        p.use = @"Airport";
         p.image = @"";
         [array addObject:p];
     }
