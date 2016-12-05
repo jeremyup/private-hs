@@ -22,7 +22,7 @@
 
 - (void) addLogo {
     // Logo
-    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png" ]];
+    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
     [self.view addSubview:logo];
     [logo makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(120, 35));

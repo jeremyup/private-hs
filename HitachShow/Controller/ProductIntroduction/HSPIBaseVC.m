@@ -23,7 +23,7 @@
 
 - (void) addSubViews {
     // LOGO
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png" ]];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
     [self.view addSubview:logoView];
     [logoView makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(123.5);
