@@ -14,6 +14,7 @@
 @interface HSCPAreaTabVC ()
 
 @property(nonatomic,strong) NSArray *areas;
+@property(nonatomic,strong) NSDictionary *dic;
 
 @end
 
@@ -21,6 +22,10 @@
 
 - (void)viewDidLoad {
     _areas = [NSArray arrayWithObjects:@"East Asia",@"Southeast Asia",@"Southern Asia",@"West Asia\nMiddle Asia", nil];
+    _dic = @{@"East Asia":@"cp_area_part_bg_3_1_0.jpg",
+             @"Southeast Asia":@"cp_area_part_bg_3_2_0.jpg",
+             @"Southern Asia":@"cp_area_part_bg_3_3_0.jpg",
+             @"West Asia\nMiddle Asia":@"cp_area_part_bg_3_4_0.jpg"};
 
     [super viewDidLoad];
     
@@ -37,6 +42,7 @@
         NSString *area =  _areas[i];
         HSCPAreaPartVC *vc = [[HSCPAreaPartVC alloc] init];
         vc.areaName = area;
+        vc.background = [UIImage imageNamed:_dic[area]];
         vc.projects = [HSProject listByArea:area];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         [vcs addObject:nav];

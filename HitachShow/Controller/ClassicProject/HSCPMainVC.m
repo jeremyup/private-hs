@@ -22,11 +22,12 @@
 - (void)viewDidLoad {
     self.mainTitle = @"Project Gallery";
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.layer.contents = (id) [UIImage imageNamed:@"common_bg.jpg"].CGImage;
     [self addSubviews];
 }
 
 - (void) addSubviews {
+    NSArray *images = [[NSArray alloc] initWithObjects:@"cp_main_btn_3_1_Area.jpg",@"cp_main_btn_3_2_Building_type.jpg", nil];
     _kv = @{@"Area":@"HSCPAreaVC",@"Building Type":@"HSCPTypeVC"};
     _keys = _kv.allKeys;
     CGFloat width = 330;
@@ -36,6 +37,7 @@
         HSImageButton *imageBtn = [[HSImageButton alloc] init];
         [self.view addSubview:imageBtn];
         imageBtn.leftTitle = key;
+        imageBtn.rightImage = images[i];
         imageBtn.targetVCName = _kv[key];
         [imageBtn.leftBtn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         imageBtn.leftBtn.tag = i;

@@ -23,15 +23,26 @@
 }
 
 -(void) addSubviews {
-    NSArray *areas = [NSArray arrayWithObjects:@"Mix",@"Office",@"Residence",
-                      @"Hotel",@"Shopping",@"Airport",@"Commercial",@"Others",@"", nil];
+    NSDictionary *areas = @{@"Mix":@"cp_type_btn_4_1_Mix.jpg",
+                            @"Office":@"cp_type_btn_4_2_Office.jpg",
+                            @"Residence":@"cp_type_btn_4_3_Residence.jpg",
+                            @"Hotel":@"cp_type_btn_4_4_Hotel.jpg",
+                            @"Shopping":@"cp_type_btn_4_5_Shopping.jpg",
+                            @"Airport":@"cp_type_btn_4_6_Airport.jpg",
+                            @"Commercial":@"cp_type_btn_4_7_Commercial.jpg",
+                            @"Others":@"cp_type_btn_4_8_Others.jpg",
+                            @"":@""};
+    
+    NSArray *keys = [[NSArray alloc] initWithObjects:@"Mix",@"Office",@"Residence",@"Hotel",
+                     @"Shopping",@"Airport",@"Commercial",@"Others",@"",nil];
     NSInteger count = areas.count;
     
     CGFloat width = 240;
     CGFloat height = 120;
     for (int i=0; i<count;i++) {
         HSImageButton *btn = [[HSImageButton alloc] init];
-        btn.leftTitle = [areas objectAtIndex:i];
+        btn.leftTitle = [keys objectAtIndex:i];
+        btn.rightImage = areas[btn.leftTitle];
         [self.view addSubview:btn];
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(width);

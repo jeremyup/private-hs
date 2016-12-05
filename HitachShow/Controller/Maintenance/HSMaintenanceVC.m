@@ -27,7 +27,7 @@
     }
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.layer.contents = (id) [UIImage imageNamed:@"maintenance_bg.jpg"].CGImage;
     
     [self addSubviews];
 }

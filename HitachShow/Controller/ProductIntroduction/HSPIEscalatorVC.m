@@ -29,7 +29,6 @@
     self.products = array;
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {

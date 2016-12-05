@@ -23,14 +23,20 @@
 }
 
 -(void) addSubviews {
-    NSArray *areas = [NSArray arrayWithObjects:@"East Asia",@"Southeast Asia",@"Southern Asia",@"West Asia\nMiddle Asia", nil];
+    NSDictionary *areas = @{@"East Asia":@"cp_area_btn_3_1_1_East.jpg",
+                            @"Southeast Asia":@"cp_area_btn_3_1_2_The southeast.jpg",
+                            @"Southern Asia":@"cp_area_btn_3_1_3_Southern.jpg",
+                            @"West Asia\nMiddle Asia":@"cp_area_btn_3_1_4_West Asia.jpg"};
+    NSArray *keys = [[NSArray alloc] initWithObjects:@"East Asia",@"Southeast Asia",
+                     @"Southern Asia",@"West Asia\nMiddle Asia",nil];
+    
     NSInteger count = areas.count;
     
     CGFloat width = 321;
     CGFloat height = 165;
     for (int i=0; i<count;i++) {
         HSImageButton *btn = [[HSImageButton alloc] init];
-        btn.leftTitle = [areas objectAtIndex:i];
+        btn.leftTitle = [keys objectAtIndex:i];
         [self.view addSubview:btn];
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(width);
@@ -38,6 +44,7 @@
             make.top.equalTo(self.view.top).offset(255 + height * (i/2));
             make.left.equalTo(self.view.left).offset(100 + width/2 * (i/2) + width * (i%2));
         }];
+        btn.rightImage = areas[btn.leftTitle];
         btn.leftBtn.tag = i;
         [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
     }

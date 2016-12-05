@@ -24,18 +24,18 @@
     [self addSubviews];
     
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor grayColor]];
+    self.view.layer.contents = (id)[UIImage imageNamed:@"ci_main_bg.jpg"].CGImage;
 }
 
 - (void) initData {
     _btns = [NSArray arrayWithObjects:
-     [HSImageButton initWithTitle:@"Company Profile" rightImage:@"" targetVCName:@"HSCICompanyProfileVC"],
-     [HSImageButton initWithTitle:@"Development Base" rightImage:@"" targetVCName:@"HSCIDevelopmentBaseVC"],
-     [HSImageButton initWithTitle:@"Manufacturing Base" rightImage:@"" targetVCName:@"HSCIManufacturingBaseVC"],
-     [HSImageButton initWithTitle:@"Sales/Service Stations" rightImage:@"" targetVCName:@"HSCISalesServiceVC"],
-     [HSImageButton initWithTitle:@"History" rightImage:@"" targetVCName:@"HSCIHistoryVC"],
-     [HSImageButton initWithTitle:@"Technology" rightImage:@"" targetVCName:@"HSCITechnologyVC"],
-     [HSImageButton initWithTitle:@"Topics" rightImage:@"" targetVCName:@"HSCITopicsVC"],nil];
+     [HSImageButton initWithTitle:@"Company Profile" rightImage:@"ci_main_btn_2_1_Company Profile.jpg" targetVCName:@"HSCICompanyProfileVC"],
+     [HSImageButton initWithTitle:@"Development Base" rightImage:@"ci_main_btn_2_2_Developmentbase.jpg" targetVCName:@"HSCIDevelopmentBaseVC"],
+     [HSImageButton initWithTitle:@"Manufacturing Base" rightImage:@"ci_main_btn_2_3_Manufacturing.jpg" targetVCName:@"HSCIManufacturingBaseVC"],
+     [HSImageButton initWithTitle:@"Sales/Service Stations" rightImage:@"ci_main_btn_2_4_Sales.jpg" targetVCName:@"HSCISalesServiceVC"],
+     [HSImageButton initWithTitle:@"History" rightImage:@"ci_main_btn_2_5_History.jpg" targetVCName:@"HSCIHistoryVC"],
+     [HSImageButton initWithTitle:@"Technology" rightImage:@"ci_main_btn_2_6_Technology.jpg" targetVCName:@"HSCITechnologyVC"],
+     [HSImageButton initWithTitle:@"Topics" rightImage:@"ci_main_btn_2_7_Topics.jpg" targetVCName:@"HSCITopicsVC"],nil];
     
     _tabVC = [[HSCITabVC alloc] init];
 }

@@ -19,14 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.layer.contents = (id)[UIImage imageNamed:@"main_bg.jpg"].CGImage;
     
     [self addSubViews];
 }
 
 - (void) addSubViews {
     // LOGO
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png" ]];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
     [self.view addSubview:logoView];
     [logoView makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(123.5);
@@ -37,6 +37,10 @@
     
     
     // Four module
+    NSArray *btnImages = [NSArray arrayWithObjects:@"main_btn_company_introduction.png",
+                          @"main_btn_classic_project.png",
+                          @"main_btn_product_introduction.png",
+                          @"main_btn_maintenance.png" ,nil];
     CGFloat btnWidth = 180.5;
     CGFloat btnHeight = 338.0;
     CGFloat btnOffset = 100.0;
@@ -45,6 +49,7 @@
         UIButton *btn = [[UIButton alloc] init];
         [self.view addSubview:btn];
         btn.layer.borderWidth = 1;
+        [btn setImage:[UIImage imageNamed:btnImages[i]] forState:UIControlStateNormal];
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(btnWidth);
             make.height.equalTo(btnHeight);

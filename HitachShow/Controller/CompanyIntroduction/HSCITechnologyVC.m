@@ -27,7 +27,7 @@
     self.videoList = list;
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.layer.contents = (id) [UIImage imageNamed:@"common_bg.jpg"].CGImage;
 }
 
 - (void)didReceiveMemoryWarning {

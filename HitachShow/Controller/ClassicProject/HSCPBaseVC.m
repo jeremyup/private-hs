@@ -34,7 +34,7 @@
         make.centerX.equalTo(self.view.centerX);
     }];
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.layer.contents = (id) [UIImage imageNamed:@"common_bg.jpg"].CGImage;
 }
 
 - (void)didReceiveMemoryWarning {

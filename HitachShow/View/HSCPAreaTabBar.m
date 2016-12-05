@@ -8,7 +8,7 @@
 
 #import "HSCPAreaTabBar.h"
 #import "HSViewUtil.h"
-#import "HSCPMainVC.h"
+#import "HSMainTabController.h"
 #import "HSCPTabVC.h"
 
 @implementation HSCPAreaTabBar
@@ -63,7 +63,8 @@
 
 -(void) moduleTopClick {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
-    HSCPMainVC *cpMainVC = [[HSCPMainVC alloc] init];
+    HSMainTabController *cpMainVC = [[HSMainTabController alloc] init];
+    cpMainVC.selectedIndex = 1;
     [currentVC presentViewController:cpMainVC animated:YES completion:nil];
 }
 

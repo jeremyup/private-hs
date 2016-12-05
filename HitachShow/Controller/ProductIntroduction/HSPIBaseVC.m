@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSubViews];
+    self.view.layer.contents = (id) [UIImage imageNamed:@"pi_main_bg.jpg"].CGImage;
 }
 
 - (void) addSubViews {
