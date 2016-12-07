@@ -8,5 +8,6 @@ platform :ios, '8.0'
 target 'HitachShow' do
     pod 'Masonry'
     pod 'MobileVLCKit'
+    pod 'FMDB'
 end
 

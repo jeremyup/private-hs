@@ -97,6 +97,8 @@
 		3FCF05ED1DE5D95A0098D292 /* duihua.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3FCF05EC1DE5D95A0098D292 /* duihua.mp4 */; };
 		3FCF05F11DE5E9EB0098D292 /* HSMaintenanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCF05F01DE5E9EB0098D292 /* HSMaintenanceVC.m */; };
 		3FD176C61DEC7827000131E4 /* HSCPBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD176C51DEC7827000131E4 /* HSCPBaseVC.m */; };
+		3FE7DE5D1DF85FC20066BF88 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7DE5C1DF85FC20066BF88 /* data.db */; };
+		3FE7DE601DF860010066BF88 /* HSCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7DE5F1DF860010066BF88 /* HSCommonInfo.m */; };
 		3FEE6F261DE35C6400A097E9 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6791DE1868600FD9875 /* libstdc++.6.0.9.dylib */; };
 		3FEE6F271DE35C6E00A097E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6771DE1867900FD9875 /* libiconv.dylib */; };
 		3FEE6F281DE35C7600A097E9 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFAA6751DE1867000FD9875 /* libbz2.dylib */; };
@@ -248,6 +250,9 @@
 		3FCF05F01DE5E9EB0098D292 /* HSMaintenanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMaintenanceVC.m; sourceTree = "<group>"; };
 		3FD176C41DEC7827000131E4 /* HSCPBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPBaseVC.h; sourceTree = "<group>"; };
 		3FD176C51DEC7827000131E4 /* HSCPBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCPBaseVC.m; sourceTree = "<group>"; };
+		3FE7DE5C1DF85FC20066BF88 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
+		3FE7DE5E1DF860010066BF88 /* HSCommonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCommonInfo.h; sourceTree = "<group>"; };
+		3FE7DE5F1DF860010066BF88 /* HSCommonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCommonInfo.m; sourceTree = "<group>"; };
 		3FEE6F1E1DE347FF00A097E9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3FEE6F221DE34C8F00A097E9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3FFAA6731DE1866400FD9875 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -314,6 +319,8 @@
 				3F716C231DDCB304009147EF /* HSDisplayInfo.m */,
 				3F903BE41DEF273000777388 /* HSProject.h */,
 				3F903BE51DEF273000777388 /* HSProject.m */,
+				3FE7DE5E1DF860010066BF88 /* HSCommonInfo.h */,
+				3FE7DE5F1DF860010066BF88 /* HSCommonInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +328,7 @@
 		3F008F741DC2517100F3C752 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3FEBB4D91DF7F83D0075BE79 /* data */,
 				3F74C8CB1DE2F2590071758E /* videos */,
 				3F7EFBF41DC9DFDB00845586 /* images */,
 				3F008F801DC252C300F3C752 /* LaunchScreen.xib */,
@@ -583,6 +591,15 @@
 			path = Maintenance;
 			sourceTree = "<group>";
 		};
+		3FEBB4D91DF7F83D0075BE79 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3FE7DE5C1DF85FC20066BF88 /* data.db */,
+			);
+			name = data;
+			path = images/data;
+			sourceTree = "<group>";
+		};
 		AB9CF02B0EFF46701AB9F05F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,6 +697,7 @@
 				3F87846A1DF56C0C007AD738 /* pi_main_bg@2x.jpg in Resources */,
 				3F8106E41DF5B4EF0051DFBB /* cp_type_btn_4_4_Hotel@2x.jpg in Resources */,
 				3F8784581DF56337007AD738 /* ci_main_bg@2x.jpg in Resources */,
+				3FE7DE5D1DF85FC20066BF88 /* data.db in Resources */,
 				3F8784681DF56A6B007AD738 /* common_bg@2x.jpg in Resources */,
 				3F8106E21DF5B4EF0051DFBB /* cp_type_btn_4_2_Office@2x.jpg in Resources */,
 				3F8784621DF5667F007AD738 /* ci_main_btn_2_3_Manufacturing@2x.jpg in Resources */,
@@ -774,6 +792,7 @@
 				3FB7E3911DE7DD0F007A33A9 /* HSCISalesServiceSubVC.m in Sources */,
 				3F008F7A1DC251FB00F3C752 /* main.m in Sources */,
 				3F676EE71DD0B7A9000AE782 /* HSCITechnologyVC.m in Sources */,
+				3FE7DE601DF860010066BF88 /* HSCommonInfo.m in Sources */,
 				3F5C1EA61DE68B9E00B298F6 /* HSPIBaseVC.m in Sources */,
 				3FCF05EB1DE5D6AE0098D292 /* HSCIHistoryVC.m in Sources */,
 				3FFB9E9C1DF0742D00ACD9F9 /* HSCPAreaTabBar.m in Sources */,

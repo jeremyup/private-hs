@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BABBAA9A1BE7E2C80C4BF53AAD771884'
+               BlueprintIdentifier = '76A487BDC27A07D2B31C09A79D144C56'
                BlueprintName = 'Pods-HitachShow'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-HitachShow.a'>

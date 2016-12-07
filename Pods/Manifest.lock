@@ -1,15 +1,20 @@
 PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - Masonry (1.0.0)
   - MobileVLCKit (2.2.2)
 
 DEPENDENCIES:
+  - FMDB
   - Masonry
   - MobileVLCKit
 
 SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MobileVLCKit: be4986cf67802826b9c4e185a1157be72ed460f9
 
-PODFILE CHECKSUM: cac5edebbfacb11ff30114a3ac4f30f1b3159d03
+PODFILE CHECKSUM: 9f89197d379503225d4566ef7d1eb1d4cc60ff96
 
 COCOAPODS: 1.1.1
