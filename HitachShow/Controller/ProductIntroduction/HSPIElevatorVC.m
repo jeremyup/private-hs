@@ -16,19 +16,7 @@
 
 - (void)viewDidLoad {
     self.topTitle = @"Product Introduction [Elevator]";
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
-    for (int i=0;i<4;i++) {
-        HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
-        info.image = @"";
-        info.pdfPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"pdf"];
-        info.pptPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"pptx"];
-        info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
-        info.productName = @"MACHINE ROOM-LESS ELEVATOR";
-        info.detail = @"UAG-SN1";
-        info.remark = @"[STANDARD MODEL]";
-        [array addObject:info];
-    }
-    self.products = array;
+    self.products = [[HSCommonInfo shared] findByCategory:@"ci-pi-el"];
     
     [super viewDidLoad];
 }

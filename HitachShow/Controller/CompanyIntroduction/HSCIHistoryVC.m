@@ -7,7 +7,7 @@
 //
 
 #import "HSCIHistoryVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSCIHistoryVC ()
 
@@ -18,13 +18,9 @@
 - (void)viewDidLoad {
     self.mainTitle = @"History";
     
-    NSMutableArray *list = [NSMutableArray arrayWithCapacity:2];
-    for (int i=0; i<2; i++) {
-        HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
-        info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
-        [list addObject:info];
-    }
-    self.videoList = list;
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    // Content from DB
+    self.videoList = [commonInfo findByCategory:@"ci-h"];
     
     [super viewDidLoad];
     self.view.layer.contents = (id) [UIImage imageNamed:@"ci_history_bg.jpg"].CGImage;

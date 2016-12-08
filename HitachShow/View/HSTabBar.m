@@ -9,6 +9,7 @@
 #import "HSTabBar.h"
 #import "HSViewUtil.h"
 #import "HSPITabVC.h"
+#import "HSMainVC.h"
 
 @implementation HSTabBar
 
@@ -79,7 +80,8 @@
 
 - (void) topClick {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
-    [currentVC dismissViewControllerAnimated:YES completion:nil];
+    HSMainVC *mainVC = [[HSMainVC alloc] init];
+    [currentVC presentViewController:mainVC animated:YES completion:nil];
 }
 
 @end

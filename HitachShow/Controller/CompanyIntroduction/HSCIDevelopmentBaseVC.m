@@ -32,7 +32,7 @@
     _introductions = [commonInfo findByCategory:@"ci-db"];
     
     [super viewDidLoad];
-    // Company profile main image
+    // Development base main image
     self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-2"].picture].CGImage;
 }
 
@@ -77,6 +77,7 @@
     
     // Buttons
     NSInteger count = _introductions.count;
+    count = count > 6 ? 6 : count;
     for (int i=0; i<count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         [self.optView addSubview:btn];
@@ -110,9 +111,11 @@
     _introduction.text = ci.text1;
     _topImage.image = [UIImage imageNamed:ci.picture];
 
-    _movie.hidden = NO;
-    // TODO
-//    _movie.videoPath = ci.video;
+    if (ci.video != nil) {
+        _movie.hidden = NO;
+        NSArray *array = [ci.video componentsSeparatedByString:@"."];
+        _movie.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,12 +7,12 @@
 //
 
 #import "HSCISalesServiceVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 #import "HSCISalesServiceSubVC.h"
 
 @interface HSCISalesServiceVC ()
 
-@property(nonatomic,strong) NSMutableArray *introductions;
+@property(nonatomic,strong) NSArray *introductions;
 
 @end
 
@@ -20,46 +20,34 @@
 
 - (void)viewDidLoad {
     self.titleText = @"Sales/Service Stations";
-    // Dummy TODO
-    _introductions = [NSMutableArray arrayWithCapacity:4];
-    for (int i=0;i<4;i++) {
-        HSDisplayInfo *entity = [[HSDisplayInfo alloc] init];
-        entity.image = @"dummy.jpg";
-        entity.title = [NSString stringWithFormat:@"%d", i ];
-        entity.btnText = [NSString stringWithFormat:@"%d", i ];
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:10];
-        for (int k=0; k<10; k++) {
-            HSDisplayInfo *e = [[HSDisplayInfo alloc] init];
-            e.image = @"dummy2.jpg";
-            e.title = [NSString stringWithFormat:@"%d", k ];
-            e.btnText = [NSString stringWithFormat:@"%d", k ];
-            [array addObject:e];
-            
-        }
-        entity.subInfos = array;
-        [_introductions addObject:entity];
+    
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    // Content from DB
+    _introductions = [commonInfo findByCategory:@"ci-ss"];
+    NSInteger count = _introductions.count;
+    count = count > 6 ? 6 : count;
+    for (int i=0;i<count;i++) {
+        HSCommonInfo *entity = _introductions[i];
+        entity.subInfos = [commonInfo findByCategory:entity.ID];
     }
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-4"].picture].CGImage;
 }
 
 - (void) addSubviews {
     [super addSubviews];
-    
-    // TODO
-    self.mainView.layer.contents = (id)[UIImage imageNamed:@""].CGImage;
     
     // Buttons
     NSInteger count = _introductions.count;
     for (int i=0; i<count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         [self.optView addSubview:btn];
-        HSDisplayInfo *ci = _introductions[i];
+        HSCommonInfo *ci = _introductions[i];
         btn.layer.borderWidth = 1.5;
         btn.backgroundColor = [UIColor blackColor];
         [btn setTitleColor:HS_COLOR_BTN_BORDER_HSCICompanyProfileVC forState:UIControlStateNormal];
         [btn sizeToFit];
-        [btn setTitle:ci.btnText forState:UIControlStateNormal];
+        [btn setTitle:ci.name forState:UIControlStateNormal];
         btn.tag = i;
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         [btn makeConstraints:^(MASConstraintMaker *make) {
@@ -71,10 +59,10 @@
 }
 
 - (void) click:(UIButton *) sender {
-    HSDisplayInfo *info = _introductions[sender.tag];
+    HSCommonInfo *info = _introductions[sender.tag];
     HSCISalesServiceSubVC *subVC = [[HSCISalesServiceSubVC alloc] init];
     subVC.infos = info.subInfos;
-    subVC.image = info.image;
+    subVC.image = info.picture;
     [self.navigationController pushViewController:subVC animated:YES];
 }
 

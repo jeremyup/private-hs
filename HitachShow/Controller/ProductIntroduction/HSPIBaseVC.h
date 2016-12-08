@@ -7,7 +7,7 @@
 //
 
 #import "HSBaseVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSPIBaseVC : HSBaseVC
 

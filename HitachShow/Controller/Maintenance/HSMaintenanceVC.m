@@ -7,24 +7,20 @@
 //
 
 #import "HSMaintenanceVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 #import "HSVideoView.h"
 
 @interface HSMaintenanceVC ()
 
-@property(nonatomic,strong) NSMutableArray *videoList;
+@property(nonatomic,strong) NSArray *videoList;
 
 @end
 
 @implementation HSMaintenanceVC
 
 - (void)viewDidLoad {
-    _videoList = [NSMutableArray arrayWithCapacity:25];
-    for (int i=0; i<30; i++) {
-        HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
-        info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
-        [_videoList addObject:info];
-    }
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    _videoList = [commonInfo findByCategory:@"ci-m"];
     
     [super viewDidLoad];
     self.view.layer.contents = (id) [UIImage imageNamed:@"maintenance_bg.jpg"].CGImage;
@@ -73,10 +69,11 @@
     
     // If the number of video becomes large,the stack maybe over flow!
     for (int i=0; i<count; i++) {
-        HSDisplayInfo *info = _videoList[i];
+        HSCommonInfo *info = _videoList[i];
         HSVideoView *vv = [[HSVideoView alloc] init];
         [videoPanel addSubview:vv];
-        vv.videoPath = info.videoPath;
+        NSArray *array = [info.video componentsSeparatedByString:@"."];
+        vv.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
         vv.displayTitle = NO;
         
         [vv makeConstraints:^(MASConstraintMaker *make) {

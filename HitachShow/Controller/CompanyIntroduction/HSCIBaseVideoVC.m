@@ -8,7 +8,7 @@
 
 #import "HSCIBaseVideoVC.h"
 #import "HSVideoView.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSCIBaseVideoVC ()
 
@@ -38,11 +38,13 @@
     // Video thumb
     CGFloat spacing = AppWidth - 280 * 2 - 145 * 2;
     NSInteger count = _videoList.count;
+    count = count > 2 ? 2 : count;
     for (int i=0; i<count;i++) {
-        HSDisplayInfo *info = _videoList[i];
+        HSCommonInfo *info = _videoList[i];
         HSVideoView *vv = [[HSVideoView alloc] init];
         [self.view addSubview:vv];
-        vv.videoPath = info.videoPath;
+        NSArray *array = [info.video componentsSeparatedByString:@"."];
+        vv.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
         vv.displayTitle = YES;
         [vv makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.view.centerY);

@@ -7,7 +7,7 @@
 //
 
 #import "HSCISalesServiceSubVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSCISalesServiceSubVC ()
 
@@ -30,11 +30,12 @@
     
     // Buttons
     NSInteger count = _infos.count;
+    count = count > 10 ? 10 : count;
     for (int i=0;i<count;i++) {
         UIButton *btn = [[UIButton alloc] init];
         [self.optView addSubview:btn];
-        HSDisplayInfo *info = _infos[i];
-        [btn setTitle:info.btnText forState:UIControlStateNormal];
+        HSCommonInfo *info = _infos[i];
+        [btn setTitle:info.name forState:UIControlStateNormal];
         [btn sizeToFit];
         [btn setTitleColor:HS_COLOR_BTN_BORDER_HSCICompanyProfileVC forState:UIControlStateNormal];
         btn.tag = i;
@@ -58,9 +59,9 @@
         }
     }
     
-    HSDisplayInfo *subInfo = _infos[sender.tag];
+    HSCommonInfo *subInfo = _infos[sender.tag];
     self.subTitle = subInfo.title;
-    self.mainView.layer.contents = (id)[ UIImage imageNamed:subInfo.image].CGImage;
+    self.mainView.layer.contents = (id)[ UIImage imageNamed:subInfo.picture].CGImage;
 }
 
 - (void)didReceiveMemoryWarning {

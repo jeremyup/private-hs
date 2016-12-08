@@ -29,6 +29,8 @@
 @property(nonatomic,strong) NSString *pdf;
 @property(nonatomic,strong) NSString *ppt;
 
+@property(nonatomic,strong) NSArray *subInfos;
+
 + (HSCommonInfo *) shared;
 
 - (NSArray *) findByCategory:(NSString *) category;

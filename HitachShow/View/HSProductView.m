@@ -60,6 +60,7 @@
     // Show pdf
     [_pdfBtn addTarget:self action:@selector(showPDF) forControlEvents:UIControlEventTouchDown];
     _pdfBtn.backgroundColor = [UIColor grayColor];
+    [_pdfBtn setImage:[UIImage imageNamed:@"pi_btn_pdf.png"] forState:UIControlStateNormal];
     [_pdfBtn makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_productImage.bottom).offset(6);
         make.left.equalTo(self.left).offset(15);
@@ -69,6 +70,7 @@
     // Show ppt
     [_pptBtn addTarget:self action:@selector(showPPT) forControlEvents:UIControlEventTouchDown];
     _pptBtn.backgroundColor = [UIColor grayColor];
+    [_pptBtn setImage:[UIImage imageNamed:@"pi_btn_ppt.png"] forState:UIControlStateNormal];
     [_pptBtn makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_pdfBtn.top);
         make.left.equalTo(_pdfBtn.right).offset(40);
@@ -77,6 +79,7 @@
     
     // Video play
     _videoBtn.backgroundColor = [UIColor grayColor];
+    [_videoBtn setImage:[UIImage imageNamed:@"pi_btn_video.png"] forState:UIControlStateNormal];
     [_videoBtn addTarget:self action:@selector(playVideo) forControlEvents:UIControlEventTouchDown];
     [_videoBtn makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_pptBtn.top);

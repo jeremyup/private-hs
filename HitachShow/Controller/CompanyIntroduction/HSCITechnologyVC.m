@@ -7,7 +7,7 @@
 //
 
 #import "HSCITechnologyVC.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSCITechnologyVC ()
 
@@ -18,13 +18,9 @@
 - (void)viewDidLoad {
     self.mainTitle = @"Technology";
     
-    NSMutableArray *list = [NSMutableArray arrayWithCapacity:2];
-    for (int i=0; i<2; i++) {
-        HSDisplayInfo *info = [[HSDisplayInfo alloc] init];
-        info.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
-        [list addObject:info];
-    }
-    self.videoList = list;
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    // Content from DB
+    self.videoList = [commonInfo findByCategory:@"ci-ty"];
     
     [super viewDidLoad];
     self.view.layer.contents = (id) [UIImage imageNamed:@"common_bg.jpg"].CGImage;

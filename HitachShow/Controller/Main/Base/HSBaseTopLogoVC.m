@@ -21,14 +21,14 @@
 }
 
 - (void) addLogo {
-    UIImageView *logoView = [[UIImageView alloc] init];
+    // LOGO
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
     [self.view addSubview:logoView];
-    logoView.backgroundColor = [UIColor whiteColor];
     [logoView makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(155);
-        make.height.equalTo(134);
-        make.left.equalTo(self.view.left).offset(89);
-        make.top.equalTo(self.view.top);
+        make.width.equalTo(123.5);
+        make.height.equalTo(35.5);
+        make.left.equalTo(self.view.left).offset(17);
+        make.top.equalTo(self.view.top).offset(30);
     }];
 }
 

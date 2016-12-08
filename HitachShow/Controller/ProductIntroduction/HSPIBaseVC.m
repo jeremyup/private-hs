@@ -60,17 +60,20 @@
     NSInteger count = _products.count;
     CGFloat spacing = (AppWidth - 130 - 235 * 3)/2+235;
     for (int i=0; i<count; i++) {
-        HSDisplayInfo *product = _products[i];
+        HSCommonInfo *product = _products[i];
         HSProductView *pw = [[HSProductView alloc] init];
         [productPanel addSubview:pw];
         
-        pw.image = [UIImage imageNamed:product.image];
-        pw.pdfPath = product.pdfPath;
-        pw.pptPath = product.pptPath;
-        pw.videoPath = product.videoPath;
-        pw.productName = product.productName;
-        pw.detail = product.detail;
-        pw.remark = product.remark;
+        pw.image = [UIImage imageNamed:product.picture];
+        pw.pdfPath = product.pdf;
+        pw.pptPath = product.ppt;
+        if (product.video != nil) {
+            NSArray *a = [product.video componentsSeparatedByString:@"."];
+            pw.videoPath = [[NSBundle mainBundle] pathForResource:a[0] ofType:a[1]];
+        }
+        pw.productName = product.name;
+        pw.detail = product.text1;
+        pw.remark = product.text2;
         
         [pw makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(productPanel.left).offset(spacing*i);
