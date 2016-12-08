@@ -8,7 +8,7 @@
 
 #import "HSCIDevelopmentBaseVC.h"
 #import "HSLabel.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 #import "HSVideoView.h"
 
 
@@ -17,7 +17,7 @@
 @property(nonatomic,strong) UIImageView *topImage;
 @property(nonatomic,strong) HSLabel *introduction;
 @property(nonatomic,strong) HSVideoView *movie;
-@property(nonatomic,strong) NSMutableArray *introductions;
+@property(nonatomic,strong) NSArray *introductions;
 
 @end
 
@@ -26,19 +26,14 @@
 
 - (void)viewDidLoad {
     self.titleText = @"Development base";
-    // Dummy TODO
-    _introductions = [NSMutableArray arrayWithCapacity:6];
-    for (int i=0;i<6;i++) {
-        HSDisplayInfo *entity = [[HSDisplayInfo alloc] init];
-        entity.introduction = @"VOA Associates Incorporated is delighted to announce that we have joined Stantec. We are now part of a team that unites approximately 22,000 employees working in over 400 locations across six continents. ";
-        entity.image = @"";
-        entity.title = [NSString stringWithFormat:@"%d", i ];
-        entity.btnText = [NSString stringWithFormat:@"%d", i ];
-        entity.videoPath = [[NSBundle mainBundle] pathForResource:@"duihua" ofType:@"mp4"];
-        [_introductions addObject:entity];
-    }
+    
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    // Content from DB
+    _introductions = [commonInfo findByCategory:@"ci-db"];
     
     [super viewDidLoad];
+    // Company profile main image
+    self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-2"].picture].CGImage;
 }
 
 - (void) addSubviews {
@@ -85,12 +80,12 @@
     for (int i=0; i<count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         [self.optView addSubview:btn];
-        HSDisplayInfo *ci = _introductions[i];
+        HSCommonInfo *ci = _introductions[i];
         btn.layer.borderWidth = 1.5;
         btn.backgroundColor = [UIColor blackColor];
         [btn setTitleColor:HS_COLOR_BTN_BORDER_HSCICompanyProfileVC forState:UIControlStateNormal];
         [btn sizeToFit];
-        [btn setTitle:ci.btnText forState:UIControlStateNormal];
+        [btn setTitle:ci.name forState:UIControlStateNormal];
         btn.tag = i;
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         [btn makeConstraints:^(MASConstraintMaker *make) {
@@ -109,15 +104,15 @@
             btn.layer.borderColor = [UIColor blackColor].CGColor;
         }
     }
-    self.mainView.backgroundColor = [UIColor clearColor];
-    HSDisplayInfo *ci = _introductions[sender.tag];
+    self.mainView.layer.contents = nil;
+    HSCommonInfo *ci = _introductions[sender.tag];
     self.subTitle = ci.title;
-    _introduction.text = ci.introduction;
-    _topImage.image = [UIImage imageNamed:ci.image];
-    _topImage.backgroundColor = [UIColor grayColor];
+    _introduction.text = ci.text1;
+    _topImage.image = [UIImage imageNamed:ci.picture];
 
     _movie.hidden = NO;
-    _movie.videoPath = ci.videoPath;
+    // TODO
+//    _movie.videoPath = ci.video;
 }
 
 - (void)didReceiveMemoryWarning {

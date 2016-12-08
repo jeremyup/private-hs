@@ -8,14 +8,14 @@
 
 #import "HSCICompanyProfileVC.h"
 #import "HSLabel.h"
-#import "HSDisplayInfo.h"
+#import "HSCommonInfo.h"
 
 @interface HSCICompanyProfileVC ()
 
 @property(nonatomic,strong) UIImageView *topImage;
 @property(nonatomic,strong) HSLabel *introduction;
 @property(nonatomic,strong) HSLabel *info;
-@property(nonatomic,strong) NSMutableArray *introductions;
+@property(nonatomic,strong) NSArray *introductions;
 
 
 @end
@@ -24,19 +24,14 @@
 
 - (void)viewDidLoad {
     self.titleText = @"Company";
-    // Dummy TODO
-    _introductions = [NSMutableArray arrayWithCapacity:6];
-    for (int i=0;i<6;i++) {
-        HSDisplayInfo *entity = [[HSDisplayInfo alloc] init];
-        entity.introduction = @"VOA Associates Incorporated is delighted to announce that we have joined Stantec. We are now part of a team that unites approximately 22,000 employees working in over 400 locations across six continents. This is an exceptional growth opportunity for us. More importantly, it offers our clients with the benefits and opportunities of working with a top ten global design firm.";
-        entity.info = @"North Side\n3121 North Milwaukee Avenue\nChicago, IL 60618\n+17735885781\n\n\nNorth Side\n3121 North Milwaukee Avenue\nChicago, IL 60618\n+17735885781";
-        entity.image = @"";
-        entity.title = [NSString stringWithFormat:@"%d", i ];
-        entity.btnText = [NSString stringWithFormat:@"%d", i ];;
-        [_introductions addObject:entity];
-    }
+    
+    HSCommonInfo *commonInfo = [HSCommonInfo shared];
+    // Content from DB
+    _introductions = [commonInfo findByCategory:@"ci-cp"];
     
     [super viewDidLoad];
+    // Company profile main image
+    self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-1"].picture].CGImage;
 }
 
 - (void) addSubviews {
@@ -71,7 +66,6 @@
     _info.numberOfLines = 0;
     _info.textColor = [UIColor whiteColor];
     _info.font = [UIFont systemFontOfSize:12 weight:0.5];
-    _info.layer.borderWidth = 1;
     _info.textInsets = UIEdgeInsetsMake(0, 0, 0, 30);
     [_info makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_introduction.bottom);
@@ -82,15 +76,17 @@
     
     // Buttons
     NSInteger count = _introductions.count;
+    // Limit count !> 6
+    count = count > 6 ? 6 : count;
     for (int i=0; i<count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         [self.optView addSubview:btn];
-        HSDisplayInfo *ci = _introductions[i];
+        HSCommonInfo *ci = _introductions[i];
         btn.layer.borderWidth = 1.5;
         btn.backgroundColor = [UIColor blackColor];
         [btn setTitleColor:HS_COLOR_BTN_BORDER_HSCICompanyProfileVC forState:UIControlStateNormal];
         [btn sizeToFit];
-        [btn setTitle:ci.btnText forState:UIControlStateNormal];
+        [btn setTitle:ci.name forState:UIControlStateNormal];
         btn.tag = i;
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         [btn makeConstraints:^(MASConstraintMaker *make) {
@@ -109,13 +105,12 @@
             btn.layer.borderColor = [UIColor blackColor].CGColor;
         }
     }
-    self.mainView.backgroundColor = [UIColor clearColor];
-    HSDisplayInfo *ci = _introductions[sender.tag];
+    self.mainView.layer.contents = nil;
+    HSCommonInfo *ci = _introductions[sender.tag];
     self.subTitle = ci.title;
-    _introduction.text = ci.introduction;
-    _info.text = ci.info;
-    _topImage.image = [UIImage imageNamed:ci.image];
-    _topImage.backgroundColor = [UIColor grayColor];
+    _introduction.text = ci.text1;
+    _info.text = ci.text2;
+    _topImage.image = [UIImage imageNamed:ci.picture];
 }
 
 - (void)didReceiveMemoryWarning {
