@@ -8,6 +8,7 @@
 
 #import "HSPIBaseVC.h"
 #import "HSProductView.h"
+#import "HSResUtil.h"
 
 @interface HSPIBaseVC ()
 
@@ -65,12 +66,9 @@
         [productPanel addSubview:pw];
         
         pw.image = [UIImage imageNamed:product.picture];
-        pw.pdfPath = product.pdf;
-        pw.pptPath = product.ppt;
-        if (product.video != nil) {
-            NSArray *a = [product.video componentsSeparatedByString:@"."];
-            pw.videoPath = [[NSBundle mainBundle] pathForResource:a[0] ofType:a[1]];
-        }
+        pw.pdfPath = [HSResUtil pathWithFileName:product.pdf];
+        pw.pptPath = [HSResUtil pathWithFileName:product.ppt];
+        pw.videoPath = [HSResUtil pathWithFileName:product.video];
         pw.productName = product.name;
         pw.detail = product.text1;
         pw.remark = product.text2;

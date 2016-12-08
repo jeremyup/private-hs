@@ -9,6 +9,7 @@
 #import "HSMaintenanceVC.h"
 #import "HSCommonInfo.h"
 #import "HSVideoView.h"
+#import "HSResUtil.h"
 
 @interface HSMaintenanceVC ()
 
@@ -72,8 +73,7 @@
         HSCommonInfo *info = _videoList[i];
         HSVideoView *vv = [[HSVideoView alloc] init];
         [videoPanel addSubview:vv];
-        NSArray *array = [info.video componentsSeparatedByString:@"."];
-        vv.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
+        vv.videoPath = [HSResUtil pathWithFileName:info.video];
         vv.displayTitle = NO;
         
         [vv makeConstraints:^(MASConstraintMaker *make) {

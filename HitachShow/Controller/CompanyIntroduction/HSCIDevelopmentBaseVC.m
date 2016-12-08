@@ -10,6 +10,7 @@
 #import "HSLabel.h"
 #import "HSCommonInfo.h"
 #import "HSVideoView.h"
+#import "HSResUtil.h"
 
 
 @interface HSCIDevelopmentBaseVC ()
@@ -113,8 +114,7 @@
 
     if (ci.video != nil) {
         _movie.hidden = NO;
-        NSArray *array = [ci.video componentsSeparatedByString:@"."];
-        _movie.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
+        _movie.videoPath = [HSResUtil pathWithFileName:ci.video];
     }
 }
 

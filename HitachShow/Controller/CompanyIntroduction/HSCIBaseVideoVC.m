@@ -9,6 +9,7 @@
 #import "HSCIBaseVideoVC.h"
 #import "HSVideoView.h"
 #import "HSCommonInfo.h"
+#import "HSResUtil.h"
 
 @interface HSCIBaseVideoVC ()
 
@@ -43,8 +44,7 @@
         HSCommonInfo *info = _videoList[i];
         HSVideoView *vv = [[HSVideoView alloc] init];
         [self.view addSubview:vv];
-        NSArray *array = [info.video componentsSeparatedByString:@"."];
-        vv.videoPath = [[NSBundle mainBundle] pathForResource:array[0] ofType:array[1]];
+        vv.videoPath = [HSResUtil pathWithFileName:info.video];
         vv.displayTitle = YES;
         [vv makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.view.centerY);

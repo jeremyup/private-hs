@@ -140,10 +140,12 @@
 }
 
 - (void) showPPT {
+    if (!_pptPath) {return;}
     [self previewWithPath:_pptPath];
 }
 
 - (void) showPDF {
+    if (!_pdfPath) {return;}
     [self previewWithPath:_pdfPath];
 }
 
