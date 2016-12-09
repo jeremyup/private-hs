@@ -15,7 +15,6 @@
 
 @property(nonatomic,strong) UIImageView *thumb;
 @property(nonatomic,strong) UILabel *title;
-@property(nonatomic,strong) VLCMediaThumbnailer *thumbnailer;
 
 @end
 
@@ -27,8 +26,6 @@
         [self addSubview:_thumb];
         _title = [[UILabel alloc] init];
         [self addSubview:_title];
-        _thumbnailer = [[VLCMediaThumbnailer alloc] init];
-        _thumbnailer.delegate = self;
     }
     return self;
 }

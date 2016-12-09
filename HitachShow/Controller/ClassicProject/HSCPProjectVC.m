@@ -23,7 +23,7 @@
     [super viewDidLoad];
 
     _keys = [NSArray arrayWithObjects:@"Project Name",@"Distributor",@"Specification",@"Year of Completion", nil];
-    _values = [NSArray arrayWithObjects:_project.name ,_project.distributor,_project.spec,_project.yearOfCompletion, nil];
+    _values = [NSArray arrayWithObjects:_project.name ,_project.distributor,_project.spec,_project.completeYear, nil];
 }
 
 - (void) addSubviews {
@@ -46,7 +46,7 @@
     // Building use label
     HSLabel *useLabel = [[HSLabel alloc] init];
     [self.view addSubview:useLabel];
-    useLabel.text = _project.use;
+    useLabel.text = _project.type;
     useLabel.textColor = [UIColor whiteColor];
     useLabel.font = [UIFont systemFontOfSize:24 weight:0.5];
     useLabel.textAlignment = NSTextAlignmentCenter;
@@ -60,7 +60,7 @@
     // Project image
     UIImageView *projectImage = [[UIImageView alloc] init];
     [self.view addSubview:projectImage];
-    projectImage.image = [UIImage imageNamed: _project.image];
+    projectImage.image = [UIImage imageNamed: _project.picture];
     [projectImage makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mainView.centerX);
         make.size.equalTo(CGSizeMake(530, 403));

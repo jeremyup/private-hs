@@ -7,7 +7,7 @@
 //
 
 #import "HSCPTypeTabVC.h"
-#import "HSProject.h"
+#import "HSCommonInfo.h"
 #import "HSCPTypePartVC.h"
 #import "HSCPTypeTabBar.h"
 
@@ -34,11 +34,19 @@
 
 - (void)setChildVC {
     NSMutableArray *vcs = [[NSMutableArray alloc] init];
+//    NSDictionary *categores = @{@"Mix":@"ci-cp-2-1",
+//                                @"Office":@"ci-cp-2-2",
+//                                @"Residence":@"ci-cp-2-3",
+//                                @"Hotel":@"ci-cp-2-4",
+//                                @"Shopping":@"ci-cp-2-5",
+//                                @"Airport":@"ci-cp-2-6",
+//                                @"Commercial":@"ci-cp-2-7",
+//                                @"Others":@"ci-cp-2-8"};
     for (int i=0; i<_types.count; i++) {
         NSString *type =  _types[i];
         HSCPTypePartVC *vc = [[HSCPTypePartVC alloc] init];
         vc.typeName = type;
-        vc.projects = [HSProject listByArea:type];
+        vc.projects = [[HSCommonInfo shared] findByType:type];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
 
         [vcs addObject:nav];

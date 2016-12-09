@@ -9,7 +9,7 @@
 #import "HSCPAreaTabVC.h"
 #import "HSCPAreaTabBar.h"
 #import "HSCPAreaPartVC.h"
-#import "HSProject.h"
+#import "HSCommonInfo.h"
 
 @interface HSCPAreaTabVC ()
 
@@ -37,13 +37,17 @@
 }
 
 - (void)setChildVC {
+//    NSDictionary *categories = @{@"East Asia":@"ci-cp-1-1",
+//                                 @"Southeast Asia":@"ci-cp-1-2",
+//                                 @"Southern Asia":@"ci-cp-1-3",
+//                                 @"West Asia\nMiddle Asia":@"ci-cp-1-4"};
     NSMutableArray *vcs = [[NSMutableArray alloc] init];
     for (int i=0; i<_areas.count; i++) {
         NSString *area =  _areas[i];
         HSCPAreaPartVC *vc = [[HSCPAreaPartVC alloc] init];
         vc.areaName = area;
         vc.background = [UIImage imageNamed:_dic[area]];
-        vc.projects = [HSProject listByArea:area];
+        vc.projects = [[HSCommonInfo shared] findByArea:area];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         [vcs addObject:nav];
     }

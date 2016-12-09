@@ -33,7 +33,7 @@
     
     // Image
     [self addSubview:_projectImage];
-    _projectImage.image = [UIImage imageNamed:_project.image];
+    _projectImage.image = [UIImage imageNamed:_project.picture];
     _projectImage.backgroundColor = [UIColor whiteColor];
     [_projectImage makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.top);

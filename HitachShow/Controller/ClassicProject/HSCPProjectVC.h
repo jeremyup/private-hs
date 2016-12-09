@@ -7,10 +7,10 @@
 //
 
 #import "HSBaseContentVC.h"
-#import "HSProject.h"
+#import "HSCommonInfo.h"
 
 @interface HSCPProjectVC : HSBaseContentVC
 
-@property(nonatomic,strong) HSProject *project;
+@property(nonatomic,strong) HSCommonInfo *project;
 
 @end

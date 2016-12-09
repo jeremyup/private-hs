@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HSProject.h"
+#import "HSCommonInfo.h"
 
 @interface HSProjectView : UIView
 
-@property(nonatomic,strong) HSProject *project;
+@property(nonatomic,strong) HSCommonInfo *project;
 
 @end
