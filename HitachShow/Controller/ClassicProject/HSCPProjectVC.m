@@ -98,7 +98,7 @@
     }];
     clientLabel.layer.borderWidth = 1;
     clientLabel.layer.borderColor = [UIColor whiteColor].CGColor;
-    clientLabel.text = @"Courtesy of Civil Aviation authority of Singapore";
+//    clientLabel.text = @"Courtesy of Civil Aviation authority of Singapore";
     clientLabel.font = [UIFont systemFontOfSize:14];
     clientLabel.backgroundColor = [UIColor clearColor];
     clientLabel.textAlignment = NSTextAlignmentCenter;

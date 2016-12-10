@@ -52,9 +52,9 @@
     _subTitleLabel.numberOfLines = 0;
     _subTitleLabel.font = [UIFont systemFontOfSize:20 weight:0.5];
     [_subTitleLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(titleLabel.left).offset(70);
+        make.centerX.equalTo(titleLabel.centerX);
         make.bottom.equalTo(titleLabel.bottom).offset(-60);
-        make.size.equalTo(CGSizeMake(90, 70));
+        make.size.equalTo(CGSizeMake(180, 70));
     }];
     
     // Bottom border

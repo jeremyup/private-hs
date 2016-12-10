@@ -60,7 +60,7 @@
     [_introduction makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_topImage.bottom).offset(20);
         make.left.equalTo(_topImage.left);
-        make.width.equalTo(330);
+        make.width.equalTo(380);
         make.height.equalTo(150);
     }];
     
@@ -92,7 +92,7 @@
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.optView.centerX);
-            make.size.equalTo(CGSizeMake(143, 33));
+            make.size.equalTo(CGSizeMake(160, 33));
             make.top.equalTo(self.optView.top).offset(17 + 50 * i);
         }];
     }
