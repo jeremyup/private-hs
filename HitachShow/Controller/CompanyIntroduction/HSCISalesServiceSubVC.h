@@ -11,6 +11,6 @@
 @interface HSCISalesServiceSubVC : HSBaseContentVC
 
 @property(nonatomic,strong) NSArray *infos;
-@property(nonatomic,strong) NSString *image;
+@property(nonatomic,strong) UIImage *image;
 
 @end

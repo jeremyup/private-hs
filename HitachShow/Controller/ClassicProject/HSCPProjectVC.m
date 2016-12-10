@@ -60,7 +60,7 @@
     // Project image
     UIImageView *projectImage = [[UIImageView alloc] init];
     [self.view addSubview:projectImage];
-    projectImage.image = [UIImage imageNamed: _project.picture];
+    projectImage.image = [HSResUtil imageNamed: _project.picture];
     [projectImage makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mainView.centerX);
         make.size.equalTo(CGSizeMake(530, 403));

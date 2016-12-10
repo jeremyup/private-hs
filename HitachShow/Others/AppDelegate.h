@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  HitachShow
 //
-//  Created by Jeremy .
+//  Created by Jeremy on 2016.
 //  Copyright (c) 2016年 hitach. All rights reserved.
 //
 

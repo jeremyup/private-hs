@@ -31,7 +31,7 @@
     
     [super viewDidLoad];
     // Company profile main image
-    self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-1"].picture].CGImage;
+    self.mainView.layer.contents = (id)[HSResUtil imageNamed:[commonInfo findByID:@"ci-1"].picture].CGImage;
 }
 
 - (void) addSubviews {
@@ -110,7 +110,7 @@
     self.subTitle = ci.title;
     _introduction.text = ci.text1;
     _info.text = ci.text2;
-    _topImage.image = [UIImage imageNamed:ci.picture];
+    _topImage.image = [HSResUtil imageNamed:ci.picture];
 }
 
 - (void)didReceiveMemoryWarning {

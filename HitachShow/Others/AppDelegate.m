@@ -2,13 +2,14 @@
 //  AppDelegate.m
 //  HitachShow
 //
-//  Created by Jeremy .
+//  Created by Jeremy on 2016.
 //  Copyright (c) 2016年 hitach. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "HSMainVC.h"
 #import "HSMainTabController.h"
+#import "HSInitUtil.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
+    [HSInitUtil appInit];
+    
     HSMainVC *mainVC = [[HSMainVC alloc] init];
     self.window.rootViewController = mainVC;
     

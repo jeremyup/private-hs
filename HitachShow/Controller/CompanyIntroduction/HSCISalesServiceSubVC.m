@@ -25,8 +25,7 @@
 - (void) addSubviews {
     [super addSubviews];
     
-    // TODO
-    self.mainView.layer.contents = (id)[UIImage imageNamed:_image].CGImage;
+    self.mainView.layer.contents = (id)_image.CGImage;
     
     // Buttons
     NSInteger count = _infos.count;
@@ -61,7 +60,7 @@
     
     HSCommonInfo *subInfo = _infos[sender.tag];
     self.subTitle = subInfo.title;
-    self.mainView.layer.contents = (id)[ UIImage imageNamed:subInfo.picture].CGImage;
+    self.mainView.layer.contents = (id)[ HSResUtil imageNamed:subInfo.picture].CGImage;
 }
 
 - (void)didReceiveMemoryWarning {

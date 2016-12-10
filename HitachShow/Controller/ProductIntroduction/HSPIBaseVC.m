@@ -65,7 +65,7 @@
         HSProductView *pw = [[HSProductView alloc] init];
         [productPanel addSubview:pw];
         
-        pw.image = [UIImage imageNamed:product.picture];
+        pw.image = [HSResUtil imageNamed:product.picture];
         pw.pdfPath = [HSResUtil pathWithFileName:product.pdf];
         pw.pptPath = [HSResUtil pathWithFileName:product.ppt];
         pw.videoPath = [HSResUtil pathWithFileName:product.video];

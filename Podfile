@@ -9,5 +9,6 @@ target 'HitachShow' do
     pod 'Masonry'
     pod 'MobileVLCKit'
     pod 'FMDB'
+    pod 'ZipArchive'
 end
 

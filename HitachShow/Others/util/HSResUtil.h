@@ -2,7 +2,7 @@
 //  HSResUtil.h
 //  HitachShow
 //
-//  Created by Jeremy .
+//  Created by Jeremy on 2016.
 //  Copyright (c) 2016年 hitach. All rights reserved.
 //
 
@@ -11,5 +11,9 @@
 @interface HSResUtil : NSObject
 
 + (NSString *) pathWithFileName:(NSString *) fileName;
+
++ (void) initResource;
+
++ (UIImage *) imageNamed:(NSString *) name;
 
 @end

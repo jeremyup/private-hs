@@ -31,7 +31,7 @@
         entity.subInfos = [commonInfo findByCategory:entity.ID];
     }
     [super viewDidLoad];
-    self.mainView.layer.contents = (id)[UIImage imageNamed:[commonInfo findByID:@"ci-4"].picture].CGImage;
+    self.mainView.layer.contents = (id)[HSResUtil imageNamed:[commonInfo findByID:@"ci-4"].picture].CGImage;
 }
 
 - (void) addSubviews {
@@ -62,7 +62,7 @@
     HSCommonInfo *info = _introductions[sender.tag];
     HSCISalesServiceSubVC *subVC = [[HSCISalesServiceSubVC alloc] init];
     subVC.infos = info.subInfos;
-    subVC.image = info.picture;
+    subVC.image = [HSResUtil imageNamed: info.picture];
     [self.navigationController pushViewController:subVC animated:YES];
 }
 
