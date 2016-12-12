@@ -7,6 +7,7 @@
 //
 
 #import "HSCommonInfo.h"
+#import <objc/message.h>
 
 @implementation HSCommonInfo
 
@@ -90,6 +91,27 @@ static HSCommonInfo *_instance;
     commonInfo.area = [resultSet stringForColumn:@"area"];
     
     return commonInfo;
+}
+
+- (HSCommonInfo *) initWithDictionary:(NSDictionary *) dictionary {
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList([HSCommonInfo class], &outCount);
+    for (i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
+        id value = [dictionary objectForKey:propName];
+        if (value) {
+            [self setValue:value forKey:propName];
+        }
+    }
+    
+    return self;
+}
+
+- (void) saveOrUpdate {
+    [self writeDefaultDBWithTask:^(FMDatabase *db, BOOL *rollback) {
+        [db executeUpdate:@"replace into hs_common_info values(:ID,:category,:name,:title,:picture,:text1,:text2,:video,:ppt,:pdf,:country,:type,:spec,:distributor,:completeYear,:area);" withParameterObject:self];
+    }];
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "HSMainVC.h"
 #import "HSMainTabController.h"
-#import "HSInitUtil.h"
+#import "HSAppUtil.h"
 
 @interface AppDelegate ()
 
@@ -21,10 +21,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [HSInitUtil appInit];
+    [HSAppUtil appInit];
     
     HSMainVC *mainVC = [[HSMainVC alloc] init];
     self.window.rootViewController = mainVC;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [HSAppUtil checkResourceVersion];
+    });
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

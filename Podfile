@@ -10,5 +10,6 @@ target 'HitachShow' do
     pod 'MobileVLCKit'
     pod 'FMDB'
     pod 'ZipArchive'
+    pod 'AFNetworking','2.5.4'
 end
 

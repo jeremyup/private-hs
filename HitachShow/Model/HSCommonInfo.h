@@ -34,6 +34,8 @@
 
 + (HSCommonInfo *) shared;
 
+- (HSCommonInfo *) initWithDictionary:(NSDictionary *) dictionary;
+
 - (NSArray *) findByCategory:(NSString *) category;
 
 // For classic project module
@@ -41,5 +43,6 @@
 - (NSArray *) findByType:(NSString *) type;
 
 - (HSCommonInfo *) findByID:(NSString *) ID;
+- (void) saveOrUpdate;
 
 @end

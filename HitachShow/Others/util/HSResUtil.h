@@ -16,4 +16,7 @@
 
 + (UIImage *) imageNamed:(NSString *) name;
 
+// path is zip's full path
++ (void) updateResourceWithPath:(NSString *) path;
+
 @end

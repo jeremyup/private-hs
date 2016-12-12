@@ -9,6 +9,7 @@
 #import "HSResUtil.h"
 #import "HSFileUtil.h"
 #import "ZipArchive.h"
+#import "HSCommonInfo.h"
 
 @implementation HSResUtil
 
@@ -38,6 +39,30 @@
         [HSFileUtil removeWithPath:filePath];
     }
     
+}
+
+// Unzip and update DB
++ (void) updateResourceWithPath:(NSString *) path {
+    ZipArchive *zipArchive = [[ZipArchive alloc] init];
+    BOOL open = [zipArchive UnzipOpenFile:path];
+    if (open) {
+        [zipArchive UnzipFileTo:[HSFileUtil documentPathWithName:@""] overWrite:YES];
+        [zipArchive UnzipCloseFile];
+    }
+    
+    NSString *infoFileName = [[path.lastPathComponent stringByDeletingPathExtension] stringByAppendingPathExtension:@"data"];
+    BOOL exist = [HSFileUtil fileExistInDocWithName:infoFileName];
+    if (exist) {
+        // Read file and update DB
+        NSString *dataFilePath = [HSFileUtil documentPathWithName:infoFileName];
+        NSData *data = [NSData dataWithContentsOfFile:dataFilePath];
+        NSError *error;
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        for (NSDictionary *dic in array) {
+            HSCommonInfo *commonInfo = [[HSCommonInfo alloc] initWithDictionary:dic];
+            [commonInfo saveOrUpdate];
+        }
+    }
 }
 
 + (UIImage *) imageNamed:(NSString *) name {

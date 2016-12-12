@@ -9,6 +9,8 @@
 #ifndef HitachShow_HSDefine_h
 #define HitachShow_HSDefine_h
 
+#define AppServer @"http://localhost:8090/has"
+
 // screen setting
 #define AppWidth                      [[UIScreen mainScreen] bounds].size.width
 #define AppHeight                     [[UIScreen mainScreen] bounds].size.height

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
+#import "FMDatabase+HSPersistence.h"
 
 @interface HSModel : NSObject
 
