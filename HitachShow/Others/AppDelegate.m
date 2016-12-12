@@ -26,12 +26,12 @@
     HSMainVC *mainVC = [[HSMainVC alloc] init];
     self.window.rootViewController = mainVC;
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [HSAppUtil checkResourceVersion];
-    });
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[HSAppUtil alloc] checkResourceVersion];
+    });
     
     return YES;
 }

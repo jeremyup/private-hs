@@ -10,6 +10,7 @@
 #import "HSDBUtil.h"
 #import "HSResUtil.h"
 #import "AFNetworking.h"
+#import "HSAlertView.h"
 
 NSString * const INIT_FLAG = @"INIT_FLAG";
 NSString * const DEFAULT_VERSION = @"V1.0";
@@ -29,37 +30,38 @@ NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
     }
 }
 
-+ (void) checkResourceVersion {
-    NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:RESOURCE_VERSION];
-    if (!currentVersion) {
-        currentVersion = DEFAULT_VERSION;
-    }
-    [HSAppUtil updateWithVersion:currentVersion];
-}
-
-+ (void) updateWithVersion:(NSString *) version {
+- (void) checkResourceVersion {
+    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSString *url = [AppServer stringByAppendingFormat:@"/api/version?v=%@",version];
+    NSString *url = [AppServer stringByAppendingFormat:@"/api/version?v=%@",[HSAppUtil currentVersion]];
     NSURL *URL = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (!error) {
             NSArray *array = responseObject;
-            for (NSDictionary *kv in array) {
-                [HSAppUtil downloadAndUpdate:kv[@"url"]];
+            if (array.count > 0) {
+                HSAlertView *alert = [[HSAlertView alloc] initWithTitle:nil message:@"There is a new version,whether to update?" cancelButtonTitle:@"Cancel" otherButtonTitles:@"Sure" block:^(NSInteger buttonIndex) {
+                    if (buttonIndex == 1) {
+                        for (NSDictionary *dic in array) {
+                            [self downloadAndUpdate:dic[@"url"]];
+                        }
+                    }
+                }];
+                [alert show];
             }
         } else {
-            NSLog(@"Error: %@", error);
+            NSLog(@"Resource data can't be updated cause network error!");
+            //            NSLog(@"Error: %@", error)
         }
     }];
     [dataTask resume];
 }
 
 // Download resource,unzip and update database
-+ (void) downloadAndUpdate:(NSString *) url {
+- (void) downloadAndUpdate:(NSString *) url {
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
@@ -79,6 +81,14 @@ NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
         }
     }];
     [downloadTask resume];
+}
+
++ (NSString *) currentVersion {
+    NSString *currentVersion = [[NSUserDefaults standardUserDefaults] objectForKey:RESOURCE_VERSION];
+    if (!currentVersion) {
+        currentVersion = DEFAULT_VERSION;
+    }
+    return currentVersion;
 }
 
 @end

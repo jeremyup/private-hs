@@ -16,20 +16,25 @@
 + (NSString *) pathWithFileName:(NSString *) fileName {
     NSString *path = nil;
     if (fileName != nil) {
-        path = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension] ofType:[fileName pathExtension]];
+        path = [HSFileUtil documentPathWithName:fileName];
     }
     return path;
 }
 
 + (void) initResource {
-    NSString *fileName = @"default-imgs.zip";
+    NSString *fileName = @"V1.0.zip";
     BOOL done = [HSFileUtil copyFromBundleToDocDirWithName:fileName];
     // unzip default resource
     ZipArchive *zipArchive = [[ZipArchive alloc] init];
-    BOOL open = [zipArchive UnzipOpenFile:[HSFileUtil documentPathWithName:fileName]];
+    NSString *defaultDocPath = [HSFileUtil documentPathWithName:fileName];
+    BOOL open = [zipArchive UnzipOpenFile:defaultDocPath];
     if (open) {
-        [zipArchive UnzipFileTo:[HSFileUtil documentPathWithName:@""] overWrite:YES];
+        BOOL success = [zipArchive UnzipFileTo:[HSFileUtil documentPathWithName:@""] overWrite:YES];
         [zipArchive UnzipCloseFile];
+        // Delete zip file after upzip
+        if (success) {
+            [HSFileUtil removeWithPath:defaultDocPath];
+        }
     }
     
     // delete from bundle
@@ -38,7 +43,6 @@
         NSString *filePath = [HSResUtil pathWithFileName:fileName];
         [HSFileUtil removeWithPath:filePath];
     }
-    
 }
 
 // Unzip and update DB
@@ -62,6 +66,7 @@
             HSCommonInfo *commonInfo = [[HSCommonInfo alloc] initWithDictionary:dic];
             [commonInfo saveOrUpdate];
         }
+        [HSFileUtil removeWithPath:path];
     }
 }
 

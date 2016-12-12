@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     self.topTitle = @"Product Introduction [Elevator]";
-    self.products = [[HSCommonInfo shared] findByCategory:@"ci-pi-el"];
+    self.products = [[HSCommonInfo shared] findByCategory:@"pi-el"];
     
     [super viewDidLoad];
 }

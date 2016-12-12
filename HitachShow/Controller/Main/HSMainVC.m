@@ -9,6 +9,7 @@
 #import "HSMainVC.h"
 #import "HSMainTabController.h"
 #import "HSPITabVC.h"
+#import "HSAppUtil.h"
 
 
 @interface HSMainVC ()
@@ -33,6 +34,19 @@
         make.height.equalTo(35.5);
         make.left.equalTo(self.view.left).offset(17);
         make.top.equalTo(self.view.top).offset(30);
+    }];
+    
+    // Resource version info
+    UILabel *versionLabel = [[UILabel alloc] init];
+    [self.view addSubview:versionLabel];
+    versionLabel.backgroundColor = [UIColor clearColor];
+    versionLabel.text = [@"Res:" stringByAppendingString:[HSAppUtil currentVersion]];
+    versionLabel.font = [UIFont systemFontOfSize:10];
+    versionLabel.textAlignment = NSTextAlignmentRight;
+    [versionLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view.right).offset(-10);
+        make.top.equalTo(self.view.top).offset(10);
+        make.size.equalTo(CGSizeMake(60, 15));
     }];
     
     

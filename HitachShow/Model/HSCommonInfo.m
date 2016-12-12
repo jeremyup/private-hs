@@ -23,7 +23,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByCategory:(NSString *) category {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE category = ? ",category];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE category = ? AND disabled = 0",category];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];
@@ -36,7 +36,7 @@ static HSCommonInfo *_instance;
 - (HSCommonInfo *) findByID:(NSString *) ID {
     __block HSCommonInfo *commonInfo = nil;
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE id = ? ",ID];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE id = ?  AND disabled = 0",ID];
         while ([resultSet next]) {
             commonInfo = [self toObjectWithResult:resultSet];
         }
@@ -48,7 +48,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByArea:(NSString *) area {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE area = ? ",area];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE area = ?  AND disabled = 0",area];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];
@@ -61,7 +61,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByType:(NSString *) type {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE type = ? ",type];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE type = ?  AND disabled = 0",type];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];
@@ -110,7 +110,7 @@ static HSCommonInfo *_instance;
 
 - (void) saveOrUpdate {
     [self writeDefaultDBWithTask:^(FMDatabase *db, BOOL *rollback) {
-        [db executeUpdate:@"replace into hs_common_info values(:ID,:category,:name,:title,:picture,:text1,:text2,:video,:ppt,:pdf,:country,:type,:spec,:distributor,:completeYear,:area);" withParameterObject:self];
+        [db executeUpdate:@"replace into hs_common_info values(:ID,:category,:name,:title,:picture,:text1,:text2,:video,:ppt,:pdf,:country,:type,:spec,:distributor,:completeYear,:area,:disabled);" withParameterObject:self];
     }];
 }
 

@@ -12,6 +12,8 @@
 
 + (void) appInit;
 
-+ (void) checkResourceVersion;
+- (void) checkResourceVersion;
+
++ (NSString *) currentVersion;
 
 @end
