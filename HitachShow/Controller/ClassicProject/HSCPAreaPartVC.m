@@ -33,10 +33,11 @@
     UILabel *area = [[UILabel alloc] init];
     [self.view addSubview:area];
     area.text = _areaName;
-    area.font = [UIFont systemFontOfSize:36];
+    area.font = [UIFont systemFontOfSize:34];
     area.textColor = [UIColor blackColor];
+    area.textAlignment = NSTextAlignmentLeft;
     [area makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(CGSizeMake(330, 48));
+        make.size.equalTo(CGSizeMake(370, 48));
         make.top.equalTo(self.view.top).offset(55);
         make.left.equalTo(self.view.left).offset(121);
     }];
