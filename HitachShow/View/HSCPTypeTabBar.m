@@ -34,6 +34,13 @@
     [self addAreaButton];
 }
 
+- (void) tabClick:(UIButton *)sender {
+    UIViewController *currentVC = [HSViewUtil findViewController:self];
+    UITabBarController *tab = (UITabBarController *) currentVC;
+    UINavigationController *nav = tab.selectedViewController;
+    [nav popToRootViewControllerAnimated:YES];
+}
+
 - (void) addAreaButton {
     CGRect frame = CGRectMake(193, (self.bounds.size.height - 40)/2, 40, 40);
     UIButton *moduleTopBtn = [self customBtnWithTitle:@"Area" frame:frame];

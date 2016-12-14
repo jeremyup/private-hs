@@ -37,6 +37,13 @@
     [self addTypeButton];
 }
 
+- (void) tabClick:(UIButton *)sender {
+    UIViewController *currentVC = [HSViewUtil findViewController:self];
+    UITabBarController *tab = (UITabBarController *) currentVC;
+    UINavigationController *nav = tab.selectedViewController;
+    [nav popToRootViewControllerAnimated:YES];
+}
+
 - (void) addTypeButton {
     CGRect frame = CGRectMake(AppWidth - 240 - 110, (self.bounds.size.height - 40)/2, 90, 40);
     UIButton *moduleTopBtn = [self customBtnWithTitle:@"Building Type" frame:frame];

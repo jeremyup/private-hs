@@ -66,7 +66,7 @@
         make.size.equalTo(CGSizeMake(530, 403));
         make.top.equalTo(self.mainView.top).offset(35);
     }];
-    projectImage.backgroundColor = [UIColor whiteColor];
+//    projectImage.backgroundColor = [UIColor whiteColor];
     
     //Project detail
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
