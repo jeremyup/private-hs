@@ -15,15 +15,17 @@
 		3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83A1DDB6A8200E26427 /* HSCICompanyProfileVC.m */; };
 		3F16F8401DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */; };
 		3F16F8411DDB6A8200E26427 /* HSCIManufacturingBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */; };
+		3F1B1A241E02E35B0064D670 /* HSCIDBSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B1A231E02E35B0064D670 /* HSCIDBSubVC.m */; };
+		3F1B1A271E02E4850064D670 /* HSCIMBSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B1A261E02E4850064D670 /* HSCIMBSubVC.m */; };
 		3F1E72EB1DCAD0A800B16341 /* HSImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */; };
 		3F2178661DFE354F00514ACF /* FMDatabase+HSPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2178651DFE354F00514ACF /* FMDatabase+HSPersistence.m */; };
 		3F22737C1DCC52B1003E421E /* HSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22737B1DCC52B1003E421E /* HSLabel.m */; };
 		3F2B20A81DC602A700B2BBA4 /* HSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */; };
 		3F3FA5211DE3EA210072DDE9 /* HSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */; };
 		3F4A98221DF9ADE500B6649C /* logo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98211DF9ADE500B6649C /* logo1@2x.png */; };
-		3F4A98261DF9AECE00B6649C /* pi_btn_pdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98231DF9AECE00B6649C /* pi_btn_pdf.png */; };
-		3F4A98271DF9AECE00B6649C /* pi_btn_ppt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98241DF9AECE00B6649C /* pi_btn_ppt.png */; };
-		3F4A98281DF9AECE00B6649C /* pi_btn_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98251DF9AECE00B6649C /* pi_btn_video.png */; };
+		3F4A98261DF9AECE00B6649C /* pi_btn_pdf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98231DF9AECE00B6649C /* pi_btn_pdf@2x.png */; };
+		3F4A98271DF9AECE00B6649C /* pi_btn_ppt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98241DF9AECE00B6649C /* pi_btn_ppt@2x.png */; };
+		3F4A98281DF9AECE00B6649C /* pi_btn_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4A98251DF9AECE00B6649C /* pi_btn_video@2x.png */; };
 		3F4A982B1DF9B35A00B6649C /* HSResUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A982A1DF9B35A00B6649C /* HSResUtil.m */; };
 		3F5313901DEC1115005B8CC2 /* HSCPAreaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F53138F1DEC1115005B8CC2 /* HSCPAreaVC.m */; };
 		3F5313931DEC114E005B8CC2 /* HSCPTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5313921DEC114E005B8CC2 /* HSCPTypeVC.m */; };
@@ -51,6 +53,7 @@
 		3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F11DC390E5007EB7B6 /* HSCPMainVC.m */; };
 		3F9203F81DC391A3007EB7B6 /* HSPITabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */; };
 		3F9203FB1DC396E0007EB7B6 /* HSMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */; };
+		3F92FCAA1E02355D0080ABC0 /* HSCICPSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F92FCA91E02355D0080ABC0 /* HSCICPSubVC.m */; };
 		3F9A4B421DF94912002F4A04 /* main_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A4B241DF94912002F4A04 /* main_bg@2x.jpg */; };
 		3F9A4B431DF94912002F4A04 /* ci_history_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A4B251DF94912002F4A04 /* ci_history_bg@2x.jpg */; };
 		3F9A4B441DF94912002F4A04 /* cp_area_part_bg_3_2_0@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F9A4B261DF94912002F4A04 /* cp_area_part_bg_3_2_0@2x.jpg */; };
@@ -132,6 +135,10 @@
 		3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIDevelopmentBaseVC.m; sourceTree = "<group>"; };
 		3F16F83D1DDB6A8200E26427 /* HSCIManufacturingBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIManufacturingBaseVC.h; sourceTree = "<group>"; };
 		3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIManufacturingBaseVC.m; sourceTree = "<group>"; };
+		3F1B1A221E02E35B0064D670 /* HSCIDBSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIDBSubVC.h; sourceTree = "<group>"; };
+		3F1B1A231E02E35B0064D670 /* HSCIDBSubVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIDBSubVC.m; sourceTree = "<group>"; };
+		3F1B1A251E02E4850064D670 /* HSCIMBSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCIMBSubVC.h; sourceTree = "<group>"; };
+		3F1B1A261E02E4850064D670 /* HSCIMBSubVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCIMBSubVC.m; sourceTree = "<group>"; };
 		3F1E72E91DCAD0A800B16341 /* HSImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSImageButton.h; sourceTree = "<group>"; };
 		3F1E72EA1DCAD0A800B16341 /* HSImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSImageButton.m; sourceTree = "<group>"; };
 		3F2178641DFE354F00514ACF /* FMDatabase+HSPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+HSPersistence.h"; sourceTree = "<group>"; };
@@ -140,13 +147,13 @@
 		3F22737B1DCC52B1003E421E /* HSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSLabel.m; sourceTree = "<group>"; };
 		3F2B20A61DC602A700B2BBA4 /* HSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTabBar.h; sourceTree = "<group>"; };
 		3F2B20A71DC602A700B2BBA4 /* HSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTabBar.m; sourceTree = "<group>"; };
-		3F3D80661DC24B6B0074556C /* HitachShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitachShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3D80661DC24B6B0074556C /* HITACHI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HITACHI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3FA51F1DE3EA210072DDE9 /* HSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVideoView.h; sourceTree = "<group>"; };
 		3F3FA5201DE3EA210072DDE9 /* HSVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVideoView.m; sourceTree = "<group>"; };
 		3F4A98211DF9ADE500B6649C /* logo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo1@2x.png"; sourceTree = "<group>"; };
-		3F4A98231DF9AECE00B6649C /* pi_btn_pdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi_btn_pdf.png; sourceTree = "<group>"; };
-		3F4A98241DF9AECE00B6649C /* pi_btn_ppt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi_btn_ppt.png; sourceTree = "<group>"; };
-		3F4A98251DF9AECE00B6649C /* pi_btn_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi_btn_video.png; sourceTree = "<group>"; };
+		3F4A98231DF9AECE00B6649C /* pi_btn_pdf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pi_btn_pdf@2x.png"; sourceTree = "<group>"; };
+		3F4A98241DF9AECE00B6649C /* pi_btn_ppt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pi_btn_ppt@2x.png"; sourceTree = "<group>"; };
+		3F4A98251DF9AECE00B6649C /* pi_btn_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pi_btn_video@2x.png"; sourceTree = "<group>"; };
 		3F4A98291DF9B35A00B6649C /* HSResUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSResUtil.h; sourceTree = "<group>"; };
 		3F4A982A1DF9B35A00B6649C /* HSResUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSResUtil.m; sourceTree = "<group>"; };
 		3F53138E1DEC1115005B8CC2 /* HSCPAreaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCPAreaVC.h; sourceTree = "<group>"; };
@@ -201,6 +208,8 @@
 		3F9203F71DC391A3007EB7B6 /* HSPITabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPITabVC.m; sourceTree = "<group>"; };
 		3F9203F91DC396E0007EB7B6 /* HSMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainVC.h; sourceTree = "<group>"; };
 		3F9203FA1DC396E0007EB7B6 /* HSMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainVC.m; sourceTree = "<group>"; };
+		3F92FCA81E02355D0080ABC0 /* HSCICPSubVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCICPSubVC.h; sourceTree = "<group>"; };
+		3F92FCA91E02355D0080ABC0 /* HSCICPSubVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCICPSubVC.m; sourceTree = "<group>"; };
 		3F9A4B241DF94912002F4A04 /* main_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "main_bg@2x.jpg"; sourceTree = "<group>"; };
 		3F9A4B251DF94912002F4A04 /* ci_history_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ci_history_bg@2x.jpg"; sourceTree = "<group>"; };
 		3F9A4B261DF94912002F4A04 /* cp_area_part_bg_3_2_0@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cp_area_part_bg_3_2_0@2x.jpg"; sourceTree = "<group>"; };
@@ -403,7 +412,7 @@
 		3F3D80671DC24B6B0074556C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F3D80661DC24B6B0074556C /* HitachShow.app */,
+				3F3D80661DC24B6B0074556C /* HITACHI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,9 +495,9 @@
 				3F9A4B3F1DF94912002F4A04 /* main_btn_maintenance@2x.png */,
 				3F9A4B401DF94912002F4A04 /* main_btn_classic_project@2x.png */,
 				3F9A4B411DF94912002F4A04 /* logo@2x.png */,
-				3F4A98231DF9AECE00B6649C /* pi_btn_pdf.png */,
-				3F4A98241DF9AECE00B6649C /* pi_btn_ppt.png */,
-				3F4A98251DF9AECE00B6649C /* pi_btn_video.png */,
+				3F4A98231DF9AECE00B6649C /* pi_btn_pdf@2x.png */,
+				3F4A98241DF9AECE00B6649C /* pi_btn_ppt@2x.png */,
+				3F4A98251DF9AECE00B6649C /* pi_btn_video@2x.png */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -529,10 +538,16 @@
 				3F16F8371DDB672900E26427 /* HSCITabVC.m */,
 				3F16F8391DDB6A8200E26427 /* HSCICompanyProfileVC.h */,
 				3F16F83A1DDB6A8200E26427 /* HSCICompanyProfileVC.m */,
+				3F92FCA81E02355D0080ABC0 /* HSCICPSubVC.h */,
+				3F92FCA91E02355D0080ABC0 /* HSCICPSubVC.m */,
 				3F16F83B1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.h */,
 				3F16F83C1DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m */,
+				3F1B1A221E02E35B0064D670 /* HSCIDBSubVC.h */,
+				3F1B1A231E02E35B0064D670 /* HSCIDBSubVC.m */,
 				3F16F83D1DDB6A8200E26427 /* HSCIManufacturingBaseVC.h */,
 				3F16F83E1DDB6A8200E26427 /* HSCIManufacturingBaseVC.m */,
+				3F1B1A251E02E4850064D670 /* HSCIMBSubVC.h */,
+				3F1B1A261E02E4850064D670 /* HSCIMBSubVC.m */,
 				3F8F93211DE48B6A00495180 /* HSCISalesServiceVC.h */,
 				3F8F93221DE48B6A00495180 /* HSCISalesServiceVC.m */,
 				3FB7E38F1DE7DD0F007A33A9 /* HSCISalesServiceSubVC.h */,
@@ -628,9 +643,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F3D80651DC24B6B0074556C /* HitachShow */ = {
+		3F3D80651DC24B6B0074556C /* HITACHI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HitachShow" */;
+			buildConfigurationList = 3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HITACHI" */;
 			buildPhases = (
 				A0287E3EA8FDD30BE8E79EED /* [CP] Check Pods Manifest.lock */,
 				3F3D80621DC24B6B0074556C /* Sources */,
@@ -643,9 +658,9 @@
 			);
 			dependencies = (
 			);
-			name = HitachShow;
+			name = HITACHI;
 			productName = HitachShow;
-			productReference = 3F3D80661DC24B6B0074556C /* HitachShow.app */;
+			productReference = 3F3D80661DC24B6B0074556C /* HITACHI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -659,7 +674,7 @@
 				TargetAttributes = {
 					3F3D80651DC24B6B0074556C = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = WJR5NAA722;
+						DevelopmentTeam = 54ZT3456LH;
 					};
 				};
 			};
@@ -676,7 +691,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F3D80651DC24B6B0074556C /* HitachShow */,
+				3F3D80651DC24B6B0074556C /* HITACHI */,
 			);
 		};
 /* End PBXProject section */
@@ -705,20 +720,20 @@
 				3F9A4B7F1DF97074002F4A04 /* ci_main_btn_2_4_Sales@2x.jpg in Resources */,
 				3F9BD2FB1DFEF3BD005F2552 /* data.db in Resources */,
 				3F9A4B541DF94912002F4A04 /* cp_type_btn_4_6_Airport@2x.jpg in Resources */,
-				3F4A98281DF9AECE00B6649C /* pi_btn_video.png in Resources */,
+				3F4A98281DF9AECE00B6649C /* pi_btn_video@2x.png in Resources */,
 				3F9A4B501DF94912002F4A04 /* ci_main_bg@2x.jpg in Resources */,
 				3F9A4B801DF97074002F4A04 /* ci_main_btn_2_5_History@2x.jpg in Resources */,
 				3F9A4B511DF94912002F4A04 /* pi_main_bg@2x.jpg in Resources */,
 				3F9A4B431DF94912002F4A04 /* ci_history_bg@2x.jpg in Resources */,
 				3F9A4B451DF94912002F4A04 /* cp_area_part_bg_3_3_0@2x.jpg in Resources */,
 				3F9A4B5D1DF94912002F4A04 /* main_btn_maintenance@2x.png in Resources */,
-				3F4A98271DF9AECE00B6649C /* pi_btn_ppt.png in Resources */,
+				3F4A98271DF9AECE00B6649C /* pi_btn_ppt@2x.png in Resources */,
 				3F9A4B521DF94912002F4A04 /* cp_type_btn_4_1_Mix@2x.jpg in Resources */,
 				3F9A4B581DF94912002F4A04 /* cp_type_btn_4_7_Commercial@2x.jpg in Resources */,
 				3F9A4B421DF94912002F4A04 /* main_bg@2x.jpg in Resources */,
 				3F9A4B441DF94912002F4A04 /* cp_area_part_bg_3_2_0@2x.jpg in Resources */,
 				3F9A4B4C1DF94912002F4A04 /* cp_area_btn_3_1_2_The southeast@2x.jpg in Resources */,
-				3F4A98261DF9AECE00B6649C /* pi_btn_pdf.png in Resources */,
+				3F4A98261DF9AECE00B6649C /* pi_btn_pdf@2x.png in Resources */,
 				3F9A4B821DF97074002F4A04 /* ci_main_btn_2_7_Topics@2x.jpg in Resources */,
 				3F9A4B551DF94912002F4A04 /* cp_type_btn_4_4_Hotel@2x.jpg in Resources */,
 				3F9A4B5E1DF94912002F4A04 /* main_btn_classic_project@2x.png in Resources */,
@@ -789,6 +804,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1B1A271E02E4850064D670 /* HSCIMBSubVC.m in Sources */,
 				3FA527B81DE4308C00813E07 /* HSVideoPlayVC.m in Sources */,
 				3FFB9E961DF0656200ACD9F9 /* HSCPTypePartVC.m in Sources */,
 				3F903BE01DEF13CA00777388 /* HSCPAreaPartVC.m in Sources */,
@@ -829,6 +845,7 @@
 				3FA375511DF084B300E4EDA5 /* HSCPTypeTabVC.m in Sources */,
 				3F5313961DEC1775005B8CC2 /* HSCPTabVC.m in Sources */,
 				3F5C1EAC1DE68C6F00B298F6 /* HSPIEscalatorVC.m in Sources */,
+				3F1B1A241E02E35B0064D670 /* HSCIDBSubVC.m in Sources */,
 				3F4A982B1DF9B35A00B6649C /* HSResUtil.m in Sources */,
 				3F9203F21DC390E5007EB7B6 /* HSCPMainVC.m in Sources */,
 				3F16F83F1DDB6A8200E26427 /* HSCICompanyProfileVC.m in Sources */,
@@ -839,6 +856,7 @@
 				3F16F8401DDB6A8200E26427 /* HSCIDevelopmentBaseVC.m in Sources */,
 				3F5313901DEC1115005B8CC2 /* HSCPAreaVC.m in Sources */,
 				3F008F7D1DC2521E00F3C752 /* AppDelegate.m in Sources */,
+				3F92FCAA1E02355D0080ABC0 /* HSCICPSubVC.m in Sources */,
 				3F7E39331DFC40D700BF78B2 /* HSFileUtil.m in Sources */,
 				3F8032DF1DD0638B00C8BFCD /* HSBaseContentVC.m in Sources */,
 				3F6697811DE732490092311C /* HSPreviewVC.m in Sources */,
@@ -866,7 +884,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -888,6 +907,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "82f64491-052e-4e31-94ec-9d6a07fd0daf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -910,7 +930,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -925,6 +946,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "82f64491-052e-4e31-94ec-9d6a07fd0daf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -936,7 +958,9 @@
 			baseConfigurationReference = 54DB2CED8A5CBD43ACD0B5C9 /* Pods-HitachShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
+				DEVELOPMENT_TEAM = 54ZT3456LH;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jeremy/Desktop/MobileVLCKit/MobileVLCKit-binary",
@@ -946,6 +970,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82af6422-c5c7-4cc9-8b12-4335463fc63a";
+				PROVISIONING_PROFILE_SPECIFIER = ZXtech_R;
 			};
 			name = Debug;
 		};
@@ -954,7 +980,9 @@
 			baseConfigurationReference = 349BBB22885E3522413A2D2F /* Pods-HitachShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZXtech(Shenyang)Co., Ltd.";
+				DEVELOPMENT_TEAM = 54ZT3456LH;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Jeremy/Desktop/MobileVLCKit/MobileVLCKit-binary",
@@ -964,6 +992,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/HitachShow/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82af6422-c5c7-4cc9-8b12-4335463fc63a";
+				PROVISIONING_PROFILE_SPECIFIER = ZXtech_R;
 			};
 			name = Release;
 		};
@@ -979,7 +1009,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HitachShow" */ = {
+		3F3D80891DC24B6B0074556C /* Build configuration list for PBXNativeTarget "HITACHI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F3D808A1DC24B6B0074556C /* Debug */,
