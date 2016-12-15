@@ -64,7 +64,7 @@
     [_pdfBtn makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_productImage.bottom).offset(6);
         make.left.equalTo(self.left).offset(15);
-        make.size.equalTo(CGSizeMake(33, 41));
+        make.size.equalTo(CGSizeMake(41, 41));
     }];
     
     // Show ppt

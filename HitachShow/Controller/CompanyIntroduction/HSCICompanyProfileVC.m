@@ -7,14 +7,11 @@
 //
 
 #import "HSCICompanyProfileVC.h"
-#import "HSLabel.h"
 #import "HSCommonInfo.h"
+#import "HSCICPSubVC.h"
 
 @interface HSCICompanyProfileVC ()
 
-@property(nonatomic,strong) UIImageView *topImage;
-@property(nonatomic,strong) HSLabel *introduction;
-@property(nonatomic,strong) HSLabel *info;
 @property(nonatomic,strong) NSArray *introductions;
 
 
@@ -36,43 +33,6 @@
 
 - (void) addSubviews {
     [super addSubviews];
-    
-    // Image text
-    _topImage = [[UIImageView alloc] init];
-    [self.mainView addSubview:_topImage];
-    [_topImage makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mainView.top).offset(20);
-        make.left.equalTo(self.mainView.left).offset(40);
-        make.right.equalTo(self.mainView.right).offset(-40);
-        make.height.equalTo(400);
-    }];
-    
-    _introduction = [[HSLabel alloc] init];
-    [self.mainView addSubview:_introduction];
-    _introduction.lineBreakMode = NSLineBreakByWordWrapping;
-    _introduction.numberOfLines = 0;
-    _introduction.textColor = [UIColor whiteColor];
-    _introduction.font = [UIFont systemFontOfSize:16 weight:0.5];
-    [_introduction makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_topImage.bottom);
-        make.left.equalTo(_topImage.left);
-        make.right.equalTo(_topImage.right);
-        make.height.equalTo(130);
-    }];
-    
-    _info = [[HSLabel alloc] init];
-    [self.mainView addSubview:_info];
-    _info.lineBreakMode = NSLineBreakByWordWrapping;
-    _info.numberOfLines = 0;
-    _info.textColor = [UIColor whiteColor];
-    _info.font = [UIFont systemFontOfSize:12 weight:0.5];
-    _info.textInsets = UIEdgeInsetsMake(0, 0, 0, 30);
-    [_info makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_introduction.bottom);
-        make.left.equalTo(_introduction.left);
-        make.right.equalTo(_introduction.right);
-        make.bottom.equalTo(self.mainView.bottom);
-    }];
     
     // Buttons
     NSInteger count = _introductions.count;
@@ -98,19 +58,10 @@
 }
 
 -(void) click:(UIButton *) sender {
-    for (UIButton *btn in self.optView.subviews) {
-        if (btn.tag == sender.tag) {
-            btn.layer.borderColor = HS_COLOR_BTN_BORDER_HSCICompanyProfileVC.CGColor;
-        } else {
-            btn.layer.borderColor = [UIColor blackColor].CGColor;
-        }
-    }
-    self.mainView.layer.contents = nil;
-    HSCommonInfo *ci = _introductions[sender.tag];
-    self.subTitle = ci.title;
-    _introduction.text = ci.text1;
-    _info.text = ci.text2;
-    _topImage.image = [HSResUtil imageNamed:ci.picture];
+    HSCICPSubVC *subVC = [[HSCICPSubVC alloc] init];
+    subVC.introductions = _introductions;
+    subVC.selectedIndex = sender.tag;
+    [self.navigationController pushViewController:subVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

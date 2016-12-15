@@ -40,6 +40,7 @@
 - (void) tabClick:(UIButton *)sender {
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     UITabBarController *tab = (UITabBarController *) currentVC;
+    [tab setSelectedIndex:sender.tag];
     UINavigationController *nav = tab.selectedViewController;
     [nav popToRootViewControllerAnimated:YES];
 }

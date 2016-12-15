@@ -7,13 +7,11 @@
 //
 
 #import "HSCIManufacturingBaseVC.h"
-#import "HSLabel.h"
 #import "HSCommonInfo.h"
+#import "HSCIMBSubVC.h"
 
 @interface HSCIManufacturingBaseVC ()
 
-@property(nonatomic,strong) UIImageView *topImage;
-@property(nonatomic,strong) HSLabel *introduction;
 @property(nonatomic,strong) NSArray *introductions;
 
 @end
@@ -33,30 +31,6 @@
 
 - (void) addSubviews {
     [super addSubviews];
-    
-    // Image text
-    _topImage = [[UIImageView alloc] init];
-    [self.mainView addSubview:_topImage];
-    [_topImage makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mainView.top).offset(20);
-        make.left.equalTo(self.mainView.left).offset(40);
-        make.right.equalTo(self.mainView.right).offset(-40);
-        make.height.equalTo(420);
-    }];
-    
-    _introduction = [[HSLabel alloc] init];
-    [self.mainView addSubview:_introduction];
-    _introduction.lineBreakMode = NSLineBreakByWordWrapping;
-    _introduction.numberOfLines = 0;
-    _introduction.textColor = [UIColor whiteColor];
-    _introduction.font = [UIFont systemFontOfSize:12];
-    _introduction.layer.borderColor = [UIColor whiteColor].CGColor;
-    [_introduction makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_topImage.bottom).offset(20);
-        make.left.equalTo(_topImage.left);
-        make.right.equalTo(_topImage);
-        make.height.equalTo(250);
-    }];
     
     // Buttons
     NSInteger count = _introductions.count;
@@ -81,18 +55,10 @@
 }
 
 -(void) click:(UIButton *) sender {
-    for (UIButton *btn in self.optView.subviews) {
-        if (btn.tag == sender.tag) {
-            btn.layer.borderColor = HS_COLOR_BTN_BORDER_HSCICompanyProfileVC.CGColor;
-        } else {
-            btn.layer.borderColor = [UIColor blackColor].CGColor;
-        }
-    }
-    self.mainView.layer.contents = nil;
-    HSCommonInfo *ci = _introductions[sender.tag];
-    self.subTitle = ci.title;
-    _introduction.text = ci.text1;
-    _topImage.image = [HSResUtil imageNamed:ci.picture];
+    HSCIMBSubVC *subVC = [[HSCIMBSubVC alloc] init];
+    subVC.introductions = _introductions;
+    subVC.selectedIndex = sender.tag;
+    [self.navigationController pushViewController:subVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

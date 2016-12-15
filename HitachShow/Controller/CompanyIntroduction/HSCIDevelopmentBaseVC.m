@@ -7,21 +7,15 @@
 //
 
 #import "HSCIDevelopmentBaseVC.h"
-#import "HSLabel.h"
 #import "HSCommonInfo.h"
-#import "HSVideoView.h"
-#import "HSResUtil.h"
+#import "HSCIDBSubVC.h"
 
 
 @interface HSCIDevelopmentBaseVC ()
 
-@property(nonatomic,strong) UIImageView *topImage;
-@property(nonatomic,strong) HSLabel *introduction;
-@property(nonatomic,strong) HSVideoView *movie;
 @property(nonatomic,strong) NSArray *introductions;
 
 @end
-
 
 @implementation HSCIDevelopmentBaseVC
 
@@ -39,42 +33,6 @@
 
 - (void) addSubviews {
     [super addSubviews];
-    
-    // Image text
-    _topImage = [[UIImageView alloc] init];
-    [self.mainView addSubview:_topImage];
-    [_topImage makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mainView.top).offset(40);
-        make.left.equalTo(self.mainView.left).offset(40);
-        make.right.equalTo(self.mainView.right).offset(-20);
-        make.height.equalTo(500);
-    }];
-    
-    _introduction = [[HSLabel alloc] init];
-    [self.mainView addSubview:_introduction];
-    _introduction.lineBreakMode = NSLineBreakByWordWrapping;
-    _introduction.numberOfLines = 0;
-    _introduction.textColor = [UIColor whiteColor];
-    _introduction.font = [UIFont systemFontOfSize:12];
-    _introduction.layer.borderColor = [UIColor whiteColor].CGColor;
-    [_introduction makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_topImage.bottom).offset(20);
-        make.left.equalTo(_topImage.left);
-        make.width.equalTo(380);
-        make.height.equalTo(150);
-    }];
-    
-    // Video thumbnail
-    _movie = [[HSVideoView alloc] init];
-    _movie.displayTitle = YES;
-    [self.mainView addSubview:_movie];
-    [_movie makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(_topImage.right).offset(-50);
-        make.top.equalTo(_introduction.top);
-        make.bottom.equalTo(self.view.bottom).offset(-80);
-        make.width.equalTo(200);
-    }];
-    _movie.hidden = YES;
     
     // Buttons
     NSInteger count = _introductions.count;
@@ -99,23 +57,10 @@
 }
 
 -(void) click:(UIButton *) sender {
-    for (UIButton *btn in self.optView.subviews) {
-        if (btn.tag == sender.tag) {
-            btn.layer.borderColor = HS_COLOR_BTN_BORDER_HSCICompanyProfileVC.CGColor;
-        } else {
-            btn.layer.borderColor = [UIColor blackColor].CGColor;
-        }
-    }
-    self.mainView.layer.contents = nil;
-    HSCommonInfo *ci = _introductions[sender.tag];
-    self.subTitle = ci.title;
-    _introduction.text = ci.text1;
-    _topImage.image = [HSResUtil imageNamed:ci.picture];
-
-    if (ci.video != nil) {
-        _movie.hidden = NO;
-        _movie.videoPath = [HSResUtil pathWithFileName:ci.video];
-    }
+    HSCIDBSubVC *subVC = [[HSCIDBSubVC alloc] init];
+    subVC.introductions = _introductions;
+    subVC.selectedIndex = sender.tag;
+    [self.navigationController pushViewController:subVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
