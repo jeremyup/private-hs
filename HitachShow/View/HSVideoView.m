@@ -46,10 +46,10 @@
     
     // titile
     _title.text = @"Movie";
-    _title.backgroundColor = [UIColor blackColor];
     _title.textColor = [UIColor whiteColor];
     _title.font = [UIFont systemFontOfSize:14 weight:1];
-    _title.backgroundColor = [UIColor blackColor];
+    _title.textAlignment = NSTextAlignmentCenter;
+    _title.backgroundColor = [UIColor clearColor];
     [_title makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.bottom).offset(10);
         make.centerX.equalTo(self.centerX);
