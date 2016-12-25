@@ -28,7 +28,7 @@
 @property(nonatomic,strong) NSString *completeYear;
 @property(nonatomic,strong) NSString *area;
 @property(nonatomic,strong) NSString *type;
-@property(nonatomic) int disabled;
+@property(nonatomic) int enabled;
 
 
 @property(nonatomic,strong) NSArray *subInfos;
