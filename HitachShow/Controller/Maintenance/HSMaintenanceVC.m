@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     HSCommonInfo *commonInfo = [HSCommonInfo shared];
-    _videoList = [commonInfo findByCategory:@"ci-m"];
+    _videoList = [commonInfo findByCategory:@"m"];
     
     [super viewDidLoad];
     self.view.layer.contents = (id) [UIImage imageNamed:@"maintenance_bg.jpg"].CGImage;
