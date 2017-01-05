@@ -10,6 +10,7 @@
 #import "HSMainTabController.h"
 #import "HSPITabVC.h"
 #import "HSAppUtil.h"
+#import "HSAlertView.h"
 
 
 @interface HSMainVC ()
@@ -48,6 +49,10 @@
         make.top.equalTo(self.view.top).offset(10);
         make.size.equalTo(CGSizeMake(60, 15));
     }];
+    // Click event to update server url
+    UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
+    versionLabel.userInteractionEnabled = YES;
+    [versionLabel addGestureRecognizer:labelTapGestureRecognizer];
     
     
     // Four module
@@ -86,6 +91,22 @@
         HSPITabVC *piTab = [[HSPITabVC alloc] init];
         [self presentViewController:piTab animated:YES completion:nil];
     }
+}
+
+-(void) labelTouchUpInside:(UITapGestureRecognizer *)recognizer{
+    NSString *msg = [@"Current server url is " stringByAppendingString:[HSAppUtil serverURL]];
+    
+    HSAlertView *alert = [[HSAlertView alloc] initWithTitle:@"Resource server url config" message:msg cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done" block:^(NSInteger buttonIndex,UIAlertView *alertView) {
+        if (buttonIndex == 1) {
+            UITextField *textField = [alertView textFieldAtIndex:0];
+            NSString *text = textField.text;
+            if (text) {
+                [HSAppUtil setServerURL:text];
+            }
+        }
+    }];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {

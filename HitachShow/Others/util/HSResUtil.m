@@ -54,7 +54,13 @@
         [zipArchive UnzipCloseFile];
     }
     
+    // move files from versin folder to doc
+    NSString *versionFolder = [path stringByDeletingPathExtension];
+    [HSFileUtil moveItemsToDocWithPath:versionFolder];
+    [HSFileUtil removeWithPath:versionFolder];
+    
     NSString *infoFileName = [[path.lastPathComponent stringByDeletingPathExtension] stringByAppendingPathExtension:@"data"];
+    // doc/version.data
     BOOL exist = [HSFileUtil fileExistInDocWithName:infoFileName];
     if (exist) {
         // Read file and update DB
@@ -66,6 +72,7 @@
             HSCommonInfo *commonInfo = [[HSCommonInfo alloc] initWithDictionary:dic];
             [commonInfo saveOrUpdate];
         }
+        [HSFileUtil removeWithPath:dataFilePath];
         [HSFileUtil removeWithPath:path];
     }
 }

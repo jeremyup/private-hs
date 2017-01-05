@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class HSAlertView;
-typedef void (^TouchBlock)(NSInteger);
+typedef void (^TouchBlock)(NSInteger,UIAlertView*);
 @interface HSAlertView : UIAlertView
 
 @property(nonatomic,copy)TouchBlock block;

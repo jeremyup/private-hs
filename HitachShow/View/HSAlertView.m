@@ -20,6 +20,6 @@
 
 //#pragma mark -AlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    _block(buttonIndex);
+    _block(buttonIndex,alertView);
 }
 @end

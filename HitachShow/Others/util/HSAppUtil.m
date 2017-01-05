@@ -15,6 +15,7 @@
 NSString * const INIT_FLAG = @"INIT_FLAG";
 NSString * const DEFAULT_VERSION = @"V1.0";
 NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
+NSString * const SERVER_URL = @"SERVER_URL";
 
 @implementation HSAppUtil
 
@@ -31,11 +32,16 @@ NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
 }
 
 - (void) checkResourceVersion {
+    NSString *serverURL = [HSAppUtil serverURL];
+    if (!serverURL) {
+        NSLog(@"Server url does not config!");
+        return;
+    }
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSString *url = [AppServer stringByAppendingFormat:@"/api/version?v=%@",[HSAppUtil currentVersion]];
+    NSString *url = [serverURL stringByAppendingFormat:@"/api/version?v=%@",[HSAppUtil currentVersion]];
     NSURL *URL = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
@@ -43,7 +49,7 @@ NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
         if (!error) {
             NSArray *array = responseObject;
             if (array.count > 0) {
-                HSAlertView *alert = [[HSAlertView alloc] initWithTitle:nil message:@"There is a new version,whether to update?" cancelButtonTitle:@"Cancel" otherButtonTitles:@"Sure" block:^(NSInteger buttonIndex) {
+                HSAlertView *alert = [[HSAlertView alloc] initWithTitle:nil message:@"There is a new version,whether to update?" cancelButtonTitle:@"Cancel" otherButtonTitles:@"Sure" block:^(NSInteger buttonIndex,UIAlertView *alertView) {
                     if (buttonIndex == 1) {
                         for (NSDictionary *dic in array) {
                             [self downloadAndUpdate:dic[@"url"]];
@@ -89,6 +95,18 @@ NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
         currentVersion = DEFAULT_VERSION;
     }
     return currentVersion;
+}
+
++ (NSString *) serverURL {
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:SERVER_URL];
+    if (!url) {
+        url = @"";
+    }
+    return url;
+}
+
++ (void) setServerURL:(NSString *) url {
+    [[NSUserDefaults standardUserDefaults] setObject:url forKey:SERVER_URL];
 }
 
 @end

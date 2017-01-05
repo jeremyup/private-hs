@@ -16,4 +16,8 @@
 
 + (NSString *) currentVersion;
 
++ (NSString *) serverURL;
+
++ (void) setServerURL:(NSString *) url;
+
 @end

@@ -18,4 +18,6 @@
 
 + (NSString *) documentPathWithName:(NSString *)fileName;
 
++ (void) moveItemsToDocWithPath:(NSString *) folderPath;
+
 @end

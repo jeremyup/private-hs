@@ -51,4 +51,17 @@
     return [documentDirectory stringByAppendingPathComponent:fileName];
 }
 
++ (void) moveItemsToDocWithPath:(NSString *) folderPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:folderPath error:&error];
+    if (!error) {
+        for (NSString *sourceFileName in contents) {
+            NSString *sourcePath = [folderPath stringByAppendingPathComponent:sourceFileName];
+            NSString *targetPath = [HSFileUtil documentPathWithName:sourceFileName];
+            [fileManager moveItemAtPath:sourcePath toPath:targetPath error:&error];
+        }
+    }
+}
+
 @end
