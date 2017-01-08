@@ -63,19 +63,19 @@
 // Auto update thumbnail
 - (void)setVideoPath:(NSString *)videoPath {
     _videoPath = videoPath;
-    if (_videoPath) {
+    if (_videoPath && ![_videoPath isEqualToString:@""]) {
         [self updateThumb];
     }
 }
 
 -(void) updateThumb {
-    if (!_videoPath) {return;}
+    if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     VLCMediaThumbnailer *thumbnailer = [VLCMediaThumbnailer thumbnailerWithMedia:[VLCMedia mediaWithPath:_videoPath] andDelegate:self];
     [thumbnailer fetchThumbnail];
 }
 
 - (void) click {
-    if (!_videoPath) {return;}
+    if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     UIViewController *vc = [HSViewUtil findViewController:self];
     // Play video
     HSVideoPlayVC *videoVC = [[HSVideoPlayVC alloc] init];

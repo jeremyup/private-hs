@@ -132,7 +132,7 @@
 }
 
 - (void) playVideo {
-    if (!_videoPath) {return;}
+    if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     UIViewController *vc = [HSViewUtil findViewController:self];
     HSVideoPlayVC *videoVC = [[HSVideoPlayVC alloc] init];
     videoVC.videoPath = _videoPath;
@@ -140,12 +140,12 @@
 }
 
 - (void) showPPT {
-    if (!_pptPath) {return;}
+    if (!_pptPath || [_pptPath isEqualToString:@""]) {return;}
     [self previewWithPath:_pptPath];
 }
 
 - (void) showPDF {
-    if (!_pdfPath) {return;}
+    if (!_pdfPath || [_pdfPath isEqualToString:@""]) {return;}
     [self previewWithPath:_pdfPath];
 }
 
