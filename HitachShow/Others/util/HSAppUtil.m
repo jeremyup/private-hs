@@ -17,6 +17,13 @@ NSString * const DEFAULT_VERSION = @"V1.0";
 NSString * const RESOURCE_VERSION = @"RESOURCE_VERSION";
 NSString * const SERVER_URL = @"SERVER_URL";
 
+@interface HSAppUtil()
+
+@property(nonatomic,strong) NSMutableArray *zipPaths;
+@property(nonatomic) NSInteger versionCount;
+
+@end
+
 @implementation HSAppUtil
 
 + (void) appInit {
@@ -51,6 +58,8 @@ NSString * const SERVER_URL = @"SERVER_URL";
             if (array.count > 0) {
                 HSAlertView *alert = [[HSAlertView alloc] initWithTitle:nil message:@"There is a new version,whether to update?" cancelButtonTitle:@"Cancel" otherButtonTitles:@"Sure" block:^(NSInteger buttonIndex,UIAlertView *alertView) {
                     if (buttonIndex == 1) {
+                        _zipPaths = [[NSMutableArray alloc] init];
+                        _versionCount = array.count;
                         for (NSDictionary *dic in array) {
                             [self downloadAndUpdate:dic[@"url"]];
                         }
@@ -79,14 +88,32 @@ NSString * const SERVER_URL = @"SERVER_URL";
         return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         NSString *pathStr = [filePath path];
+        [_zipPaths addObject:pathStr];
+        // Update after download all zip
+        if (_zipPaths.count == _versionCount) {
+            [self batchUpdateWithPaths:_zipPaths];
+        }
+    }];
+    [downloadTask resume];
+}
+
+// Batch update version resource
+- (void) batchUpdateWithPaths:(NSMutableArray *) zipPaths {
+    NSArray *sortedArray = [zipPaths sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        NSString *str1=(NSString *)obj1;
+        NSString *str2=(NSString *)obj2;
+        str1 = [[[str1 lastPathComponent] stringByDeletingPathExtension] substringFromIndex:1];
+        str2 = [[[str2 lastPathComponent] stringByDeletingPathExtension] substringFromIndex:1];
+        return [str1 doubleValue] > [str2 doubleValue];
+    }];
+    for (NSString *pathStr in sortedArray) {
         if (pathStr) {
             [HSResUtil updateResourceWithPath:pathStr];
             NSString *version = [pathStr.lastPathComponent stringByDeletingPathExtension];
             [[NSUserDefaults standardUserDefaults] setObject:version forKey:RESOURCE_VERSION];
             NSLog(@"Resource version has updated to %@ " ,version);
         }
-    }];
-    [downloadTask resume];
+    }
 }
 
 + (NSString *) currentVersion {
