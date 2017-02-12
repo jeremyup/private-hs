@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addLogo];
-    [self resetTabBarWidth:AppWidth];
 }
 
 - (void) addLogo {

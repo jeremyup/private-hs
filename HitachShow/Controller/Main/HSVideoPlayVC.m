@@ -7,7 +7,8 @@
 //
 
 #import "HSVideoPlayVC.h"
-#import "MobileVLCKit/MobileVLCKit.h"
+//#import "MobileVLCKit/MobileVLCKit.h"
+#import "MRVLCPlayer.h"
 
 
 @interface HSVideoPlayVC ()
@@ -20,27 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *videoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, AppWidth, AppHeight)];
-    [self.view addSubview:videoView];
-    _player = [[VLCMediaPlayer alloc] initWithOptions:nil];
-    _player.drawable = videoView;
-    _player.media = [VLCMedia mediaWithPath:_videoPath];
+    MRVLCPlayer *player = [[MRVLCPlayer alloc] init];
+    player.bounds = CGRectMake(0, 0, AppWidth, AppHeight);
+    player.center = self.view.center;
     
-    // Click event
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click)];
-    [videoView addGestureRecognizer:tapGesture];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [_player play];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [_player stop];
-}
-
-- (void)click {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    player.mediaURL = [NSURL fileURLWithPath:_videoPath];
+    
+    [player showInView:self.view];
 }
 
 - (void)didReceiveMemoryWarning {

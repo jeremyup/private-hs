@@ -39,8 +39,12 @@
         imageBtn.leftTitle = key;
         imageBtn.rightImage = images[i];
         imageBtn.targetVCName = _kv[key];
-        [imageBtn.leftBtn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
+        
+        // Updated at 2017.2
+        imageBtn.rightImgV.tag = i;
         imageBtn.leftBtn.tag = i;
+        [imageBtn.rightImgV addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
+        [imageBtn.leftBtn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         
         [imageBtn makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(CGSizeMake(width, height));

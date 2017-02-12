@@ -23,7 +23,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByCategory:(NSString *) category {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE category = ? AND enabled = 1",category];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE category = ? AND enabled = 1 ORDER BY id",category];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];
@@ -48,7 +48,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByArea:(NSString *) area {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE area = ?  AND enabled = 1",area];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE area = ?  AND enabled = 1 ORDER BY id",area];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];
@@ -61,7 +61,7 @@ static HSCommonInfo *_instance;
 - (NSArray *) findByType:(NSString *) type {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [self readDefaultDBWithTask:^(FMDatabase *db) {
-        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE type = ?  AND enabled = 1",type];
+        FMResultSet *resultSet = [db executeQuery:@"SELECT id,category,name,title,picture,text1,text2,video,country,spec,distributor,complete_year,pdf,ppt,area,type FROM hs_common_info WHERE type = ?  AND enabled = 1 ORDER BY id",type];
         while ([resultSet next]) {
             HSCommonInfo *element = [self toObjectWithResult:resultSet];
             [array addObject:element];

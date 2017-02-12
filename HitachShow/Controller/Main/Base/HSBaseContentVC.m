@@ -34,8 +34,10 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     titleLabel.numberOfLines = 0;
+//    titleLabel.layer.borderWidth = 2;
+//    titleLabel.layer.borderColor = [UIColor whiteColor].CGColor;
     titleLabel.font = [UIFont systemFontOfSize:22 weight:0.5];
-    titleLabel.textInsets = UIEdgeInsetsMake(-150, 50, 0, 50);
+    titleLabel.textInsets = UIEdgeInsetsMake(-80, 30, 0, 30);
     [titleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.top);
         make.right.equalTo(self.view.right);
@@ -53,8 +55,8 @@
     _subTitleLabel.font = [UIFont systemFontOfSize:20 weight:0.5];
     [_subTitleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(titleLabel.centerX);
-        make.bottom.equalTo(titleLabel.bottom).offset(-60);
-        make.size.equalTo(CGSizeMake(180, 70));
+        make.bottom.equalTo(titleLabel.bottom).offset(-30);
+        make.size.equalTo(CGSizeMake(240, 70));
     }];
     
     // Bottom border

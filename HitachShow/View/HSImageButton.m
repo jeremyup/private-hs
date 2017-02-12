@@ -12,8 +12,6 @@
 
 @interface HSImageButton ()
 
-@property(strong,nonatomic) UIImageView *rightImgV;
-
 @end
 
 @implementation HSImageButton
@@ -31,7 +29,7 @@
     if (self = [super initWithFrame:frame]) {
         _leftBtn = [[UIButton alloc] init];
         [self addSubview:_leftBtn];
-        _rightImgV = [[UIImageView alloc] init];
+        _rightImgV = [[UIButton alloc] init];
         [self addSubview:_rightImgV];
     }
     return self;
@@ -54,7 +52,7 @@
     
     _rightImgV.layer.borderWidth = 0.5;
     _rightImgV.layer.borderColor = [UIColor whiteColor].CGColor;
-    _rightImgV.image = [UIImage imageNamed:_rightImage];
+    [_rightImgV setImage:[UIImage imageNamed:_rightImage ] forState:UIControlStateNormal];
     _rightImgV.backgroundColor = [UIColor blackColor];
     [_rightImgV makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self).insets(UIEdgeInsetsMake(0, self.frame.size.width/2, 0, 0));

@@ -14,6 +14,8 @@
 
 - (void) tabClick:(UIButton *) sender;
 
+- (void) setSelectedIndex:(NSInteger) selectedIndex;
+
 - (UIButton *) customBtnWithTitle:(NSString *) title frame:(CGRect) frame;
 
 - (void) addButtons;

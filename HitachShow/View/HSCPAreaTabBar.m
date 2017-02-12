@@ -20,8 +20,8 @@
 
 - (void) addButtons {
     int i = 0;
-    CGFloat x = 195;
-    CGFloat width = (AppWidth - x - 250 - 113)/4;
+    CGFloat x = 221;
+    CGFloat width = (AppWidth - x - 134)/4;
     for (UIView *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             [tabBarButton removeFromSuperview];
@@ -38,6 +38,7 @@
 }
 
 - (void) tabClick:(UIButton *)sender {
+    [self setSelectedIndex:sender.tag];
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     UITabBarController *tab = (UITabBarController *) currentVC;
     [tab setSelectedIndex:sender.tag];
@@ -46,7 +47,7 @@
 }
 
 - (void) addTypeButton {
-    CGRect frame = CGRectMake(AppWidth - 240 - 110, (self.bounds.size.height - 40)/2, 90, 40);
+    CGRect frame = CGRectMake(AppWidth - 127, (self.bounds.size.height - 40)/2, 120, 40);
     UIButton *moduleTopBtn = [self customBtnWithTitle:@"Building Type" frame:frame];
     moduleTopBtn.titleLabel.font = [UIFont systemFontOfSize:12 weight:0.6];
     [self addSubview:moduleTopBtn];
@@ -62,7 +63,7 @@
 
 - (void) addModuleTop {
     // TOP size=80*40, spacing=7 btnSpacing=3
-    CGRect frame = CGRectMake(70, (self.bounds.size.height - 40)/2, 120, 40);
+    CGRect frame = CGRectMake(74, (self.bounds.size.height - 40)/2, 140, 40);
     UIButton *moduleTopBtn = [self customBtnWithTitle:@"PROJECT GALLERY TOP" frame:frame];
     moduleTopBtn.titleLabel.font = [UIFont systemFontOfSize:12 weight:0.6];
     [self addSubview:moduleTopBtn];

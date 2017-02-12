@@ -10,6 +10,4 @@
 
 @interface HSBaseVC : UIViewController
 
-- (void) resetTabBarWidth:(CGFloat) width;
-
 @end

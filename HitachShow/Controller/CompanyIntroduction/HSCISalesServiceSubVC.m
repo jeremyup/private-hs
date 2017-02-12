@@ -42,7 +42,7 @@
         btn.layer.borderWidth = 1.5;
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.optView.centerX);
-            make.size.equalTo(CGSizeMake(160, 33));
+            make.size.equalTo(CGSizeMake(180, 33));
             make.top.equalTo(self.optView.top).offset(8 + 40 * i);
         }];
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];

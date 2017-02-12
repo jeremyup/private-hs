@@ -8,6 +8,7 @@
 
 #import "HSPITabVC.h"
 #import "HSPIBaseVC.h"
+#import "HSTabBar.h"
 
 @interface HSPITabVC ()
 

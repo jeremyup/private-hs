@@ -88,7 +88,7 @@
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
         [btn makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.optView.centerX);
-            make.size.equalTo(CGSizeMake(160, 33));
+            make.size.equalTo(CGSizeMake(180, 33));
             make.top.equalTo(self.optView.top).offset(17 + 50 * i);
         }];
     }

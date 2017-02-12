@@ -31,19 +31,6 @@
     return YES;
 }
 
-- (void) resetTabBarWidth:(CGFloat) width {
-    UITabBar *bar = nil;
-    if (self.navigationController && self.navigationController.tabBarController) {
-        bar = self.navigationController.tabBarController.tabBar;
-    } else if (self.tabBarController){
-        bar = self.tabBarController.tabBar;
-    }
-    if (bar) {
-        CGRect frame = bar.frame;
-        [bar setFrame:CGRectMake(frame.origin.x, frame.origin.y, width, frame.size.height)];
-    }
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft||
             interfaceOrientation==UIInterfaceOrientationLandscapeRight);

@@ -49,10 +49,19 @@
         make.top.equalTo(self.view.top).offset(10);
         make.size.equalTo(CGSizeMake(60, 15));
     }];
-    // Click event to update server url
-    UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
-    versionLabel.userInteractionEnabled = YES;
-    [versionLabel addGestureRecognizer:labelTapGestureRecognizer];
+    
+    UIButton *setBtn = [[UIButton alloc] init];
+    [self.view addSubview:setBtn];
+    [setBtn setTitle:@"Setting" forState:UIControlStateNormal];
+    setBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    setBtn.titleLabel.textColor = [UIColor whiteColor];
+    [setBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(CGSizeMake(60, 20));
+        make.centerY.equalTo(versionLabel.centerY);
+        make.right.equalTo(versionLabel.left).offset(10);
+    }];
+    setBtn.backgroundColor = [UIColor grayColor];
+    [setBtn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchDown];
     
     
     // Four module
@@ -89,11 +98,12 @@
     } else {
         // Production introduction do not like other tab page,need create new view
         HSPITabVC *piTab = [[HSPITabVC alloc] init];
+        [piTab setSelectedIndex:0];
         [self presentViewController:piTab animated:YES completion:nil];
     }
 }
 
--(void) labelTouchUpInside:(UITapGestureRecognizer *)recognizer{
+-(void) click {
     NSString *msg = [@"Current server url is " stringByAppendingString:[HSAppUtil serverURL]];
     
     HSAlertView *alert = [[HSAlertView alloc] initWithTitle:@"Resource server url config" message:msg cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done" block:^(NSInteger buttonIndex,UIAlertView *alertView) {

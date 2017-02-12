@@ -12,8 +12,8 @@
 @implementation HSMainTabController
 
 - (void)viewDidLoad {
-    self.titles = [NSArray arrayWithObjects:@"Company Introduction",
-                   @"Classic Project",@"Product Introduction",
+    self.titles = [NSArray arrayWithObjects:@"Company\nIntroduction",
+                   @"Project\nGallery",@"Product\nIntroduction",
                    @"Maintenance",nil ];
     [super viewDidLoad];
     
@@ -21,9 +21,9 @@
 }
 
 - (void)setChildVC {
-    NSDictionary *map = @{@"Company Introduction":@"HSCIMainVC",
-                          @"Classic Project":@"HSCPMainVC",
-                          @"Product Introduction":@"HSPITabVC",
+    NSDictionary *map = @{@"Company\nIntroduction":@"HSCIMainVC",
+                          @"Project\nGallery":@"HSCPMainVC",
+                          @"Product\nIntroduction":@"HSPITabVC",
                           @"Maintenance":@"HSMaintenanceVC"};
     NSMutableArray *vcs = [[NSMutableArray alloc] init];
     for (NSString *key in self.titles) {

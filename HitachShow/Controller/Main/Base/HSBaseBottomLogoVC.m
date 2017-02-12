@@ -17,17 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addLogo];
-    [self resetTabBarWidth:AppWidth - 250];
 }
 
 - (void) addLogo {
     // Logo
-    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo1.png" ]];
+    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png" ]];
     [self.view addSubview:logo];
     [logo makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(120, 35));
         make.right.equalTo(self.view.right).offset(-56);
-        make.bottom.equalTo(self.view.bottom).offset(-41);
+        make.bottom.equalTo(self.view.bottom).offset(-70);
     }];
 }
 

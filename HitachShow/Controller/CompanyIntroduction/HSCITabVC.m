@@ -16,7 +16,7 @@
 @implementation HSCITabVC
 
 - (void)viewDidLoad {
-    self.titles = [NSArray arrayWithObjects:@"Company Profile",@"Development Base",@"Manufacturing Base",@"Sales/Service Stations",@"History",@"Technology" ,@"Topics",nil];
+    self.titles = [NSArray arrayWithObjects:@"Company\nProfile",@"Development\nBase",@"Manufacturing\nBase",@"Sales/Service\nStations",@"History",@"Technology" ,@"Topics",nil];
 
     [super viewDidLoad];
     self.delegate = self;
@@ -24,10 +24,10 @@
 }
 
 - (void)setChildVC {
-    NSDictionary *map = @{@"Company Profile":@"HSCICompanyProfileVC",
-                          @"Development Base":@"HSCIDevelopmentBaseVC",
-                          @"Manufacturing Base":@"HSCIManufacturingBaseVC",
-                          @"Sales/Service Stations":@"HSCISalesServiceVC",
+    NSDictionary *map = @{@"Company\nProfile":@"HSCICompanyProfileVC",
+                          @"Development\nBase":@"HSCIDevelopmentBaseVC",
+                          @"Manufacturing\nBase":@"HSCIManufacturingBaseVC",
+                          @"Sales/Service\nStations":@"HSCISalesServiceVC",
                           @"History":@"HSCIHistoryVC",
                           @"Technology":@"HSCITechnologyVC",
                           @"Topics":@"HSCITopicsVC"};

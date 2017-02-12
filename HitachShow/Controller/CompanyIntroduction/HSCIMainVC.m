@@ -29,7 +29,7 @@
 
 - (void) initData {
     _btns = [NSArray arrayWithObjects:
-     [HSImageButton initWithTitle:@"Company Profile" rightImage:@"ci_main_btn_2_1_Company Profile.jpg" targetVCName:@"HSCICompanyProfileVC"],
+     [HSImageButton initWithTitle:@" Company  Profile" rightImage:@"ci_main_btn_2_1_Company Profile.jpg" targetVCName:@"HSCICompanyProfileVC"],
      [HSImageButton initWithTitle:@"Development Base" rightImage:@"ci_main_btn_2_2_Developmentbase.jpg" targetVCName:@"HSCIDevelopmentBaseVC"],
      [HSImageButton initWithTitle:@"Manufacturing Base" rightImage:@"ci_main_btn_2_3_Manufacturing.jpg" targetVCName:@"HSCIManufacturingBaseVC"],
      [HSImageButton initWithTitle:@"Sales/Service Stations" rightImage:@"ci_main_btn_2_4_Sales.jpg" targetVCName:@"HSCISalesServiceVC"],
@@ -47,7 +47,7 @@
     // title
     UILabel *title = [[UILabel alloc] init];
     [self.view addSubview:title];
-    title.text = @"COMPANY INTRODUCTION";
+    title.text = @"Company Introduction";
     title.textAlignment = NSTextAlignmentCenter;
     title.font = [UIFont systemFontOfSize:30];
     title.textColor = [UIColor whiteColor];
@@ -86,8 +86,12 @@
             make.top.equalTo(self.view.top).offset(topOffset);
             make.left.equalTo(self.view.left).offset(leftOffset);
         }];
+        // Updated at 2017.2
+        btn.rightImgV.tag = i;
         btn.leftBtn.tag = i;
+        [btn.rightImgV addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
         [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
+        
     }
 }
 

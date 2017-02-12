@@ -14,16 +14,13 @@
 
 - (void) addButtons {
     int i = 0;
-    CGFloat x = 235;
-    CGFloat width = (AppWidth - x - 250)/self.titles.count;
+    CGFloat x = 288;
+    CGFloat width = (AppWidth - x - 7)/self.titles.count;
     for (UIView *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             [tabBarButton removeFromSuperview];
             CGRect frame = CGRectMake(x, (self.bounds.size.height - 40)/2, width, 40);
             UIButton *tabBtn = [self customBtnWithTitle:self.titles[i] frame:frame];
-            if ([self.titles[i] isEqualToString:@"Commercial"]) {
-                tabBtn.titleLabel.font = [UIFont systemFontOfSize:11 weight:1];
-            }
             tabBtn.tag = i;
             [tabBtn addTarget:self action:@selector(tabClick:) forControlEvents:UIControlEventTouchDown];
             [self addSubview:tabBtn];
@@ -35,6 +32,7 @@
 }
 
 - (void) tabClick:(UIButton *)sender {
+    [self setSelectedIndex:sender.tag];
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     UITabBarController *tab = (UITabBarController *) currentVC;
     [tab setSelectedIndex:sender.tag];
@@ -43,7 +41,7 @@
 }
 
 - (void) addAreaButton {
-    CGRect frame = CGRectMake(193, (self.bounds.size.height - 40)/2, 40, 40);
+    CGRect frame = CGRectMake(221, (self.bounds.size.height - 40)/2, 60, 40);
     UIButton *moduleTopBtn = [self customBtnWithTitle:@"Area" frame:frame];
     moduleTopBtn.titleLabel.font = [UIFont systemFontOfSize:12 weight:0.6];
     [self addSubview:moduleTopBtn];

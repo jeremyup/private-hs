@@ -50,7 +50,10 @@
             make.top.equalTo(self.view.top).offset(255 + height * (i/3));
             make.left.equalTo(self.view.left).offset(100 + (i/3==1?width/2:0) + width * (i%3));
         }];
+        // Updated at 2017.2
+        btn.rightImgV.tag = i;
         btn.leftBtn.tag = i;
+        [btn.rightImgV addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
         [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
     }
 }

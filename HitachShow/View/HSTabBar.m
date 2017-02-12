@@ -28,8 +28,8 @@
 
 - (void) addButtons {
     int i = 0;
-    CGFloat x = 75;
-    CGFloat width = (AppWidth - x - 250)/7;
+    CGFloat x = 74;
+    CGFloat width = (AppWidth - x - 7)/7;
     for (UIView *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             [tabBarButton removeFromSuperview];
@@ -44,7 +44,24 @@
     }
 }
 
+- (void) setSelectedIndex:(NSInteger) selectedIndex {
+    NSLog(@"-----%ld",self.subviews.count);
+    for (UIView *v in self.subviews) {
+        if ([v isKindOfClass:NSClassFromString(@"UIButton")]) {
+            UIButton *btn = (UIButton *)v;
+            if (btn.tag == selectedIndex) {
+                [btn setBackgroundColor:[UIColor whiteColor]];
+                [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            } else {
+                [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                [btn setBackgroundColor:[UIColor clearColor]];
+            }
+        }
+    }
+}
+
 - (void) tabClick:(UIButton *) sender {
+    [self setSelectedIndex:sender.tag];
     UIViewController *currentVC = [HSViewUtil findViewController:self];
     if ([currentVC isKindOfClass:[UITabBarController class]]) {
         if (![sender.titleLabel.text isEqualToString:@"Product Introduction"]) {
@@ -53,6 +70,7 @@
         } else {
             // Production introduction do not like other tab page,need create new view
             HSPITabVC *piTab = [[HSPITabVC alloc] init];
+            piTab.selectedIndex = 0;
             [currentVC presentViewController:piTab animated:YES completion:nil];
         }
     }
@@ -67,6 +85,8 @@
     [btn setTitle:title forState:UIControlStateNormal];
     btn.titleLabel.numberOfLines = 0;
     btn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    // Diff others
+    btn.tag = -1;
     
     return btn;
 }

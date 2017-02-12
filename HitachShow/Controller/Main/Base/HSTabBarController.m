@@ -11,6 +11,8 @@
 
 @interface HSTabBarController ()
 
+@property(nonatomic,strong) HSTabBar *customBar;
+
 @end
 
 @implementation HSTabBarController
@@ -18,18 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    HSTabBar *tabBar = [[HSTabBar alloc] initWithFrame:self.tabBar.frame];
-    tabBar.titles = _titles;
-    [self setValue:tabBar forKeyPath:@"tabBar"];
+    _customBar = [[HSTabBar alloc] initWithFrame:self.tabBar.frame];
+    _customBar.titles = _titles;
+    [self setValue:_customBar forKeyPath:@"tabBar"];
     [UITabBar appearance].translucent = YES;
     [UITabBar appearance].barStyle = UIBarStyleBlack;
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) setSelectedIndex:(NSUInteger)selectedIndex {
+    [super setSelectedIndex:selectedIndex];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    HSTabBar *tb = (HSTabBar *)self.tabBar;
+    [tb setSelectedIndex:0];
+}
+
+
 
 /*
 #pragma mark - Navigation

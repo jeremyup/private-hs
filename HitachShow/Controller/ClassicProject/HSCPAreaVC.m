@@ -45,7 +45,10 @@
             make.left.equalTo(self.view.left).offset(100 + width/2 * (i/2) + width * (i%2));
         }];
         btn.rightImage = areas[btn.leftTitle];
+        // Updated at 2017.2
+        btn.rightImgV.tag = i;
         btn.leftBtn.tag = i;
+        [btn.rightImgV addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
         [btn.leftBtn addTarget:self action:@selector(tab:) forControlEvents:UIControlEventTouchDown];
     }
 }
