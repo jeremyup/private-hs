@@ -7,9 +7,9 @@
 //
 
 #import "HSProductView.h"
-#import "HSVideoPlayVC.h"
 #import "HSViewUtil.h"
 #import "HSPreviewVC.h"
+#import "HSVideoUtil.h"
 
 @interface HSProductView ()
 
@@ -134,9 +134,7 @@
 - (void) playVideo {
     if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     UIViewController *vc = [HSViewUtil findViewController:self];
-    HSVideoPlayVC *videoVC = [[HSVideoPlayVC alloc] init];
-    videoVC.videoPath = _videoPath;
-    [vc presentViewController:videoVC animated:YES completion:nil];
+    [HSVideoUtil showVideo:vc.view videoPath:_videoPath];
 }
 
 - (void) showPPT {

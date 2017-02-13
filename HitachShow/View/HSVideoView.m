@@ -9,7 +9,7 @@
 #import "HSVideoView.h"
 #import "MobileVLCKit/MobileVLCKit.h"
 #import "HSViewUtil.h"
-#import "HSVideoPlayVC.h"
+#import "HSVideoUtil.h"
 
 @interface HSVideoView () <VLCMediaThumbnailerDelegate>
 
@@ -77,10 +77,8 @@
 - (void) click {
     if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     UIViewController *vc = [HSViewUtil findViewController:self];
-    // Play video
-    HSVideoPlayVC *videoVC = [[HSVideoPlayVC alloc] init];
-    videoVC.videoPath = _videoPath;
-    [vc presentViewController:videoVC animated:YES completion:nil];
+    
+    [HSVideoUtil showVideo:vc.view videoPath:_videoPath];
 }
 
 #pragma VLCThumbnailer delegate implement
