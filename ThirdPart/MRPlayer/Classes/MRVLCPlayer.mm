@@ -54,7 +54,7 @@ static const NSTimeInterval kVideoPlayerAnimationTimeinterval = 2.0f;
     [view addSubview:self];
     
     self.alpha = 1.0;
-    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:0.2];
+    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:0.1];
 
 }
 
@@ -69,7 +69,7 @@ static const NSTimeInterval kVideoPlayerAnimationTimeinterval = 2.0f;
     self.player = nil;
     
     // 注销通知
-    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+//    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self removeFromSuperview];
 }
@@ -99,13 +99,13 @@ static const NSTimeInterval kVideoPlayerAnimationTimeinterval = 2.0f;
 
 - (void)setupNotification {
     
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(orientationHandler)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil
-     ];
+//    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(orientationHandler)
+//                                                 name:UIDeviceOrientationDidChangeNotification
+//                                               object:nil
+//     ];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillEnterForeground)

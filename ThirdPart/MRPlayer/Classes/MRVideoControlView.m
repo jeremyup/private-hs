@@ -206,7 +206,8 @@
 - (MRVideoHUDView *)indicatorView {
     if (!_indicatorView) {
         _indicatorView = [[MRVideoHUDView alloc] init];
-        _indicatorView.bounds = CGRectMake(0, 0, 100, 100);
+        // 不显示加载状态 by Jeremy
+        _indicatorView.bounds = CGRectMake(0, 0, 0, 0);
     }
     return _indicatorView;
 }
@@ -310,7 +311,8 @@
 - (CALayer *)bgLayer {
     if (!_bgLayer) {
         _bgLayer = [CALayer layer];
-        _bgLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Video Bg"]].CGColor;
+        // 修改为不显示加载动画 by Jeremy
+//        _bgLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Video Bg"]].CGColor;
         _bgLayer.bounds = self.frame;
         _bgLayer.position = CGPointMake(CGRectGetWidth(self.bounds) / 2, CGRectGetHeight(self.bounds) / 2);
     }
