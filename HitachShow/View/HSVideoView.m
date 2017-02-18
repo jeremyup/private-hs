@@ -7,14 +7,14 @@
 //
 
 #import "HSVideoView.h"
-#import "MobileVLCKit/MobileVLCKit.h"
 #import "HSViewUtil.h"
 #import "HSVideoUtil.h"
 
-@interface HSVideoView () <VLCMediaThumbnailerDelegate>
+@interface HSVideoView ()
 
 @property(nonatomic,strong) UIImageView *thumb;
 @property(nonatomic,strong) UILabel *title;
+@property(nonatomic,strong) UIImageView *playBtn;
 
 @end
 
@@ -26,23 +26,32 @@
         [self addSubview:_thumb];
         _title = [[UILabel alloc] init];
         [self addSubview:_title];
+        _playBtn = [[UIImageView alloc] init];
+        [self addSubview:_playBtn];
+        
     }
     return self;
 }
 
 -(void) layoutSubviews {
     self.backgroundColor = [UIColor blackColor];
-    // Video thumb
-    [self updateThumb];
     [_thumb makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.left);
         make.right.equalTo(self.right);
         make.top.equalTo(self.top).offset(5);
         make.bottom.equalTo(self.bottom).offset(5);
     }];
+    
+    NSString *thumbPath = [_videoPath stringByReplacingOccurrencesOfString:[@"." stringByAppendingString: [_videoPath pathExtension]]   withString:@"thumb.jpg"];
+    [_thumb setImage:[UIImage imageWithContentsOfFile:thumbPath]];
     // Click event
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click)];
     [self addGestureRecognizer:tapGesture];
+    
+    [_playBtn setImage:[UIImage imageNamed:@"btn_video_play.png"]];
+    [_playBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(_thumb.center);
+    }];
     
     // titile
     _title.text = @"Movie";
@@ -60,34 +69,11 @@
     }
 }
 
-// Auto update thumbnail
-- (void)setVideoPath:(NSString *)videoPath {
-    _videoPath = videoPath;
-    if (_videoPath && ![_videoPath isEqualToString:@""]) {
-        [self updateThumb];
-    }
-}
-
--(void) updateThumb {
-    if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
-    VLCMediaThumbnailer *thumbnailer = [VLCMediaThumbnailer thumbnailerWithMedia:[VLCMedia mediaWithPath:_videoPath] andDelegate:self];
-    [thumbnailer fetchThumbnail];
-}
-
 - (void) click {
     if (!_videoPath || [_videoPath isEqualToString:@""]) {return;}
     UIViewController *vc = [HSViewUtil findViewController:self];
     
     [HSVideoUtil showVideo:vc.view videoPath:_videoPath];
-}
-
-#pragma VLCThumbnailer delegate implement
-- (void)mediaThumbnailerDidTimeOut:(VLCMediaThumbnailer *)mediaThumbnailer {
-    // TODO 
-}
-- (void)mediaThumbnailer:(VLCMediaThumbnailer *)mediaThumbnailer didFinishThumbnail:(CGImageRef)thumbnail {
-    UIImage *image = [UIImage imageWithCGImage:thumbnail];
-    [_thumb setImage:image];
 }
 
 @end
